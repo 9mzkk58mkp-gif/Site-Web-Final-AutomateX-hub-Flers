@@ -6,14 +6,11 @@ import { buildSystemPrompt } from "@/lib/chatbot/system-prompt";
 import { retrieveRelevantPublicChunks } from "@/lib/chatbot-knowledge/retrieval";
 import { containsInjectionAttempt, INJECTION_GENERIC_REPLY } from "@/lib/chatbot/prompt-injection";
 import { sendContactToN8n } from "@/lib/chatbot/n8n-webhook";
-import { verifyTurnstileToken } from "@/lib/chatbot/turnstile";
 import {
   getOrCreateSession,
   isGlobalLimitReached,
   isIpLimitReached,
   isSessionLimitReached,
-  isTurnstileVerified,
-  markTurnstileVerified,
   markWebhookSent,
   registerGlobalMistralCall,
   registerIpMessage,
@@ -26,9 +23,17 @@ const SESSION_COOKIE = "ax_chat_sid";
 const LIMIT_REPLY = `Pour aller plus loin, appelez directement Nolan au ${NAP.phoneDisplay}.`;
 const UNAVAILABLE_REPLY = `Assistant temporairement indisponible, contactez-moi directement au ${NAP.phoneDisplay}.`;
 
+// Pas de CAPTCHA (Turnstile délibérément désactivé — voir rate-limit.ts).
+// Délai artificiel minimal : coût négligeable pour un usage normal, complique
+// légèrement un script envoyant des requêtes en rafale.
+const ARTIFICIAL_DELAY_MS = 400;
+
 interface IncomingBody {
   messages?: Array<{ role: "user" | "assistant"; content: string }>;
-  turnstileToken?: string;
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function getClientIp(request: NextRequest): string {
@@ -75,15 +80,6 @@ export async function POST(request: NextRequest) {
     return errorResponse(LIMIT_REPLY, 429, sessionId);
   }
 
-  // CAPTCHA invisible avant le premier message de la session.
-  if (!isTurnstileVerified(sessionId)) {
-    const verified = await verifyTurnstileToken(body.turnstileToken, ip);
-    if (!verified) {
-      return errorResponse("Vérification anti-robot échouée, réessayez.", 403, sessionId);
-    }
-    markTurnstileVerified(sessionId);
-  }
-
   registerSessionMessage(sessionId);
   registerIpMessage(ip);
 
@@ -93,6 +89,8 @@ export async function POST(request: NextRequest) {
     response.cookies.set(SESSION_COOKIE, sessionId, { httpOnly: true, sameSite: "lax", path: "/" });
     return response;
   }
+
+  await sleep(ARTIFICIAL_DELAY_MS);
 
   try {
     const ragContext = await retrieveRelevantPublicChunks(lastMessage.content);

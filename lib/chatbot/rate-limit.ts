@@ -19,7 +19,6 @@ interface SessionState {
   messageCount: number;
   lastActivity: number;
   webhookSent: boolean;
-  turnstileVerified: boolean;
 }
 
 const sessions = new Map<string, SessionState>();
@@ -43,7 +42,6 @@ export function getOrCreateSession(sessionId: string): SessionState {
     messageCount: 0,
     lastActivity: now,
     webhookSent: false,
-    turnstileVerified: existing?.turnstileVerified ?? false,
   };
   sessions.set(sessionId, fresh);
   return fresh;
@@ -72,15 +70,6 @@ export function markWebhookSent(sessionId: string): void {
 
 export function wasWebhookAlreadySent(sessionId: string): boolean {
   return getOrCreateSession(sessionId).webhookSent;
-}
-
-export function markTurnstileVerified(sessionId: string): void {
-  const session = getOrCreateSession(sessionId);
-  session.turnstileVerified = true;
-}
-
-export function isTurnstileVerified(sessionId: string): boolean {
-  return getOrCreateSession(sessionId).turnstileVerified;
 }
 
 export function registerIpMessage(ip: string): number {

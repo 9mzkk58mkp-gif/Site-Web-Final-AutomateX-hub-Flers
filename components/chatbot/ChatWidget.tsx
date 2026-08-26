@@ -18,8 +18,7 @@ const SEEN_KEY = "ax_chat_seen";
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBadge, setShowBadge] = useState(false);
-  const { messages, isLoading, error, limitReached, sendMessage, turnstileContainerRef } =
-    useChatSession();
+  const { messages, isLoading, error, limitReached, sendMessage } = useChatSession();
 
   useEffect(() => {
     try {
@@ -50,7 +49,6 @@ export default function ChatWidget() {
           error={error}
           limitReached={limitReached}
           onSend={sendMessage}
-          turnstileContainerRef={turnstileContainerRef}
         />
       )}
 

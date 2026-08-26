@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useTurnstile } from "./useTurnstile";
 
 export interface ChatMessage {
   role: "user" | "assistant";
@@ -27,7 +26,6 @@ export function useChatSession() {
   const [error, setError] = useState<string | null>(null);
   const [limitReached, setLimitReached] = useState(false);
   const lastActivityRef = useRef(Date.now());
-  const { containerRef, getToken } = useTurnstile();
 
   useEffect(() => {
     if (messages.length > 1) lastActivityRef.current = Date.now();
@@ -46,12 +44,11 @@ export function useChatSession() {
       setError(null);
 
       try {
-        const turnstileToken = await getToken();
         const response = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "same-origin",
-          body: JSON.stringify({ messages: nextMessages, turnstileToken }),
+          body: JSON.stringify({ messages: nextMessages }),
         });
 
         const data = await response.json();
@@ -71,8 +68,8 @@ export function useChatSession() {
         setIsLoading(false);
       }
     },
-    [messages, getToken],
+    [messages],
   );
 
-  return { messages, isLoading, error, limitReached, sendMessage, turnstileContainerRef: containerRef };
+  return { messages, isLoading, error, limitReached, sendMessage };
 }

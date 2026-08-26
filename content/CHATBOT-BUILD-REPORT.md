@@ -3,6 +3,13 @@
 Implémentation du chatbot commercial RAG décrit dans `content/04-chatbot-rag-spec.md`. Le design system
 Aurora existant n'a pas été modifié — uniquement le widget et son infra serveur.
 
+> **Mise à jour (2026-08-26)** : Cloudflare Turnstile a été retiré délibérément (pas de compte Cloudflare
+> prévu à court terme) — `turnstile.ts` et `useTurnstile.ts` ont été supprimés, ce n'est pas un mode
+> dégradé temporaire mais l'état normal et assumé du projet. La protection anti-abus repose désormais sur
+> le rate limiting (session/IP/global) et le filtre anti prompt-injection, plus un délai artificiel de
+> 400ms côté serveur avant traitement de chaque message. Les sections ci-dessous qui mentionnent encore
+> Turnstile décrivent l'implémentation initiale, conservées pour l'historique.
+
 ## Fichiers créés
 
 **Base de connaissance RAG**
@@ -79,8 +86,9 @@ Aurora existant n'a pas été modifié — uniquement le widget et son infra ser
 |---|---|
 | `MISTRAL_API_KEY` | Créer un compte sur [console.mistral.ai](https://console.mistral.ai), générer une clé API dans la section "API Keys". |
 | `N8N_CHATBOT_WEBHOOK_URL` | Dans l'instance N8N existante, créer un nouveau workflow avec un nœud "Webhook" dédié au chatbot (distinct de celui du formulaire de contact), copier l'URL de production du webhook. |
-| `TURNSTILE_SECRET_KEY` | [dashboard.cloudflare.com](https://dash.cloudflare.com) → Turnstile → créer un widget (gratuit), copier la "Secret Key". |
-| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Même écran Cloudflare Turnstile, copier la "Site Key" (publique par nature). |
+
+`TURNSTILE_SECRET_KEY` / `NEXT_PUBLIC_TURNSTILE_SITE_KEY` ne sont plus nécessaires — voir la note en tête
+de ce document.
 
 Toutes les valeurs sont à placer dans `.env.local` (déjà ignoré par git, jamais dans `.env.example`).
 
@@ -126,9 +134,9 @@ de plus de 500 caractères (400).
    des pages ou d'`internal.md`.
 3. **Créer et connecter le webhook N8N dédié** (`N8N_CHATBOT_WEBHOOK_URL`), tester la réception du
    payload `{ source, nom, telephone, metier, besoin_exprime, timestamp }`.
-4. **Créer le compte Cloudflare Turnstile**, renseigner `TURNSTILE_SECRET_KEY` et
-   `NEXT_PUBLIC_TURNSTILE_SITE_KEY`. Tant que ces variables sont vides, le CAPTCHA est ignoré côté
-   serveur (log d'avertissement) — ne pas laisser cet état en production.
+4. ~~Créer le compte Cloudflare Turnstile~~ — retiré délibérément, voir la note en tête de ce document.
+   Si un jour le volume d'abus l'exige, `TURNSTILE_SECRET_KEY` / `NEXT_PUBLIC_TURNSTILE_SITE_KEY` restent
+   documentées (en commentaire) dans `.env.example` pour réactivation rapide.
 5. **Tester en dev avec de vraies clés** avant de brancher le vrai webhook N8N : vérifier une conversation
    complète (qualification → capture de nom/téléphone → appel de l'outil `submit_contact_request` →
    réception du lead côté N8N), vérifier que les tarifs annoncés correspondent à `internal.md`, et tester

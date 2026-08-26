@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent, type RefObject } from "react";
+import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import { TEL_HREF, NAP } from "@/lib/constants";
 import { SendIcon } from "./ChatIcons";
@@ -14,7 +14,6 @@ interface ChatPanelProps {
   error: string | null;
   limitReached: boolean;
   onSend: (text: string) => void;
-  turnstileContainerRef: RefObject<HTMLDivElement | null>;
 }
 
 function MessageBubble({ message }: { message: ChatMessage }) {
@@ -40,7 +39,6 @@ export default function ChatPanel({
   error,
   limitReached,
   onSend,
-  turnstileContainerRef,
 }: ChatPanelProps) {
   const [draft, setDraft] = useState("");
   const disabled = isLoading || limitReached;
@@ -90,8 +88,6 @@ export default function ChatPanel({
           </p>
         )}
       </div>
-
-      <div ref={turnstileContainerRef} className="hidden" />
 
       <form onSubmit={handleSubmit} className="flex items-center gap-2 border-t border-white/10 p-3">
         <input
