@@ -3,7 +3,7 @@ import Badge from "@/components/ui/Badge";
 import SiteIcon from "@/components/ui/SiteIcon";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
-import ChildPageCard from "@/components/services/ChildPageCard";
+import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
 
 export const metadata: Metadata = {
@@ -70,11 +70,7 @@ export default function SitesWebPage() {
       <div>
         <SectionHeading>Chaque métier a ses propres besoins</SectionHeading>
         <p className="mt-2 text-sm text-text-secondary">Voici le détail par spécialité :</p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {METIER_PAGES.map((page) => (
-            <ChildPageCard key={page.href} {...page} />
-          ))}
-        </div>
+        <ChildPageGrid pages={METIER_PAGES} />
       </div>
     </ServicePageLayout>
   );

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import PhoneIcon from "@/components/ui/PhoneIcon";
+import Reveal from "@/components/motion/Reveal";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
 function BackArrowIcon() {
@@ -50,19 +51,25 @@ export default function ServicePageLayout({
         </Link>
       )}
 
-      {eyebrow && <div className="mt-6 flex flex-wrap gap-3">{eyebrow}</div>}
+      <Reveal>
+        {eyebrow && <div className="mt-6 flex flex-wrap gap-3">{eyebrow}</div>}
 
-      <h1 className="aurora-h1 mt-6">{h1}</h1>
+        <h1 className="aurora-h1 mt-6">{h1}</h1>
 
-      {intro && <p className="mt-6 text-base text-text-secondary">{intro}</p>}
+        {intro && <p className="mt-6 text-base text-text-secondary">{intro}</p>}
+      </Reveal>
 
-      {children && <div className="mt-10 space-y-8">{children}</div>}
+      {children && (
+        <Reveal delay={0.1} className="mt-10 space-y-8">
+          {children}
+        </Reveal>
+      )}
 
-      <div className="mt-16 flex justify-center">
+      <Reveal delay={0.15} className="mt-16 flex justify-center">
         <Button href={TEL_HREF} icon={<PhoneIcon />}>
           {NAP.phoneDisplay} — {ctaText}
         </Button>
-      </div>
+      </Reveal>
     </article>
   );
 }

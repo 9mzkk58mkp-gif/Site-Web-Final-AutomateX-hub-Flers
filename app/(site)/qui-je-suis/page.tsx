@@ -5,6 +5,8 @@ import PhoneIcon from "@/components/ui/PhoneIcon";
 import SchemaScript from "@/components/seo/SchemaScript";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
+import Reveal from "@/components/motion/Reveal";
+import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
 import { getPersonSchema } from "@/lib/schema";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
@@ -26,7 +28,7 @@ export default function QuiJeSuisPage() {
       <SchemaScript schema={getPersonSchema()} />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
-        <div className="flex items-center gap-5">
+        <Reveal className="flex items-center gap-5">
           <Image
             src="/nolan.jpg"
             alt="Nolan Hermand, fondateur d'Automatex"
@@ -36,21 +38,23 @@ export default function QuiJeSuisPage() {
             priority
           />
           <h1 className="aurora-h1">Une seule personne du début à la fin</h1>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 space-y-6 text-base text-text-secondary">
-          <p>
-            Je m&apos;appelle Nolan Hermand. J&apos;ai 19 ans, et avant de faire du web, j&apos;ai
-            fait du chantier.
-          </p>
-          <p>
-            CAP menuiserie, deux ans d&apos;apprentissage en pose de fenêtres, deux mois de
-            couverture. Assez de terrain pour savoir comment un artisan travaille — les journées
-            qui commencent tôt, les devis qu&apos;on écrit le soir, la paperasse qui
-            s&apos;accumule.
-          </p>
+        <StaggerGrid className="mt-10 space-y-6 text-base text-text-secondary">
+          <StaggerItem>
+            <p>
+              Je m&apos;appelle Nolan Hermand. J&apos;ai 19 ans, et avant de faire du web,
+              j&apos;ai fait du chantier.
+            </p>
+            <p className="mt-6">
+              CAP menuiserie, deux ans d&apos;apprentissage en pose de fenêtres, deux mois de
+              couverture. Assez de terrain pour savoir comment un artisan travaille — les
+              journées qui commencent tôt, les devis qu&apos;on écrit le soir, la paperasse qui
+              s&apos;accumule.
+            </p>
+          </StaggerItem>
 
-          <div>
+          <StaggerItem>
             <SectionHeading>Le déclic</SectionHeading>
             <p className="mt-3">
               Pendant mon alternance, j&apos;ai vu le même problème revenir sans arrêt : des
@@ -59,9 +63,9 @@ export default function QuiJeSuisPage() {
               avaient une fiche Google à jour ou un site qui s&apos;affichait bien sur téléphone.
             </p>
             <p className="mt-3">J&apos;ai créé Automatex pour régler ça.</p>
-          </div>
+          </StaggerItem>
 
-          <div>
+          <StaggerItem>
             <SectionHeading>Ce que je fais différemment</SectionHeading>
             <p className="mt-3">
               Je ne viens pas d&apos;une agence. Je gère chaque projet seul, du premier échange à
@@ -73,21 +77,21 @@ export default function QuiJeSuisPage() {
               vraiment sur un site ou une fiche Google d&apos;artisan : pas de blabla marketing,
               des outils qui servent concrètement à décrocher des chantiers.
             </p>
-          </div>
+          </StaggerItem>
 
-          <div>
+          <StaggerItem>
             <SectionHeading>En pratique</SectionHeading>
             <div className="mt-4">
               <FeatureList items={EN_PRATIQUE} />
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerGrid>
 
-        <div className="mt-16 flex justify-center">
+        <Reveal className="mt-16 flex justify-center">
           <Button href={TEL_HREF} icon={<PhoneIcon />}>
             {NAP.phoneDisplay} — Discutons de votre projet
           </Button>
-        </div>
+        </Reveal>
       </article>
     </>
   );

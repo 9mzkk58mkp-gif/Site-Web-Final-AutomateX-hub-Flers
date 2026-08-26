@@ -8,7 +8,9 @@ export default function Card({
   className?: string;
 }) {
   return (
-    <div className={`glass-card rounded-2xl p-6 ${className}`}>
+    <div
+      className={`glass-card rounded-2xl p-6 transition-transform duration-200 ease-out hover:-translate-y-1 ${className}`}
+    >
       {children}
     </div>
   );

@@ -3,7 +3,7 @@ import Badge from "@/components/ui/Badge";
 import AutomationIcon from "@/components/ui/AutomationIcon";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
-import ChildPageCard from "@/components/services/ChildPageCard";
+import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
 
 export const metadata: Metadata = {
@@ -61,11 +61,7 @@ export default function AutomatisationsPage() {
 
       <div>
         <SectionHeading>Le détail par système</SectionHeading>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {CHILD_PAGES.map((page) => (
-            <ChildPageCard key={page.href} {...page} />
-          ))}
-        </div>
+        <ChildPageGrid pages={CHILD_PAGES} />
       </div>
     </ServicePageLayout>
   );
