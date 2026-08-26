@@ -1,0 +1,83 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import SchemaScript from "@/components/seo/SchemaScript";
+import Hero from "@/components/home/Hero";
+import ProblemSection from "@/components/home/ProblemSection";
+import ServicesSection from "@/components/home/ServicesSection";
+import FaqSection from "@/components/home/FaqSection";
+import ContactForm from "@/components/contact/ContactForm";
+import SectionHeading from "@/components/services/SectionHeading";
+import Reveal from "@/components/motion/Reveal";
+import { getFaqSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { HOME_FAQ } from "@/lib/faq";
+
+export const metadata: Metadata = {
+  title: "Sites web et fiche Google pour artisans dans l'Orne",
+  description:
+    "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
+};
+
+export default function HomePage() {
+  return (
+    <>
+      <SchemaScript schema={getLocalBusinessSchema()} />
+      <SchemaScript schema={getFaqSchema([...HOME_FAQ])} />
+
+      <Hero />
+      <ProblemSection />
+      <ServicesSection />
+
+      <Reveal className="mx-auto mt-20 max-w-3xl px-4 text-center">
+        <h2 className="aurora-h2">Une seule personne du début à la fin</h2>
+        <p className="mt-4 text-base text-text-secondary">
+          Je m&apos;appelle Nolan Hermand. Je viens du chantier — CAP menuiserie, pose de
+          fenêtres. Je sais comment vous travaillez, et je sais que la visibilité passe toujours
+          après le boulot.
+        </p>
+        <Link href="/qui-je-suis" className="mt-4 inline-block text-sm font-medium text-emerald hover:underline">
+          Mon parcours →
+        </Link>
+      </Reveal>
+
+      {/*
+        Preuve sociale — structure prête, masquée jusqu'à l'accord des 3
+        premiers clients (Menuiserie Bois Concept, Ren & Rev, MG LOC) pour
+        affichage. Ne jamais remplir avec des témoignages ou logos inventés
+        — cf. content/00-build-spec.md et content/01-architecture...md.
+      */}
+      <section aria-hidden="true" className="hidden" data-section="preuve-sociale">
+        <h2 className="aurora-h2 text-center">Ils m&apos;ont fait confiance</h2>
+        <div className="mt-10 grid gap-4 md:grid-cols-3" />
+      </section>
+
+      <Reveal className="mx-auto mt-28 max-w-3xl px-4 text-center">
+        <h2 className="aurora-h2">
+          Installé à Saint-Georges-des-Groseillers, je me déplace dans tout l&apos;Orne
+        </h2>
+        <p className="mt-4 text-base text-text-secondary">
+          Vous êtes artisan dans l&apos;Orne ? On peut se rencontrer en face à face, pas juste par
+          mail.
+        </p>
+        <Link
+          href="/zones-intervention"
+          className="mt-4 inline-block text-sm font-medium text-emerald hover:underline"
+        >
+          Zones d&apos;intervention →
+        </Link>
+      </Reveal>
+
+      <Reveal className="mx-auto mt-28 max-w-3xl px-4 pb-4 text-center">
+        <SectionHeading>Décrivez votre projet, je vous réponds sous 24h</SectionHeading>
+        <p className="mt-4 text-base text-text-secondary">
+          Pas envie d&apos;appeler tout de suite ? Laissez vos coordonnées, je vous recontacte
+          rapidement.
+        </p>
+        <div className="mt-8 text-left">
+          <ContactForm />
+        </div>
+      </Reveal>
+
+      <FaqSection />
+    </>
+  );
+}

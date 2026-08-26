@@ -1,0 +1,66 @@
+import type { Metadata } from "next";
+import ServicePageLayout from "@/components/services/ServicePageLayout";
+import SectionHeading from "@/components/services/SectionHeading";
+import FeatureList from "@/components/services/FeatureList";
+import SchemaScript from "@/components/seo/SchemaScript";
+import { getServiceSchema } from "@/lib/schema";
+
+const URL = "/fiche-google/fiche-vs-site";
+const DESCRIPTION =
+  "Fiche Google ou site web : lequel choisir en premier selon votre budget, vos réalisations à montrer et le type de clients que vous ciblez.";
+
+export const metadata: Metadata = {
+  title: "Fiche Google ou site web : lequel choisir en premier",
+  description: DESCRIPTION,
+};
+
+const FICHE_FIRST = [
+  "Vous voulez des appels rapidement, sans attendre",
+  "Votre budget est limité pour l'instant",
+  "Vous n'avez pas encore beaucoup de réalisations à montrer",
+];
+
+const SITE_FIRST = [
+  "Vous travaillez surtout sur recommandation et devis premium",
+  "Vous voulez montrer un book de réalisations détaillé",
+  "Vous visez des clients qui comparent plusieurs prestataires avant de choisir",
+];
+
+export default function FicheVsSitePage() {
+  return (
+    <>
+      <SchemaScript
+        schema={getServiceSchema({
+          name: "Conseil fiche Google ou site web",
+          description: DESCRIPTION,
+          url: URL,
+        })}
+      />
+      <ServicePageLayout
+        backLink={{ href: "/fiche-google", label: "Retour à Fiche Google" }}
+        h1="Fiche Google ou site web : lequel choisir en premier"
+        intro="Question qu'on me pose souvent : faut-il commencer par la fiche Google ou par le site ? La réponse honnête : les deux travaillent ensemble, mais si vous devez choisir un point de départ avec un budget serré, voici comment trancher."
+        ctaText="On définit la priorité pour votre activité"
+      >
+        <div>
+          <SectionHeading>La fiche Google en premier si</SectionHeading>
+          <div className="mt-4">
+            <FeatureList items={FICHE_FIRST} />
+          </div>
+        </div>
+
+        <div>
+          <SectionHeading>Le site en premier si</SectionHeading>
+          <div className="mt-4">
+            <FeatureList items={SITE_FIRST} />
+          </div>
+        </div>
+
+        <p className="text-sm text-text-secondary">
+          Dans l&apos;idéal : Les deux ensemble : la fiche capte la recherche locale immédiate, le
+          site convertit et rassure une fois le contact établi.
+        </p>
+      </ServicePageLayout>
+    </>
+  );
+}

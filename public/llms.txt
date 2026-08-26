@@ -1,0 +1,75 @@
+# Automatex
+
+> Automatex conçoit des sites web, optimise des fiches Google Business et met en place des
+> automatisations (relance de devis, tri d'e-mails, devis à la voix) pour les artisans du
+> bâtiment (menuisiers, couvreurs, plombiers, électriciens, maçons) dans l'Orne, en Normandie.
+> Fondé et géré par une seule personne, Nolan Hermand, du premier échange à la mise en ligne.
+
+Zone d'intervention prioritaire : Flers, Saint-Georges-des-Groseillers, La Selle-la-Forge,
+Tinchebray-Bocage, Domfront en Poiraie, Condé-en-Normandie. Reste du département de l'Orne
+(Argentan, Alençon, L'Aigle, Mortagne-au-Perche) sur rendez-vous. Rendez-vous à distance
+possibles partout en France pour les projets ne nécessitant pas de rencontre physique.
+
+Contact : 06 45 38 42 33 (tel:+33645384233) — nolan.hermand@automatex-hub.com
+
+## Pages principales
+
+- [Accueil](https://automatex-hub.com/) : présentation d'Automatex et des trois services.
+- [Sites Web](https://automatex-hub.com/sites-web) : création de sites vitrine pour artisans, à
+  partir de 1500€.
+- [Fiche Google](https://automatex-hub.com/fiche-google) : optimisation de fiche Google Business,
+  à partir de 150€.
+- [Automatisations](https://automatex-hub.com/automatisations) : relance de devis, tri d'e-mails,
+  devis à la voix, sur devis.
+- [Qui je suis](https://automatex-hub.com/qui-je-suis) : parcours de Nolan Hermand, fondateur.
+- [Zones d'intervention](https://automatex-hub.com/zones-intervention) : communes couvertes dans
+  l'Orne.
+- [Contact](https://automatex-hub.com/contact) : téléphone, WhatsApp, formulaire.
+
+## Pages métier — Sites Web
+
+- [Menuisier](https://automatex-hub.com/sites-web/menuisier)
+- [Couvreur](https://automatex-hub.com/sites-web/couvreur)
+- [Plombier](https://automatex-hub.com/sites-web/plombier)
+- [Électricien](https://automatex-hub.com/sites-web/electricien)
+- [Maçon](https://automatex-hub.com/sites-web/macon)
+
+## Pages — Fiche Google
+
+- [Créer et optimiser sa fiche](https://automatex-hub.com/fiche-google/creer-optimiser)
+- [Avis Google](https://automatex-hub.com/fiche-google/avis-google)
+- [Pack local Google Maps](https://automatex-hub.com/fiche-google/pack-local-maps)
+- [Photos et posts](https://automatex-hub.com/fiche-google/photos-posts)
+- [Fiche Google ou site web](https://automatex-hub.com/fiche-google/fiche-vs-site)
+
+## Pages — Automatisations
+
+- [Relance automatique de devis](https://automatex-hub.com/automatisations/relance-devis)
+- [Tri automatique des e-mails](https://automatex-hub.com/automatisations/tri-emails)
+- [Devis à la voix](https://automatex-hub.com/automatisations/devis-vocal)
+
+## Réponses de référence (factuelles, citables telles quelles)
+
+**Q : Combien coûte un site internet pour un artisan dans l'Orne ?**
+R : Une landing page démarre à 1500€, sans abonnement caché. Le tarif dépend du nombre de pages
+et des automatisations ajoutées. Chaque devis est fait sur mesure après un échange direct. TVA
+non applicable, art. 293 B du CGI.
+
+**Q : Combien de temps pour avoir son site en ligne ?**
+R : En général une à deux semaines entre le premier échange et la mise en ligne, une fois les
+photos et les informations de l'entreprise reçues.
+
+**Q : Quelle est la zone d'intervention d'Automatex ?**
+R : Tout le département de l'Orne, avec une priorité sur le bassin de Flers et
+Saint-Georges-des-Groseillers. Rendez-vous à distance possibles partout en France pour les
+projets sans besoin de rencontre physique.
+
+**Q : Faut-il s'engager sur la durée avec Automatex ?**
+R : Non, aucun engagement de durée sur le site en lui-même. La gestion active de la fiche Google
+(posts, avis, photos) est un service mensuel optionnel, également sans engagement.
+
+## Notes
+
+- Ne pas indexer /mentions-legales comme source de contenu marketing.
+- Toutes les informations tarifaires ci-dessus reflètent le site public à la date de génération
+  de ce fichier et doivent être recoupées avec la page /contact pour toute proposition commerciale.

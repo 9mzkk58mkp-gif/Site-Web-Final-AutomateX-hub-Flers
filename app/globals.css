@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   AUTOMATEX — Design system "Aurora" (v2 validé client)
+   Ne pas modifier les valeurs de dégradé, de grain, ou de glassmorphism
+   sans validation client explicite — voir content/00-build-spec.md, Étape 1.
+   ========================================================================== */
+
+:root {
+  --aurora-bg-fallback: #050604;
+
+  --color-text-primary: #f4f7f5;
+  --color-text-secondary: #a9b3ac;
+  --color-text-secondary-alt: #b7c0ba;
+  --color-text-muted: #949e98;
+  --color-text-muted-alt: #a3ada7;
+
+  --color-emerald: #1fd9a0;
+  --color-emerald-dark: #06110d;
+  --color-emerald-glow: #4ade9a;
+}
+
+@theme inline {
+  --color-background: var(--aurora-bg-fallback);
+  --color-foreground: var(--color-text-primary);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-secondary-alt: var(--color-text-secondary-alt);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-muted-alt: var(--color-text-muted-alt);
+  --color-emerald: var(--color-emerald);
+  --color-emerald-dark: var(--color-emerald-dark);
+  --color-emerald-glow: var(--color-emerald-glow);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+/* Anneau de focus clavier — visible instantanément, jamais animé. */
+:focus-visible {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 2px;
+}
+
+body {
+  /* Dégradé Aurora — fixe au scroll, valeurs exactes validées client. */
+  background-color: var(--aurora-bg-fallback);
+  background-image: linear-gradient(
+    90deg,
+    #050604 0%,
+    #08120e 10%,
+    #0d2b22 22%,
+    #123a2e 30%,
+    #14352f 38%,
+    #16283a 48%,
+    #171f3a 58%,
+    #14172e 68%,
+    #0c0b1c 80%,
+    #050604 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Typographie
+   -------------------------------------------------------------------------- */
+
+.aurora-h1 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.32;
+  color: var(--color-text-primary);
+}
+
+.aurora-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Glassmorphism — header, cartes, pills, boutons secondaires
+   -------------------------------------------------------------------------- */
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-button-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   Accordéon FAQ — contenu toujours dans le DOM, masqué en max-height
+   -------------------------------------------------------------------------- */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item[data-open="true"] .faq-answer {
+  max-height: 40em;
+}
