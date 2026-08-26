@@ -27,7 +27,7 @@ export default function MentionsLegalesPage() {
             {NAP.vatNote}
             <br />
             Email :{" "}
-            <a href={MAIL_HREF} className="hover:text-text-primary">
+            <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
               {NAP.email}
             </a>
             <br />
@@ -63,7 +63,20 @@ export default function MentionsLegalesPage() {
             pour répondre à votre demande. Elles ne sont ni vendues ni transmises à des tiers.
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification et
             de suppression de vos données en écrivant à{" "}
-            <a href={MAIL_HREF} className="hover:text-text-primary">
+            <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
+              {NAP.email}
+            </a>
+            .
+          </p>
+          <p className="mt-4">
+            L&apos;assistant de conversation (chatbot) présent sur le site fonctionne selon les mêmes
+            principes : vos échanges sont utilisés uniquement pour répondre à votre demande et, si vous
+            le souhaitez, transmettre vos coordonnées à Nolan afin qu&apos;il vous recontacte. L&apos;historique
+            de conversation n&apos;est pas conservé de façon persistante — il reste en mémoire le temps de
+            l&apos;échange, puis n&apos;est pas sauvegardé. Aucune donnée du chatbot n&apos;est vendue ni transmise à
+            des tiers en dehors de cet usage. Vous disposez des mêmes droits d&apos;accès, de rectification et
+            de suppression en écrivant à{" "}
+            <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
               {NAP.email}
             </a>
             .

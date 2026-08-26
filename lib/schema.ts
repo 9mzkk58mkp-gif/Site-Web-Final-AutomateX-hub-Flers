@@ -39,6 +39,7 @@ export function getLocalBusinessSchema(): JsonLdSchema {
     telephone: NAP.phoneE164,
     email: NAP.email,
     url: SITE_URL,
+    image: `${SITE_URL}/logo-mark.png`,
     areaServed: [...PRIORITY_AREAS, ...OTHER_AREAS].map((name) => ({
       "@type": "AdministrativeArea",
       name,

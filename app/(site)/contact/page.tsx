@@ -46,7 +46,7 @@ export default function ContactPage() {
             </p>
             <p>
               Email :{" "}
-              <a href={MAIL_HREF} className="hover:text-text-primary">
+              <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
                 {NAP.email}
               </a>
             </p>

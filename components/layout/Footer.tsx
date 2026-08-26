@@ -20,12 +20,12 @@ export default function Footer() {
           <p className="text-base font-semibold text-text-primary">{NAP.name}</p>
           <p className="mt-2 text-sm text-text-secondary">{NAP.founder}</p>
           <p className="mt-4 text-sm text-text-secondary">
-            <a href={TEL_HREF} className="hover:text-text-primary">
+            <a href={TEL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
               {NAP.phoneDisplay}
             </a>
           </p>
           <p className="text-sm text-text-secondary">
-            <a href={MAIL_HREF} className="hover:text-text-primary">
+            <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
               {NAP.email}
             </a>
           </p>
