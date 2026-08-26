@@ -9,6 +9,11 @@ Aurora existant n'a pas été modifié — uniquement le widget et son infra ser
 > le rate limiting (session/IP/global) et le filtre anti prompt-injection, plus un délai artificiel de
 > 400ms côté serveur avant traitement de chaque message. Les sections ci-dessous qui mentionnent encore
 > Turnstile décrivent l'implémentation initiale, conservées pour l'historique.
+>
+> **Mise à jour (2026-08-26, suite)** : `N8N_CHATBOT_WEBHOOK_URL` a été fusionnée dans
+> `NEXT_PUBLIC_N8N_WEBHOOK_URL` — un seul workflow N8N pour le formulaire de contact et le chatbot,
+> distingués par le champ `"source"` du payload (`"contact"` / `"chatbot"`). Les mentions ci-dessous de
+> `N8N_CHATBOT_WEBHOOK_URL` décrivent l'implémentation initiale, conservées pour l'historique.
 
 ## Fichiers créés
 
@@ -49,7 +54,8 @@ Aurora existant n'a pas été modifié — uniquement le widget et son infra ser
 - `turnstile.ts` — vérification serveur du token Cloudflare Turnstile ; si `TURNSTILE_SECRET_KEY` est
   absente (dev sans compte Cloudflare), la vérification est ignorée avec un `console.warn` explicite —
   **à activer avant mise en production**.
-- `n8n-webhook.ts` — envoi du payload de contact vers `N8N_CHATBOT_WEBHOOK_URL`, côté serveur uniquement.
+- `n8n-webhook.ts` — envoi du payload de contact vers `NEXT_PUBLIC_N8N_WEBHOOK_URL` (partagée avec le
+  formulaire de contact), côté serveur uniquement.
 
 **Route API**
 - `app/api/chat/route.ts` — orchestre : validation d'entrée, rate limiting (session/IP/global), CAPTCHA,
@@ -85,7 +91,8 @@ Aurora existant n'a pas été modifié — uniquement le widget et son infra ser
 | Variable | Où l'obtenir |
 |---|---|
 | `MISTRAL_API_KEY` | Créer un compte sur [console.mistral.ai](https://console.mistral.ai), générer une clé API dans la section "API Keys". |
-| `N8N_CHATBOT_WEBHOOK_URL` | Dans l'instance N8N existante, créer un nouveau workflow avec un nœud "Webhook" dédié au chatbot (distinct de celui du formulaire de contact), copier l'URL de production du webhook. |
+Formulaire de contact et chatbot partagent maintenant `NEXT_PUBLIC_N8N_WEBHOOK_URL` — un seul workflow
+N8N côté N8N, avec un nœud IF qui route sur le champ `"source"` du payload.
 
 `TURNSTILE_SECRET_KEY` / `NEXT_PUBLIC_TURNSTILE_SITE_KEY` ne sont plus nécessaires — voir la note en tête
 de ce document.
@@ -132,8 +139,9 @@ de plus de 500 caractères (400).
    fonctionne (grâce à `internal.md` toujours injecté intégralement dans le prompt système) mais sans
    les extraits ciblés des pages publiques. Retour à relancer ce script à chaque modification du contenu
    des pages ou d'`internal.md`.
-3. **Créer et connecter le webhook N8N dédié** (`N8N_CHATBOT_WEBHOOK_URL`), tester la réception du
-   payload `{ source, nom, telephone, metier, besoin_exprime, timestamp }`.
+3. **Connecter le webhook N8N unique** (`NEXT_PUBLIC_N8N_WEBHOOK_URL`, partagé avec le formulaire de
+   contact), tester la réception du payload `{ source, nom, telephone, metier, besoin_exprime, timestamp }`
+   et confirmer que le nœud IF côté N8N route bien sur `"source": "chatbot"` vs `"source": "contact"`.
 4. ~~Créer le compte Cloudflare Turnstile~~ — retiré délibérément, voir la note en tête de ce document.
    Si un jour le volume d'abus l'exige, `TURNSTILE_SECRET_KEY` / `NEXT_PUBLIC_TURNSTILE_SITE_KEY` restent
    documentées (en commentaire) dans `.env.example` pour réactivation rapide.

@@ -21,13 +21,14 @@ export default function ContactForm() {
     }
 
     const formData = new FormData(event.currentTarget);
+    const payload = { source: "contact", ...Object.fromEntries(formData) };
     setStatus("submitting");
 
     try {
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: JSON.stringify(payload),
       });
       if (!response.ok) throw new Error("Webhook error");
       setStatus("success");
