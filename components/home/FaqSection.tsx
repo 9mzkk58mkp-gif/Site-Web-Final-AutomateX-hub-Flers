@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { HOME_FAQ } from "@/lib/faq";
+import Reveal from "@/components/motion/Reveal";
+import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -34,24 +36,26 @@ export default function FaqSection() {
 
   return (
     <section className="mx-auto mt-24 max-w-3xl px-4 pb-24">
-      <h2 className="aurora-h2 text-center">Questions fréquentes</h2>
+      <Reveal>
+        <h2 className="aurora-h2 text-center">Questions fréquentes</h2>
+      </Reveal>
 
-      <div className="mt-10 space-y-3">
+      <StaggerGrid className="mt-10 space-y-3">
         {HOME_FAQ.map((item, index) => {
           const isOpen = openIndex === index;
           const answerId = `faq-answer-${index}`;
           return (
-            <div
+            <StaggerItem
               key={item.question}
-              data-open={isOpen}
               className="faq-item glass-card rounded-2xl px-5 py-4"
+              data-open={isOpen}
             >
               <button
                 type="button"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 aria-expanded={isOpen}
                 aria-controls={answerId}
-                className="flex w-full items-center justify-between gap-4 text-left"
+                className="flex min-h-12 w-full items-center justify-between gap-4 text-left"
               >
                 <span className="text-sm font-medium text-text-primary">{item.question}</span>
                 <ChevronIcon open={isOpen} />
@@ -59,12 +63,12 @@ export default function FaqSection() {
               <div id={answerId} className="faq-answer">
                 <p className="pt-3 text-sm text-text-secondary">{item.answer}</p>
               </div>
-            </div>
+            </StaggerItem>
           );
         })}
-      </div>
+      </StaggerGrid>
 
-      <p className="mt-8 text-center text-xs text-text-muted">
+      <p className="mt-8 text-center text-xs text-text-muted-alt">
         TVA non applicable, art. 293 B du CGI.
       </p>
     </section>

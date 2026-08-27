@@ -12,7 +12,7 @@ export default function ChildPageCard({
 }) {
   return (
     <Link href={href} className="block">
-      <Card className="h-full transition-colors duration-200 hover:bg-white/[0.08]">
+      <Card className="h-full">
         <p className="text-base font-medium text-text-primary">{title}</p>
         <p className="mt-2 text-sm text-text-secondary">{description}</p>
       </Card>

@@ -51,7 +51,7 @@ export default function ServicePageLayout({
         </Link>
       )}
 
-      <Reveal>
+      <Reveal immediate>
         {eyebrow && <div className="mt-6 flex flex-wrap gap-3">{eyebrow}</div>}
 
         <h1 className="aurora-h1 mt-6">{h1}</h1>

@@ -32,7 +32,7 @@ export default function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-        className="glass-button-secondary grid h-10 w-10 place-items-center rounded-full text-text-primary"
+        className="glass-button-secondary grid h-12 w-12 place-items-center rounded-full text-text-primary"
       >
         <MenuIcon open={open} />
       </button>
@@ -48,7 +48,7 @@ export default function MobileNav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm text-text-secondary transition-colors hover:bg-white/[0.06] hover:text-text-primary"
+                className="flex min-h-12 items-center rounded-lg px-3 text-sm text-text-secondary transition-colors hover:bg-white/[0.06] hover:text-text-primary"
               >
                 {link.label}
               </Link>

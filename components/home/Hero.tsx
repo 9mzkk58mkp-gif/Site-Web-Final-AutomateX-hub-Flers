@@ -9,15 +9,15 @@ import { TEL_HREF, WHATSAPP_URL, NAP } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-4xl px-4 pt-16 text-center sm:pt-24">
-      <Reveal>
+    <section className="mx-auto max-w-4xl px-4 pt-8 text-center sm:pt-24">
+      <Reveal immediate>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Badge>Sites Web</Badge>
           <Badge>Visibilité Locale</Badge>
           <Badge>Automatisations</Badge>
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-3">
+        <div className="mt-6 flex items-center justify-center gap-3 sm:mt-8">
           <div className="glass-card grid h-12 w-12 place-items-center rounded-full text-sm font-semibold text-text-primary">
             A
           </div>
@@ -37,7 +37,7 @@ export default function Hero() {
         </p>
       </Reveal>
 
-      <Reveal delay={0.12}>
+      <Reveal immediate>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button href={TEL_HREF} icon={<PhoneIcon />}>
             {NAP.phoneDisplay}

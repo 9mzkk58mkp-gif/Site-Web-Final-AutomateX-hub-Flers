@@ -21,7 +21,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+              className="flex min-h-12 items-center text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
               {link.label}
             </Link>
@@ -29,12 +29,18 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/*
+            aria-label obligatoire : sous 400px le numéro est masqué visuellement
+            et l'icône est aria-hidden — sans lui, le CTA principal du site n'a
+            aucun nom accessible sur mobile (échec Lighthouse "link-name").
+          */}
           <a
             href={TEL_HREF}
-            className="glass-button-secondary flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-white/10"
+            aria-label={`Appeler Automatex au ${NAP.phoneDisplay}`}
+            className="glass-button-secondary flex min-h-12 items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-text-primary transition-colors hover:bg-white/10"
           >
             <PhoneIcon />
-            <span className="hidden sm:inline">{NAP.phoneDisplay}</span>
+            <span className="hidden min-[400px]:inline">{NAP.phoneDisplay}</span>
           </a>
 
           <MobileNav />

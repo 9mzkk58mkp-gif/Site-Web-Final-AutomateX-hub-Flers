@@ -20,12 +20,12 @@ export default function Footer() {
           <p className="text-base font-semibold text-text-primary">{NAP.name}</p>
           <p className="mt-2 text-sm text-text-secondary">{NAP.founder}</p>
           <p className="mt-4 text-sm text-text-secondary">
-            <a href={TEL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
+            <a href={TEL_HREF} className="inline-flex min-h-12 items-center hover:text-text-primary">
               {NAP.phoneDisplay}
             </a>
           </p>
           <p className="text-sm text-text-secondary">
-            <a href={MAIL_HREF} className="-my-2 inline-block py-2 hover:text-text-primary">
+            <a href={MAIL_HREF} className="inline-flex min-h-12 items-center hover:text-text-primary">
               {NAP.email}
             </a>
           </p>
@@ -36,7 +36,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Automatex sur LinkedIn"
-              className="transition-opacity duration-200 hover:opacity-80"
+              className="grid min-h-12 min-w-12 place-items-center rounded-full transition-opacity duration-200 hover:opacity-80"
             >
               <LinkedinIcon />
             </a>
@@ -45,7 +45,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Automatex sur Facebook"
-              className="transition-opacity duration-200 hover:opacity-80"
+              className="grid min-h-12 min-w-12 place-items-center rounded-full transition-opacity duration-200 hover:opacity-80"
             >
               <FacebookIcon />
             </a>
@@ -54,7 +54,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Automatex sur TikTok"
-              className="transition-opacity duration-200 hover:opacity-80"
+              className="grid min-h-12 min-w-12 place-items-center rounded-full transition-opacity duration-200 hover:opacity-80"
             >
               <TiktokIcon />
             </a>
@@ -62,15 +62,15 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-wide text-text-muted-alt">
+          <p className="font-mono text-xs uppercase tracking-wide text-text-muted-alt">
             Services
           </p>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-2">
             {SILO_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-text-secondary hover:text-text-primary"
+                  className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary"
                 >
                   {link.label}
                 </Link>
@@ -80,27 +80,27 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-wide text-text-muted-alt">
+          <p className="font-mono text-xs uppercase tracking-wide text-text-muted-alt">
             Informations
           </p>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-2">
             <li>
-              <Link href="/qui-je-suis" className="text-sm text-text-secondary hover:text-text-primary">
+              <Link href="/qui-je-suis" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
                 Qui je suis
               </Link>
             </li>
             <li>
-              <Link href="/zones-intervention" className="text-sm text-text-secondary hover:text-text-primary">
+              <Link href="/zones-intervention" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
                 Zones d&apos;intervention
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-sm text-text-secondary hover:text-text-primary">
+              <Link href="/contact" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
                 Contact
               </Link>
             </li>
             <li>
-              <Link href="/mentions-legales" className="text-sm text-text-secondary hover:text-text-primary">
+              <Link href="/mentions-legales" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
                 Mentions légales
               </Link>
             </li>
@@ -109,10 +109,10 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 max-w-6xl border-t border-white/10 pt-6">
-        <p className="text-xs text-text-muted">
+        <p className="text-xs text-text-muted-alt">
           SIRET {NAP.siret} — {NAP.vatNote}
         </p>
-        <p className="mt-1 text-xs text-text-muted">
+        <p className="mt-1 text-xs text-text-muted-alt">
           © {new Date().getFullYear()} {NAP.name}. Tous droits réservés.
         </p>
       </div>

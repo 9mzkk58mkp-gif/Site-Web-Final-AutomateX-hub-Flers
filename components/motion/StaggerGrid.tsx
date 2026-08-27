@@ -39,12 +39,15 @@ export function StaggerGrid({
 export function StaggerItem({
   children,
   className = "",
+  ...rest
 }: {
   children: ReactNode;
   className?: string;
+  /** Attributs data-* transmis tels quels (ex. data-open de l'accordéon FAQ). */
+  [dataAttribute: `data-${string}`]: unknown;
 }) {
   return (
-    <motion.div className={className} variants={ITEM}>
+    <motion.div className={className} variants={ITEM} {...rest}>
       {children}
     </motion.div>
   );
