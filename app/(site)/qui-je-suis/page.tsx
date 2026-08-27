@@ -7,13 +7,14 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import Reveal from "@/components/motion/Reveal";
 import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
-import { getPersonSchema } from "@/lib/schema";
+import { getPersonPageSchema } from "@/lib/schema";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Qui je suis — Nolan Hermand, fondateur d'Automatex",
+  title: { absolute: "Qui je suis — Nolan Hermand, fondateur d'Automatex" },
   description:
     "Nolan Hermand, CAP menuiserie, fondateur d'Automatex. Une seule personne du début à la fin pour votre site web et votre visibilité Google dans l'Orne.",
+  alternates: { canonical: "/qui-je-suis" },
 };
 
 const EN_PRATIQUE = [
@@ -25,10 +26,10 @@ const EN_PRATIQUE = [
 export default function QuiJeSuisPage() {
   return (
     <>
-      <SchemaScript schema={getPersonSchema()} />
+      <SchemaScript schema={getPersonPageSchema()} />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
-        <Reveal className="flex items-center gap-5">
+        <Reveal immediate className="flex items-center gap-5">
           <Image
             src="/nolan.jpg"
             alt="Nolan Hermand, fondateur d'Automatex"
@@ -55,7 +56,15 @@ export default function QuiJeSuisPage() {
           </StaggerItem>
 
           <StaggerItem>
-            <SectionHeading>Le déclic</SectionHeading>
+            <SectionHeading>
+              Pourquoi un menuisier devient-il créateur de sites web&nbsp;?
+            </SectionHeading>
+            <p className="mt-3">
+              Parce qu&apos;il a vu le problème depuis l&apos;intérieur du métier. Je viens du
+              chantier — CAP menuiserie, pose de fenêtres, 2 mois de couverture — et je me suis
+              ensuite spécialisé dans le web pour les artisans du bâtiment, pas pour tout le
+              monde.
+            </p>
             <p className="mt-3">
               Pendant mon alternance, j&apos;ai vu le même problème revenir sans arrêt : des
               artisans qui font un travail irréprochable, mais invisibles sur Internet. Pendant
@@ -66,11 +75,18 @@ export default function QuiJeSuisPage() {
           </StaggerItem>
 
           <StaggerItem>
-            <SectionHeading>Ce que je fais différemment</SectionHeading>
+            <SectionHeading>
+              En quoi Automatex est différent d&apos;une agence classique&nbsp;?
+            </SectionHeading>
             <p className="mt-3">
-              Je ne viens pas d&apos;une agence. Je gère chaque projet seul, du premier échange à
-              la mise en ligne — pas de commercial, pas de chef de projet, pas d&apos;intermédiaire.
-              Vous parlez directement à la personne qui construit votre site.
+              Une seule personne gère votre projet, du premier échange à la mise en ligne, sans
+              frais de structure ni intermédiaire à relayer. C&apos;est la même personne qui
+              répond au téléphone, qui vient sur place et qui construit le site.
+            </p>
+            <p className="mt-3">
+              Je ne viens pas d&apos;une agence. Je gère chaque projet seul — pas de commercial,
+              pas de chef de projet, pas d&apos;intermédiaire. Vous parlez directement à la
+              personne qui construit votre site.
             </p>
             <p className="mt-3">
               Je connais le métier du bâtiment de l&apos;intérieur, donc je sais ce qui compte
@@ -80,7 +96,14 @@ export default function QuiJeSuisPage() {
           </StaggerItem>
 
           <StaggerItem>
-            <SectionHeading>En pratique</SectionHeading>
+            <SectionHeading>
+              Comment se déroule concrètement une collaboration avec Automatex&nbsp;?
+            </SectionHeading>
+            <p className="mt-3">
+              Par un premier échange au téléphone ou en face à face, puis un devis, puis la
+              réalisation — le tout avec le même interlocuteur, en 1 à 2 semaines pour un site
+              une fois vos photos et informations reçues.
+            </p>
             <div className="mt-4">
               <FeatureList items={EN_PRATIQUE} />
             </div>

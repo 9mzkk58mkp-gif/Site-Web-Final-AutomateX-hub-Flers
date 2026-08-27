@@ -5,11 +5,17 @@ import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
+import SchemaScript from "@/components/seo/SchemaScript";
+import { getServiceSchema } from "@/lib/schema";
+
+const URL = "/sites-web";
+const DESCRIPTION =
+  "Site vitrine rapide et mobile-first pour artisans du bâtiment dans l'Orne, à partir de 1500€ sans abonnement. Design pensé pour votre métier, pas un template.";
 
 export const metadata: Metadata = {
   title: "Création de site internet pour artisan dans l'Orne",
-  description:
-    "Site vitrine rapide et mobile-first pour artisans du bâtiment dans l'Orne, à partir de 1500€ sans abonnement. Design pensé pour votre métier, pas un template.",
+  description: DESCRIPTION,
+  alternates: { canonical: "/sites-web" },
 };
 
 const INCLUSIONS = [
@@ -24,7 +30,8 @@ const METIER_PAGES = [
   {
     href: "/sites-web/menuisier",
     title: "Site internet pour menuisier dans l'Orne",
-    description: "Galerie de réalisations, matériaux et finitions mis en avant, section sur-mesure.",
+    description:
+      "Galerie de réalisations, matériaux et finitions mis en avant, section sur-mesure.",
   },
   {
     href: "/sites-web/couvreur",
@@ -50,28 +57,47 @@ const METIER_PAGES = [
 
 export default function SitesWebPage() {
   return (
-    <ServicePageLayout
-      eyebrow={<Badge icon={<SiteIcon />}>Sites Web</Badge>}
-      h1="Création de site internet pour artisan dans l'Orne"
-      intro="Un site vitrine ne sert à rien s'il charge lentement ou s'il ne s'affiche pas bien sur téléphone. C'est pourtant ce que la majorité des artisans ont aujourd'hui : un site fait il y a cinq ans, jamais mis à jour, ou pas de site du tout."
-      ctaText="Parlons de votre projet"
-    >
-      <div>
-        <SectionHeading>Ce que comprend un site Automatex</SectionHeading>
-        <div className="mt-4">
-          <FeatureList items={INCLUSIONS} />
+    <>
+      <SchemaScript
+        schema={getServiceSchema({
+          name: "Création de site internet pour artisan dans l'Orne",
+          description: DESCRIPTION,
+          url: URL,
+        })}
+      />
+      <ServicePageLayout
+        eyebrow={<Badge icon={<SiteIcon />}>Sites Web</Badge>}
+        h1="Création de site internet pour artisan dans l'Orne"
+        intro="Un site vitrine ne sert à rien s'il charge lentement ou s'il ne s'affiche pas bien sur téléphone. C'est pourtant ce que la majorité des artisans ont aujourd'hui : un site fait il y a cinq ans, jamais mis à jour, ou pas de site du tout."
+        ctaText="Parlons de votre projet"
+      >
+        <div>
+          <SectionHeading>Qu&apos;est-ce qui est inclus dans un site Automatex&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Un site vitrine complet à partir de 1500&nbsp;€, sans abonnement caché : design
+            adapté à votre métier, affichage mobile en priorité, galerie de vos chantiers,
+            numéro et formulaire visibles sur chaque page. TVA non applicable, art. 293 B du CGI.
+          </p>
+          <div className="mt-4">
+            <FeatureList items={INCLUSIONS} />
+          </div>
+          <p className="mt-6 text-sm text-text-muted">
+            Tarif indicatif : à partir de 1500€, sans abonnement caché. TVA non applicable, art. 293
+            B du CGI.
+          </p>
         </div>
-        <p className="mt-6 text-sm text-text-muted">
-          Tarif indicatif : à partir de 1500€, sans abonnement caché. TVA non applicable, art. 293
-          B du CGI.
-        </p>
-      </div>
 
-      <div>
-        <SectionHeading>Chaque métier a ses propres besoins</SectionHeading>
-        <p className="mt-2 text-sm text-text-secondary">Voici le détail par spécialité :</p>
-        <ChildPageGrid pages={METIER_PAGES} />
-      </div>
-    </ServicePageLayout>
+        <div>
+          <SectionHeading>Le site est-il différent selon mon métier d&apos;artisan&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Oui. Un couvreur doit rassurer sur l&apos;urgence et les garanties, un menuisier doit
+            montrer ses finitions, un électricien doit séparer clairement ses prestations. La
+            structure du site change en conséquence, pas seulement les photos.
+          </p>
+          <p className="mt-3 text-sm text-text-secondary">Le détail par spécialité :</p>
+          <ChildPageGrid pages={METIER_PAGES} />
+        </div>
+      </ServicePageLayout>
+    </>
   );
 }

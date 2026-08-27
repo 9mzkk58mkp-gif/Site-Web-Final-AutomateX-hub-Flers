@@ -29,3 +29,35 @@ export const HOME_FAQ = [
       "Non, aucun engagement de durée sur le site en lui-même. La gestion active de la fiche Google (posts, avis, photos) est un service mensuel optionnel, sans engagement non plus.",
   },
 ] as const;
+
+/**
+ * FAQ page locale /site-web-flers — même logique GEO que HOME_FAQ, adaptée à
+ * l'intention "site web à Flers". Source unique : FaqAccordion + schema FAQPage.
+ */
+export const FLERS_FAQ = [
+  {
+    question: "Combien coûte un site web à Flers ?",
+    answer:
+      "Une landing page démarre à 1500€ et un site vitrine starter à partir de 590€, sans abonnement caché. Le tarif dépend du nombre de pages, du contenu à produire et des systèmes ajoutés. Chaque devis est établi après un échange direct. TVA non applicable, art. 293 B du CGI.",
+  },
+  {
+    question: "Combien de temps pour avoir mon site en ligne à Flers ?",
+    answer:
+      "Comptez une à deux semaines entre le premier échange et la mise en ligne, une fois vos photos et les informations de l'entreprise reçues. Étant à Saint-Georges-des-Groseillers, à 5 à 10 minutes de Flers, les allers-retours de validation se font vite.",
+  },
+  {
+    question: "Pourquoi passer par un prestataire local plutôt qu'une agence ?",
+    answer:
+      "Une seule personne gère votre projet du premier échange à la mise en ligne, sans intermédiaire ni chef de projet à relayer. Les délais sont plus courts, le prix ne comprend pas de frais de structure, et on peut se voir en face à face à Flers plutôt que d'échanger par tickets.",
+  },
+  {
+    question: "Est-ce que je peux rencontrer le prestataire en face à face à Flers ?",
+    answer:
+      "Oui. Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers. Le rendez-vous se fait chez vous, sur votre lieu d'activité ou dans un lieu neutre à Flers, sans surcoût de déplacement dans le bassin flérien.",
+  },
+  {
+    question: "Le référencement local Google est-il inclus ?",
+    answer:
+      "Oui. Chaque site est livré avec les bases du référencement local : structure adaptée à votre métier et à votre zone, pages optimisées pour Flers et l'agglomération, et mise en place ou vérification de la fiche Google Business Profile. Aucune position ne peut être garantie, mais le site part sur des fondations saines.",
+  },
+] as const;

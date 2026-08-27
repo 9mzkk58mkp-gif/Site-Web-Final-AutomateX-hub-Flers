@@ -5,11 +5,17 @@ import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
+import SchemaScript from "@/components/seo/SchemaScript";
+import { getServiceSchema } from "@/lib/schema";
+
+const URL = "/fiche-google";
+const DESCRIPTION =
+  "Configuration, avis, pack local, photos : je gère votre fiche Google Business pour artisan dans l'Orne, à partir de 150€ ou incluse dans un pack site web.";
 
 export const metadata: Metadata = {
   title: "Optimisation de fiche Google Business pour artisan dans l'Orne",
-  description:
-    "Configuration, avis, pack local, photos : je gère votre fiche Google Business pour artisan dans l'Orne, à partir de 150€ ou incluse dans un pack site web.",
+  description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google" },
 };
 
 const INCLUSIONS = [
@@ -34,7 +40,8 @@ const CHILD_PAGES = [
   {
     href: "/fiche-google/pack-local-maps",
     title: "Pack local Google Maps : comment y apparaître",
-    description: "Pertinence, distance, notoriété : les trois critères qui déterminent votre position.",
+    description:
+      "Pertinence, distance, notoriété : les trois critères qui déterminent votre position.",
   },
   {
     href: "/fiche-google/photos-posts",
@@ -50,29 +57,44 @@ const CHILD_PAGES = [
 
 export default function FicheGooglePage() {
   return (
-    <ServicePageLayout
-      eyebrow={
-        <Badge icon={<GoogleIcon size={14} />}>Fiche Google</Badge>
-      }
-      h1="Optimisation de fiche Google Business pour artisan dans l'Orne"
-      intro="Avant même votre site, c'est votre fiche Google que vos clients voient. Elle apparaît sur Google Maps, dans le pack local, et de plus en plus dans les réponses des IA quand quelqu'un cherche un artisan près de chez lui. Une fiche incomplète, c'est une fiche invisible."
-      ctaText="Faisons le point sur votre fiche"
-    >
-      <div>
-        <SectionHeading>Ce que je fais sur votre fiche</SectionHeading>
-        <div className="mt-4">
-          <FeatureList items={INCLUSIONS} />
+    <>
+      <SchemaScript
+        schema={getServiceSchema({
+          name: "Optimisation de fiche Google Business pour artisan dans l'Orne",
+          description: DESCRIPTION,
+          url: URL,
+        })}
+      />
+      <ServicePageLayout
+        eyebrow={<Badge icon={<GoogleIcon size={14} />}>Fiche Google</Badge>}
+        h1="Optimisation de fiche Google Business pour artisan dans l'Orne"
+        intro="Avant même votre site, c'est votre fiche Google que vos clients voient. Elle apparaît sur Google Maps, dans le pack local, et de plus en plus dans les réponses des IA quand quelqu'un cherche un artisan près de chez lui. Une fiche incomplète, c'est une fiche invisible."
+        ctaText="Faisons le point sur votre fiche"
+      >
+        <div>
+          <SectionHeading>
+            Qu&apos;est-ce qui est inclus dans l&apos;optimisation de votre fiche Google&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            La configuration complète de la fiche, la stratégie d&apos;avis clients,
+            l&apos;optimisation pour le pack local et la publication de photos et de posts
+            réguliers. À partir de 150&nbsp;€, ou inclus dans un pack site web. TVA non
+            applicable, art. 293 B du CGI.
+          </p>
+          <div className="mt-4">
+            <FeatureList items={INCLUSIONS} />
+          </div>
+          <p className="mt-6 text-sm text-text-muted">
+            Tarif indicatif : à partir de 150€, ou inclus dans un pack site web. TVA non applicable,
+            art. 293 B du CGI.
+          </p>
         </div>
-        <p className="mt-6 text-sm text-text-muted">
-          Tarif indicatif : à partir de 150€, ou inclus dans un pack site web. TVA non
-          applicable, art. 293 B du CGI.
-        </p>
-      </div>
 
-      <div>
-        <SectionHeading>Le détail par sujet</SectionHeading>
-        <ChildPageGrid pages={CHILD_PAGES} />
-      </div>
-    </ServicePageLayout>
+        <div>
+          <SectionHeading>Le détail par sujet</SectionHeading>
+          <ChildPageGrid pages={CHILD_PAGES} />
+        </div>
+      </ServicePageLayout>
+    </>
   );
 }

@@ -26,6 +26,19 @@ export function getPersonSchema(): JsonLdSchema {
 }
 
 /**
+ * Variante autonome du schema Person, pour injection directe dans une page.
+ * getPersonSchema() est conçu pour être IMBRIQUÉ (founder d'une organisation)
+ * et n'a donc pas de "@context" : injecté tel quel dans un <script>, le bloc
+ * n'est pas du JSON-LD valide et Google l'ignore entièrement.
+ */
+export function getPersonPageSchema(): JsonLdSchema {
+  return {
+    "@context": "https://schema.org",
+    ...getPersonSchema(),
+  };
+}
+
+/**
  * LocalBusiness (+ ProfessionalService). Service Area Business : jamais
  * d'adresse postale complète visible, uniquement areaServed.
  */

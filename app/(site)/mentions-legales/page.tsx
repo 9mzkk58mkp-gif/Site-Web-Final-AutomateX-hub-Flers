@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
+import Reveal from "@/components/motion/Reveal";
 import { MAIL_HREF, NAP } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
   description:
     "Mentions légales d'Automatex : éditeur du site, hébergement, propriété intellectuelle et traitement des données personnelles conformément au RGPD.",
+  alternates: { canonical: "/mentions-legales" },
 };
 
 export default function MentionsLegalesPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
-      <h1 className="aurora-h1">Mentions légales</h1>
+      <Reveal immediate>
+        <h1 className="aurora-h1">Mentions légales</h1>
+      </Reveal>
 
-      <div className="mt-10 space-y-8 text-sm text-text-secondary">
+      <Reveal delay={0.08} className="mt-10 space-y-8 text-sm text-text-secondary">
         <section>
           <h2 className="text-base font-semibold text-text-primary">Éditeur du site</h2>
           <p className="mt-2">
@@ -38,7 +42,7 @@ export default function MentionsLegalesPage() {
         <section>
           <h2 className="text-base font-semibold text-text-primary">Hébergement</h2>
           <p className="mt-2">
-            Netlify, Inc. — [adresse Netlify à compléter — à vérifier sur leur site officiel]
+            Netlify, Inc. — 101 2nd Street, San Francisco, CA 94105, États-Unis.
           </p>
         </section>
 
@@ -89,7 +93,7 @@ export default function MentionsLegalesPage() {
             [à compléter selon les outils analytics utilisés, le cas échéant]
           </p>
         </section>
-      </div>
+      </Reveal>
     </article>
   );
 }

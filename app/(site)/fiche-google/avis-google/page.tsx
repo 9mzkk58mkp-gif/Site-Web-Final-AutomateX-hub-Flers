@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Obtenir et gérer ses avis Google en tant qu'artisan",
   description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google/avis-google" },
 };
 
 const POINTS = [
@@ -37,7 +38,14 @@ export default function AvisGooglePage() {
         ctaText="Parlons de votre stratégie d'avis"
       >
         <div>
-          <SectionHeading>Comment obtenir plus d&apos;avis sans être lourd</SectionHeading>
+          <SectionHeading>
+            Comment obtenir plus d&apos;avis Google sans être insistant&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            En demandant une seule fois, au bon moment : juste après la fin du chantier, quand la
+            satisfaction est encore fraîche. Et en rendant la démarche immédiate, avec un lien
+            direct ou une carte NFC, plutôt qu&apos;en relançant plusieurs fois.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

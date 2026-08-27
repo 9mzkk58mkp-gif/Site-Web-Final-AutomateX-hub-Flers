@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Site internet pour plombier dans l'Orne",
   description: DESCRIPTION,
+  alternates: { canonical: "/sites-web/plombier" },
 };
 
 const POINTS = [
@@ -38,7 +39,10 @@ export default function PlombierPage() {
         ctaText="Discutons de votre site"
       >
         <div>
-          <SectionHeading>Ce qui compte pour un site de plombier</SectionHeading>
+          <SectionHeading>Qu&apos;est-ce qui compte pour un site de plombier&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Pouvoir être appelé en un geste : le numéro accessible en un clic depuis le mobile, la mention claire des dépannages d&apos;urgence, et une zone d&apos;intervention lisible sans avoir à la chercher.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

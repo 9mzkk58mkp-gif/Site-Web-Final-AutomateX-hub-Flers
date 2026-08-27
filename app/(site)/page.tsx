@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Sites web et fiche Google pour artisans dans l'Orne",
   description:
     "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
@@ -40,15 +41,19 @@ export default function HomePage() {
       </Reveal>
 
       {/*
-        Preuve sociale — structure prête, masquée jusqu'à l'accord des 3
-        premiers clients (Menuiserie Bois Concept, Ren & Rev, MG LOC) pour
-        affichage. Ne jamais remplir avec des témoignages ou logos inventés
+        Preuve sociale — section volontairement absente du markup, et non pas
+        masquée en CSS : une balise <h2> laissée dans le DOM d'une section vide
+        et aria-hidden reste lue par les crawlers et fausse la hiérarchie Hn de
+        la page. Structure à rétablir ici, avec un vrai H2 et du contenu, dès
+        l'accord des 3 premiers clients (Menuiserie Bois Concept, Ren & Rev,
+        MG LOC). Ne jamais remplir avec des témoignages ou logos inventés
         — cf. content/00-build-spec.md et content/01-architecture...md.
+
+        <section>
+          <h2 className="aurora-h2 text-center">Ils m'ont fait confiance</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">…</div>
+        </section>
       */}
-      <section aria-hidden="true" className="hidden" data-section="preuve-sociale">
-        <h2 className="aurora-h2 text-center">Ils m&apos;ont fait confiance</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3" />
-      </section>
 
       <Reveal className="mx-auto mt-28 max-w-3xl px-4 text-center">
         <h2 className="aurora-h2">

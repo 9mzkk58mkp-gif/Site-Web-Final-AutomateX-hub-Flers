@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Site internet pour menuisier dans l'Orne",
   description: DESCRIPTION,
+  alternates: { canonical: "/sites-web/menuisier" },
 };
 
 const POINTS = [
@@ -38,7 +39,10 @@ export default function MenuisierPage() {
         ctaText="Discutons de votre site"
       >
         <div>
-          <SectionHeading>Ce qui compte pour un site de menuisier</SectionHeading>
+          <SectionHeading>Qu&apos;est-ce qui compte pour un site de menuisier&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Montrer le travail fini avant tout : galerie de réalisations par type de projet, matériaux et finitions mis en avant, et une section sur-mesure. Un menuisier vend un savoir-faire qui ne se lit pas sur une liste de prestations.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

@@ -19,12 +19,15 @@ Contact : 06 45 38 42 33 (tel:+33645384233) — nolan.hermand@automatex-hub.com
   partir de 1500€.
 - [Fiche Google](https://automatex-hub.com/fiche-google) : optimisation de fiche Google Business,
   à partir de 150€.
-- [Automatisations](https://automatex-hub.com/automatisations) : relance de devis, tri d'e-mails,
-  devis à la voix, sur devis.
+- [Automatisations](https://automatex-hub.com/automatisations) : relance devis automatique, tri des
+  mails de chantier, devis dictés depuis le chantier — travail de bureau d'une entreprise du
+  bâtiment uniquement (ni robotique, ni machines d'atelier). Sur devis.
 - [Qui je suis](https://automatex-hub.com/qui-je-suis) : parcours de Nolan Hermand, fondateur.
 - [Zones d'intervention](https://automatex-hub.com/zones-intervention) : communes couvertes dans
   l'Orne.
 - [Contact](https://automatex-hub.com/contact) : téléphone, WhatsApp, formulaire.
+- [Création de site internet à Flers](https://automatex-hub.com/site-web-flers) : page locale Flers
+  (Orne), landing page dès 1500€, site vitrine starter dès 590€.
 
 ## Pages métier — Sites Web
 
@@ -44,9 +47,9 @@ Contact : 06 45 38 42 33 (tel:+33645384233) — nolan.hermand@automatex-hub.com
 
 ## Pages — Automatisations
 
-- [Relance automatique de devis](https://automatex-hub.com/automatisations/relance-devis)
-- [Tri automatique des e-mails](https://automatex-hub.com/automatisations/tri-emails)
-- [Devis à la voix](https://automatex-hub.com/automatisations/devis-vocal)
+- [Relance devis automatique pour artisans du bâtiment](https://automatex-hub.com/automatisations/relance-devis)
+- [Tri automatique des mails pour artisans du bâtiment](https://automatex-hub.com/automatisations/tri-emails)
+- [Automatiser les devis à la voix](https://automatex-hub.com/automatisations/devis-vocal)
 
 ## Réponses de référence (factuelles, citables telles quelles)
 

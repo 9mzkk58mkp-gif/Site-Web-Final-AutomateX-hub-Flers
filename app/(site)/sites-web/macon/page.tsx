@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Site internet pour maçon dans l'Orne",
   description: DESCRIPTION,
+  alternates: { canonical: "/sites-web/macon" },
 };
 
 const POINTS = [
@@ -38,7 +39,10 @@ export default function MaconPage() {
         ctaText="Discutons de votre site"
       >
         <div>
-          <SectionHeading>Ce qui compte pour un site de maçon</SectionHeading>
+          <SectionHeading>Qu&apos;est-ce qui compte pour un site de maçon&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Montrer l&apos;ampleur des chantiers déjà menés et expliquer le déroulé : galerie classée par type de travaux, étapes du chantier détaillées, garanties et zone d&apos;intervention affichées.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

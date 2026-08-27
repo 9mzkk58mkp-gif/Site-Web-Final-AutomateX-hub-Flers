@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Créer et optimiser sa fiche Google Business",
   description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google/creer-optimiser" },
 };
 
 const POINTS = [
@@ -38,7 +39,14 @@ export default function CreerOptimiserPage() {
         ctaText="On configure votre fiche ensemble"
       >
         <div>
-          <SectionHeading>Ce qui compte pour bien la configurer</SectionHeading>
+          <SectionHeading>
+            Qu&apos;est-ce qui compte pour bien configurer sa fiche Google&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            La catégorie principale avant tout : c&apos;est le réglage qui pèse le plus sur votre
+            position. Viennent ensuite une zone d&apos;intervention réaliste, une description
+            claire sans bourrage de mots-clés, et des coordonnées identiques partout en ligne.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

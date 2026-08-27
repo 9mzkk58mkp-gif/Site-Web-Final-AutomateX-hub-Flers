@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Apparaître dans le pack local Google Maps",
   description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google/pack-local-maps" },
 };
 
 const POINTS = [
@@ -37,7 +38,14 @@ export default function PackLocalMapsPage() {
         ctaText="Voyons où vous en êtes sur le pack local"
       >
         <div>
-          <SectionHeading>Ce qui détermine votre position dans le pack local</SectionHeading>
+          <SectionHeading>
+            Qu&apos;est-ce qui détermine la position dans le pack local Google Maps&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Trois critères combinés : la pertinence de votre fiche par rapport à la recherche, la
+            distance entre vous et la personne qui cherche, et votre notoriété (avis, activité de
+            la fiche, présence en ligne). Seuls les deux premiers se travaillent directement.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

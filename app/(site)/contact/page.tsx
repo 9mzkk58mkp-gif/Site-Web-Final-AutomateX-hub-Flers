@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Contactez-moi",
   description:
     "Contactez Automatex par téléphone, WhatsApp ou formulaire. Nolan Hermand répond personnellement sous 24h ouvrées, sans standard ni intermédiaire.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -21,7 +22,7 @@ export default function ContactPage() {
       <SchemaScript schema={getLocalBusinessSchema()} />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
-        <Reveal>
+        <Reveal immediate>
           <h1 className="aurora-h1">Contactez-moi</h1>
 
           <p className="mt-6 text-base text-text-secondary">
@@ -54,13 +55,18 @@ export default function ContactPage() {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-12">
-          <SectionHeading>Écrivez-moi directement</SectionHeading>
+          <SectionHeading>Comment contacter Automatex directement&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Par téléphone au {NAP.phoneDisplay}, c&apos;est le plus rapide et vous avez Nolan
+            Hermand en direct. Par écrit, le formulaire ci-dessous reçoit une réponse sous 24h
+            ouvrées.
+          </p>
           <div className="mt-6">
             <ContactForm />
           </div>
         </Reveal>
 
-        <p className="mt-16 text-center text-xs text-text-muted">
+        <p className="mt-16 text-center text-xs text-text-muted-alt">
           {NAP.name} — {NAP.founder} — SIRET {NAP.siret} — {NAP.vatNote}
         </p>
       </article>

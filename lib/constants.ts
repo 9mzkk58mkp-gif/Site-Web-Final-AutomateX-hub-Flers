@@ -33,7 +33,7 @@ export const TEL_HREF = `tel:${NAP.phoneE164}`;
 export const MAIL_HREF = `mailto:${NAP.email}`;
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/nolan-hermand";
-export const FACEBOOK_URL = "https://www.facebook.com/Automatex";
+export const FACEBOOK_URL = "https://www.facebook.com/people/Automatex/61591685603620/";
 export const TIKTOK_URL = "https://www.tiktok.com/@automatex_hub";
 
 export const SOCIAL_LINKS = [LINKEDIN_URL, FACEBOOK_URL, TIKTOK_URL] as const;
@@ -62,6 +62,9 @@ export const METIERS = [
   { slug: "plombier", label: "Plombier" },
   { slug: "electricien", label: "Électricien" },
   { slug: "macon", label: "Maçon" },
+  // Ouvert aux commerces et TPE locales (cf. /site-web-flers) : sans cette
+  // option, un commerçant ne peut pas qualifier sa demande dans le formulaire.
+  { slug: "autre", label: "Autre activité" },
 ] as const;
 
 export const NAV_LINKS = [

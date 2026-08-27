@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Photos et publications Google : garder sa fiche active",
   description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google/photos-posts" },
 };
 
 const POINTS = [
@@ -37,7 +38,14 @@ export default function PhotosPostsPage() {
         ctaText="On organise votre contenu Google"
       >
         <div>
-          <SectionHeading>Ce qui fonctionne</SectionHeading>
+          <SectionHeading>
+            Quelles photos et publications fonctionnent le mieux sur une fiche Google&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Vos propres photos de chantiers récents, jamais des images génériques trouvées en
+            ligne, accompagnées de posts réguliers sur vos réalisations ou vos disponibilités.
+            Renommer les fichiers avec votre métier et votre zone avant de les envoyer aide aussi.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

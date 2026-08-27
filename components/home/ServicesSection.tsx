@@ -14,6 +14,7 @@ const SERVICES = [
     description:
       "Un site vitrine rapide, propre, qui s'affiche bien sur mobile et montre vos réalisations. Pas un site générique — un site pensé pour votre métier.",
     href: "/sites-web",
+    linkLabel: "Voir la création de sites web pour artisans",
     icon: <SiteIcon />,
   },
   {
@@ -22,6 +23,7 @@ const SERVICES = [
     description:
       "Votre fiche Google Business optimisée, à jour, qui vous sort dans le pack local quand un client cherche votre métier près de chez lui.",
     href: "/fiche-google",
+    linkLabel: "Voir l'optimisation de fiche Google Business",
     icon: <GoogleIcon size={14} />,
   },
   {
@@ -30,6 +32,7 @@ const SERVICES = [
     description:
       "Des systèmes qui trient vos mails et relancent vos devis tout seuls. Le temps que vous perdez sur l'administratif, on vous le rend.",
     href: "/automatisations",
+    linkLabel: "Voir la relance de devis et le tri des mails",
     icon: <AutomationIcon />,
   },
 ];
@@ -50,9 +53,9 @@ export default function ServicesSection() {
               <p className="mt-2 flex-1 text-sm text-text-secondary">{service.description}</p>
               <Link
                 href={service.href}
-                className="mt-6 text-sm font-medium text-emerald hover:underline"
+                className="mt-6 inline-flex min-h-12 items-center text-sm font-medium text-emerald hover:underline"
               >
-                Voir le détail →
+                {service.linkLabel} →
               </Link>
             </Card>
           </StaggerItem>

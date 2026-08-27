@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Site internet pour couvreur dans l'Orne",
   description: DESCRIPTION,
+  alternates: { canonical: "/sites-web/couvreur" },
 };
 
 const POINTS = [
@@ -38,7 +39,10 @@ export default function CouvreurPage() {
         ctaText="Discutons de votre site"
       >
         <div>
-          <SectionHeading>Ce qui compte pour un site de couvreur</SectionHeading>
+          <SectionHeading>Qu&apos;est-ce qui compte pour un site de couvreur&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Rassurer vite, parce qu&apos;une toiture engage un gros budget et parfois une urgence : certifications et assurance décennale visibles d&apos;emblée, numéro d&apos;urgence dès l&apos;accueil, et des avant/après de chantiers réels.
+          </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>

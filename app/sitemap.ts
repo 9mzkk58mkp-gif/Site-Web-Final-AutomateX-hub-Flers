@@ -5,9 +5,13 @@ const STATIC_ROUTES = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
   { path: "/qui-je-suis", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/zones-intervention", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/realisations", priority: 0.5, changeFrequency: "monthly" as const },
+  // /realisations est en noindex tant qu'aucune étude de cas n'est publiée
+  // (voir app/(site)/realisations/page.tsx) : l'inscrire au sitemap
+  // contredirait la directive robots. À remettre en même temps que l'index.
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/mentions-legales", priority: 0.2, changeFrequency: "yearly" as const },
+
+  { path: "/site-web-flers", priority: 0.8, changeFrequency: "monthly" as const },
 
   { path: "/sites-web", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/sites-web/menuisier", priority: 0.7, changeFrequency: "monthly" as const },

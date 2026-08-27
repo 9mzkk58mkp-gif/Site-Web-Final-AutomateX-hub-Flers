@@ -12,6 +12,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Fiche Google ou site web : lequel choisir en premier",
   description: DESCRIPTION,
+  alternates: { canonical: "/fiche-google/fiche-vs-site" },
 };
 
 const FICHE_FIRST = [
@@ -43,16 +44,28 @@ export default function FicheVsSitePage() {
         ctaText="On définit la priorité pour votre activité"
       >
         <div>
-          <SectionHeading>La fiche Google en premier si</SectionHeading>
-          <div className="mt-4">
-            <FeatureList items={FICHE_FIRST} />
-          </div>
-        </div>
+          <SectionHeading>
+            Faut-il commencer par la fiche Google ou par le site internet&nbsp;?
+          </SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Par la fiche Google si vous voulez des appels rapidement et que votre budget est
+            serré : elle est gratuite à créer et capte la recherche locale immédiate. Par le site
+            si vous travaillez sur recommandation et sur devis élevés, parce que vos clients
+            comparent et veulent voir vos réalisations avant d&apos;appeler.
+          </p>
 
-        <div>
-          <SectionHeading>Le site en premier si</SectionHeading>
-          <div className="mt-4">
-            <FeatureList items={SITE_FIRST} />
+          <div className="mt-6">
+            <SectionHeading level={3}>La fiche Google en premier si</SectionHeading>
+            <div className="mt-3">
+              <FeatureList items={FICHE_FIRST} />
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <SectionHeading level={3}>Le site en premier si</SectionHeading>
+            <div className="mt-3">
+              <FeatureList items={SITE_FIRST} />
+            </div>
           </div>
         </div>
 
