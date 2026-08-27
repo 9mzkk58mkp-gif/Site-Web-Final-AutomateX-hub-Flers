@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Reveal from "@/components/motion/Reveal";
 import { MAIL_HREF, NAP } from "@/lib/constants";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Mentions légales",
-  description:
-    "Mentions légales d'Automatex : éditeur du site, hébergement, propriété intellectuelle et traitement des données personnelles conformément au RGPD.",
-  alternates: { canonical: "/mentions-legales" },
+  description: "Mentions légales d'Automatex : éditeur du site, hébergement, propriété intellectuelle et traitement des données personnelles conformément au RGPD.",
+  path: "/mentions-legales",
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 export default function MentionsLegalesPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
+      <PageSchema meta={PAGE} />
       <Reveal immediate>
         <h1 className="aurora-h1">Mentions légales</h1>
       </Reveal>

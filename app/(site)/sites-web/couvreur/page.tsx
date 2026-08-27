@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/sites-web/couvreur";
 const DESCRIPTION =
   "Site internet pour couvreur dans l'Orne : certifications et assurance décennale visibles, numéro d'urgence dès l'accueil, avant/après de chantiers.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Site internet pour couvreur dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web/couvreur" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Mise en avant immédiate des certifications et de l'assurance décennale",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function CouvreurPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Site internet pour couvreur dans l'Orne",

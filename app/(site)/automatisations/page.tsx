@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import Badge from "@/components/ui/Badge";
 import AutomationIcon from "@/components/ui/AutomationIcon";
@@ -13,11 +15,14 @@ const URL = "/automatisations";
 const DESCRIPTION =
   "Relance de devis, tri des mails et devis dictés depuis le chantier, pour les artisans du bâtiment de Flers et de l'Orne. Des systèmes simples, sur devis.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Automatisation des devis pour artisans du bâtiment dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: URL },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const INSTALLED = [
   "Relance des devis envoyés au client et restés sans réponse",
@@ -139,6 +144,7 @@ function TarifEtSuite() {
 export default function AutomatisationsPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Automatisation des devis et de la gestion administrative pour artisans",

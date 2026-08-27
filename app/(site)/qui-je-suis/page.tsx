@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import PhoneIcon from "@/components/ui/PhoneIcon";
@@ -10,12 +12,15 @@ import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
 import { getPersonPageSchema } from "@/lib/schema";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: { absolute: "Qui je suis — Nolan Hermand, fondateur d'Automatex" },
-  description:
-    "Nolan Hermand, CAP menuiserie, fondateur d'Automatex. Une seule personne du début à la fin pour votre site web et votre visibilité Google dans l'Orne.",
-  alternates: { canonical: "/qui-je-suis" },
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
+  title: "Qui je suis — Nolan Hermand, fondateur d'Automatex",
+  absoluteTitle: "Qui je suis — Nolan Hermand, fondateur d'Automatex",
+  description: "Nolan Hermand, CAP menuiserie, fondateur d'Automatex. Une seule personne du début à la fin pour votre site web et votre visibilité Google dans l'Orne.",
+  path: "/qui-je-suis",
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const EN_PRATIQUE = [
   "Basé à Saint-Georges-des-Groseillers, dans l'Orne",
@@ -26,6 +31,7 @@ const EN_PRATIQUE = [
 export default function QuiJeSuisPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript schema={getPersonPageSchema()} />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">

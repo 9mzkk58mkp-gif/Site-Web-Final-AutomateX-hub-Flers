@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Badge from "@/components/ui/Badge";
 import SiteIcon from "@/components/ui/SiteIcon";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
@@ -12,11 +14,14 @@ const URL = "/sites-web";
 const DESCRIPTION =
   "Site vitrine rapide et mobile-first pour artisans du bâtiment dans l'Orne, à partir de 1500€ sans abonnement. Design pensé pour votre métier, pas un template.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Création de site internet pour artisan dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const INCLUSIONS = [
   "Un design propre, pensé pour votre métier — pas un template générique",
@@ -58,11 +63,15 @@ const METIER_PAGES = [
 export default function SitesWebPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Création de site internet pour artisan dans l'Orne",
           description: DESCRIPTION,
           url: URL,
+          // Prix repris à l'identique du texte de la page (« à partir de
+          // 1500 € »). Ne jamais structurer un tarif absent du contenu visible.
+          offers: [{ label: "Site vitrine pour artisan", fromPrice: 1500 }],
         })}
       />
       <ServicePageLayout

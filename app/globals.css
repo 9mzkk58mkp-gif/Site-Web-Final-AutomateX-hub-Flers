@@ -12,7 +12,10 @@
   --color-text-primary: #f4f7f5;
   --color-text-secondary: #a9b3ac;
   --color-text-secondary-alt: #b7c0ba;
-  --color-text-muted: #949e98;
+  /* #949e98 tombait à 3.61:1 sur le point le plus clair du fond (dégradé du
+     body + halo) : sous le seuil WCAG AA de 4.5:1 pour du texte normal.
+     Relevé en clarté à teinte constante — 4.82:1 sur le fond le plus clair. */
+  --color-text-muted: #a6b1aa;
   --color-text-muted-alt: #a3ada7;
 
   --color-emerald: #1fd9a0;
@@ -217,6 +220,7 @@ body::before {
   inset: -10%;
   z-index: -1;
   pointer-events: none;
+  transition: opacity 900ms ease-out;
   background:
     radial-gradient(38% 44% at 26% 32%, rgba(31, 217, 160, 0.16), transparent 70%),
     radial-gradient(34% 40% at 74% 62%, rgba(74, 222, 154, 0.1), transparent 72%);
@@ -224,6 +228,24 @@ body::before {
      éloignés, jamais comme un mouvement suivi du regard. */
   animation: aurora-drift 44s ease-in-out infinite alternate;
   will-change: transform, opacity;
+}
+
+/* Le halo CSS ci-dessus est le rendu de secours. Dès que la couche WebGL est
+   réellement montée (components/aurora/AuroraField.tsx pose .aurora-webgl sur
+   <html>), il s'efface pour ne pas s'additionner au champ du shader. Sans
+   WebGL, sans JavaScript, ou pendant le chargement du module, la classe n'est
+   jamais posée et le halo reste seul à l'écran. */
+.aurora-webgl body::before {
+  opacity: 0;
+  animation: none;
+}
+
+/* Le shader dessine déjà une image complète en mode prefers-reduced-motion ;
+   la dérive du halo de secours, elle, doit se figer. */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
 }
 
 /* --------------------------------------------------------------------------

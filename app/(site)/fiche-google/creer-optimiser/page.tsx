@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/fiche-google/creer-optimiser";
 const DESCRIPTION =
   "Créer et optimiser sa fiche Google Business : bonne catégorie, zone d'intervention réaliste, description sans bourrage de mots-clés, NAP cohérent.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Créer et optimiser sa fiche Google Business",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google/creer-optimiser" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "La bonne catégorie principale (c'est le facteur qui pèse le plus sur votre position)",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function CreerOptimiserPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Création et optimisation de fiche Google Business",

@@ -56,7 +56,8 @@ export default function ServicePageLayout({
 
         <h1 className="aurora-h1 mt-6">{h1}</h1>
 
-        {intro && <p className="mt-6 text-base text-text-secondary">{intro}</p>}
+        {/* .geo-answer : passage-réponse ciblé par le speakable du JSON-LD. */}
+        {intro && <p className="geo-answer mt-6 text-base text-text-secondary">{intro}</p>}
       </Reveal>
 
       {children && (

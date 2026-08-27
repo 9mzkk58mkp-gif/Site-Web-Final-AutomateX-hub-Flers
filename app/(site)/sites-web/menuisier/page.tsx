@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/sites-web/menuisier";
 const DESCRIPTION =
   "Site internet pour menuisier dans l'Orne : galerie de réalisations, matériaux et finitions mis en avant, section sur-mesure pour rassurer vos clients.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Site internet pour menuisier dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web/menuisier" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Galerie photo avant/après par type de projet (agencement, extérieur, escalier, fenêtres)",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function MenuisierPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Site internet pour menuisier dans l'Orne",

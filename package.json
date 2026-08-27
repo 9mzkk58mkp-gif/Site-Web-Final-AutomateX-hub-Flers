@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:knowledge": "tsx scripts/build-chatbot-index.ts"
+    "build:knowledge": "tsx scripts/build-chatbot-index.ts",
+    "build:page-dates": "tsx scripts/build-page-dates.ts",
+    "build:llms": "tsx scripts/build-llms-full.ts"
   },
   "dependencies": {
     "@netlify/blobs": "^11.0.1",

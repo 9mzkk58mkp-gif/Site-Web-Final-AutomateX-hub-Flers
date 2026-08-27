@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import PhoneIcon from "@/components/ui/PhoneIcon";
@@ -6,21 +8,25 @@ import SectionHeading from "@/components/services/SectionHeading";
 import Reveal from "@/components/motion/Reveal";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Réalisations",
   description:
     "Les études de cas clients d'Automatex arrivent bientôt, avec l'accord des artisans concernés. En attendant, contactez-moi directement pour échanger sur votre projet.",
-  alternates: { canonical: "/realisations" },
+  path: "/realisations",
   // Page volontairement hors index tant qu'elle n'a pas de contenu : une page
   // sans étude de cas envoyée à l'indexation pèse sur l'évaluation de qualité
   // du site. À repasser en index dès la première réalisation publiée (et à
   // remettre dans app/sitemap.ts au même moment).
-  robots: { index: false, follow: true },
+  noIndex: true,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 export default function RealisationsPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
+      <PageSchema meta={PAGE} />
       <Reveal immediate>
         <h1 className="aurora-h1 text-center">Études de cas à venir</h1>
       </Reveal>

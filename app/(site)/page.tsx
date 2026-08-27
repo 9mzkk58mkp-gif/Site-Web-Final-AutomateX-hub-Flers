@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import SchemaScript from "@/components/seo/SchemaScript";
 import Hero from "@/components/home/Hero";
@@ -11,16 +13,19 @@ import Reveal from "@/components/motion/Reveal";
 import { getFaqSchema, getLocalBusinessSchema } from "@/lib/schema";
 import { HOME_FAQ } from "@/lib/faq";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Sites web et fiche Google pour artisans dans l'Orne",
-  description:
-    "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
-  alternates: { canonical: "/" },
+  description: "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
+  path: "/",
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 export default function HomePage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript schema={getLocalBusinessSchema()} />
       <SchemaScript schema={getFaqSchema([...HOME_FAQ])} />
 

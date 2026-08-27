@@ -95,6 +95,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/site-web-flers" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
+                Site internet à Flers
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="flex min-h-12 items-center text-sm text-text-secondary hover:text-text-primary">
                 Contact
               </Link>

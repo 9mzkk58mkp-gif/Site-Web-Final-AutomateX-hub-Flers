@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/fiche-google/photos-posts";
 const DESCRIPTION =
   "Photos et publications Google : garder sa fiche active avec des photos de chantiers réels, des posts réguliers et des noms de fichiers optimisés.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Photos et publications Google : garder sa fiche active",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google/photos-posts" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Photos de chantiers récents, pas des images génériques trouvées en ligne",
@@ -24,6 +29,7 @@ const POINTS = [
 export default function PhotosPostsPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Gestion photos et posts Google Business",

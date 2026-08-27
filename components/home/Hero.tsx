@@ -30,7 +30,8 @@ export default function Hero() {
 
         <p className="mt-3 font-mono text-xs text-text-muted-alt">automatex-hub.com</p>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base text-text-secondary">
+        {/* .geo-answer : passage-réponse ciblé par le speakable du JSON-LD. */}
+        <p className="geo-answer mx-auto mt-6 max-w-2xl text-base text-text-secondary">
           Des artisans qui font un travail irréprochable, mais invisibles sur Internet. Pendant ce
           temps, la concurrence récupère vos chantiers avec une fiche Google à jour et un site qui
           s&apos;affiche bien sur téléphone.

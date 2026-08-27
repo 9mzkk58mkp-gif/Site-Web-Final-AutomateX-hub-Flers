@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/sites-web/plombier";
 const DESCRIPTION =
   "Site internet pour plombier dans l'Orne : numéro visible en un clic, mention des urgences, prestations et zone d'intervention affichées clairement.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Site internet pour plombier dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web/plombier" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Numéro de contact visible en un clic depuis mobile, sans scroller",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function PlombierPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Site internet pour plombier dans l'Orne",

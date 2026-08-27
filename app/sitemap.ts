@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { getPageDate } from "@/lib/page-dates";
 
 const STATIC_ROUTES = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
@@ -34,10 +35,13 @@ const STATIC_ROUTES = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // lastModified vient de l'historique Git (lib/page-dates.ts), pas de
+  // `new Date()` : annoncer à chaque déploiement que les 23 pages viennent
+  // d'être modifiées dévalue le signal <lastmod>, dont les crawlers — IA
+  // comprises — se servent pour décider d'un re-crawl.
   return STATIC_ROUTES.map((route) => ({
     url: `${SITE_URL}${route.path}`,
-    lastModified,
+    lastModified: getPageDate(route.path),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

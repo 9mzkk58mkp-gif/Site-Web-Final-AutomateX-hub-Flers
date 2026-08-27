@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/sites-web/electricien";
 const DESCRIPTION =
   "Site internet pour électricien dans l'Orne : prestations séparées clairement, certifications Consuel/Qualifelec, formulaire de devis rapide.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Site internet pour électricien dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web/electricien" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Séparation claire des prestations (mise aux normes, dépannage, domotique, bornes)",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function ElectricienPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Site internet pour électricien dans l'Orne",

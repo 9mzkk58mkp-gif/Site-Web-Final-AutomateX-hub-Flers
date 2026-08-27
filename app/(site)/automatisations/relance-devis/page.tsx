@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
@@ -10,11 +12,14 @@ const URL = "/automatisations/relance-devis";
 const DESCRIPTION =
   "Relance devis automatique pour artisans du bâtiment : vos devis sans réponse sont suivis et relancés au bon moment, sans logiciel à apprendre ni abonnement.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Relance devis automatique pour artisans du bâtiment",
   description: DESCRIPTION,
-  alternates: { canonical: URL },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Chaque devis envoyé est suivi : vous voyez d'un coup d'œil ceux qui n'ont jamais eu de réponse",
@@ -114,6 +119,7 @@ function TarifEtLiens() {
 export default function RelanceDevisPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Relance devis automatique pour artisans du bâtiment",

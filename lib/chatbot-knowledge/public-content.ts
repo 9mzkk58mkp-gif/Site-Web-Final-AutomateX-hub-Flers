@@ -151,6 +151,13 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
     text: "Automatiser les devis à la voix. Sur un chantier, prendre des notes pour un devis n'est jamais pratique : les cotes finissent sur un carnet et la mise en forme attend le soir. L'artisan dicte les informations depuis le chantier avec son téléphone, les cotes, quantités et coordonnées du client sont retranscrites et rangées, et il récupère une base de devis prête à chiffrer sans ressaisie. Le suivi des devis (envoyé, vu, accepté, sans réponse) se tient ensuite tout seul dans un tableau, et alimente la relance devis automatique. Tarif sur devis, TVA non applicable, art. 293 B du CGI.",
   },
   {
+    id: "site-web-flers",
+    tier: "public",
+    title: "Création de site internet à Flers (Orne)",
+    url: "/site-web-flers",
+    text: "Création de site internet à Flers, dans l'Orne : une landing page démarre à 1500€ et un site vitrine starter à partir de 590€, TVA non applicable (art. 293 B du CGI). Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers, à 5 à 10 minutes du centre : les rendez-vous se font en face à face, chez le client ou sur son lieu d'activité, sans surcoût de déplacement dans le bassin flérien. Comptez une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et les informations de l'entreprise reçues. Un seul interlocuteur du premier échange à la mise en ligne, sans chef de projet intermédiaire ni frais de structure d'agence. Le référencement local est inclus : structure adaptée au métier et à la zone, pages optimisées pour Flers et l'agglomération, mise en place ou vérification de la fiche Google Business Profile. Aucune position sur Google ne peut être garantie. La page s'adresse aussi aux commerces et TPE locales, pas uniquement aux artisans du bâtiment.",
+  },
+  {
     id: "qui-je-suis",
     tier: "public",
     title: "Qui je suis — Nolan Hermand",

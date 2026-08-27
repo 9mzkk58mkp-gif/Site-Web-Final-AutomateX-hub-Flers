@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
@@ -10,11 +12,14 @@ const URL = "/automatisations/tri-emails";
 const DESCRIPTION =
   "Tri automatique des mails pour artisans du bâtiment : les demandes de chantier remontent en haut, les factures fournisseurs de côté, les réponses courantes prêtes.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Tri automatique des mails pour artisans du bâtiment",
   description: DESCRIPTION,
-  alternates: { canonical: URL },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Les mails sont triés par type : demande de chantier, facture fournisseur, administratif, reste",
@@ -106,6 +111,7 @@ function SuiteEtTarif() {
 export default function TriEmailsPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Tri automatique des mails pour artisans du bâtiment",

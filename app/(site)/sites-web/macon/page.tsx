@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/sites-web/macon";
 const DESCRIPTION =
   "Site internet pour maçon dans l'Orne : galerie de chantiers par type, déroulé du chantier expliqué, assurance décennale et zone d'intervention.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Site internet pour maçon dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/sites-web/macon" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Galerie de chantiers réalisés, classés par type (extension, rénovation, gros œuvre)",
@@ -25,6 +30,7 @@ const POINTS = [
 export default function MaconPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Site internet pour maçon dans l'Orne",

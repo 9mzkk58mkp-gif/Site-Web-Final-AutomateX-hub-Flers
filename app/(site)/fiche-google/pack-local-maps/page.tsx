@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/fiche-google/pack-local-maps";
 const DESCRIPTION =
   "Apparaître dans le pack local Google Maps : pertinence, distance et notoriété, les trois critères ajustés pour sortir dans les 3 premiers résultats.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Apparaître dans le pack local Google Maps",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google/pack-local-maps" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "La pertinence : votre catégorie et vos services correspondent-ils à la recherche",
@@ -24,6 +29,7 @@ const POINTS = [
 export default function PackLocalMapsPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Optimisation pack local Google Maps",

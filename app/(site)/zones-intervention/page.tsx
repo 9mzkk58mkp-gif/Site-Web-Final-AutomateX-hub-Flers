@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Button from "@/components/ui/Button";
 import PhoneIcon from "@/components/ui/PhoneIcon";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -6,16 +9,20 @@ import Reveal from "@/components/motion/Reveal";
 import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
 import { NAP, OTHER_AREAS, PRIORITY_AREAS, TEL_HREF } from "@/lib/constants";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Zones d'intervention dans l'Orne",
   description:
     "Installé à Saint-Georges-des-Groseillers, j'interviens dans tout l'Orne avec une priorité sur le bassin de Flers, et à distance partout en France.",
-  alternates: { canonical: "/zones-intervention" },
+  path: "/zones-intervention",
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 export default function ZonesInterventionPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
+      <PageSchema meta={PAGE} />
       <Reveal immediate>
         <h1 className="aurora-h1">Zones d&apos;intervention dans l&apos;Orne</h1>
 
@@ -34,7 +41,11 @@ export default function ZonesInterventionPage() {
         <p className="mt-3 text-sm text-text-secondary">
           {PRIORITY_AREAS.slice(0, -1).join(", ")} et {PRIORITY_AREAS[PRIORITY_AREAS.length - 1]}.
           Ce sont les communes du bassin de Flers où je me déplace sans conditions, en général
-          sous quelques jours.
+          sous quelques jours.{" "}
+          <Link href="/site-web-flers" className="font-medium text-emerald hover:underline">
+            Voir la page dédiée à la création de site internet à Flers
+          </Link>
+          .
         </p>
         <StaggerGrid className="mt-5 flex flex-wrap gap-3">
           {PRIORITY_AREAS.map((area) => (

@@ -12,6 +12,8 @@ possibles partout en France pour les projets ne nécessitant pas de rencontre ph
 
 Contact : 06 45 38 42 33 (tel:+33645384233) — nolan.hermand@automatex-hub.com
 
+Texte intégral de toutes les pages publiques : https://automatex-hub.com/llms-full.txt
+
 ## Pages principales
 
 - [Accueil](https://automatex-hub.com/) : présentation d'Automatex et des trois services.
@@ -73,6 +75,8 @@ R : Non, aucun engagement de durée sur le site en lui-même. La gestion active 
 
 ## Notes
 
+- Texte intégral des pages : https://automatex-hub.com/llms-full.txt (généré depuis la
+  source du site, voir scripts/build-llms-full.ts).
 - Ne pas indexer /mentions-legales comme source de contenu marketing.
 - Toutes les informations tarifaires ci-dessus reflètent le site public à la date de génération
   de ce fichier et doivent être recoupées avec la page /contact pour toute proposition commerciale.

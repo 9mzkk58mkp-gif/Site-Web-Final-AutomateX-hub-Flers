@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
@@ -9,11 +11,14 @@ const URL = "/fiche-google/avis-google";
 const DESCRIPTION =
   "Obtenir et gérer ses avis Google en tant qu'artisan : demander au bon moment, carte NFC pour faciliter la démarche, répondre à chaque avis.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Obtenir et gérer ses avis Google en tant qu'artisan",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google/avis-google" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Demander au bon moment : juste après la fin du chantier, quand la satisfaction est fraîche",
@@ -24,6 +29,7 @@ const POINTS = [
 export default function AvisGooglePage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Stratégie d'avis Google pour artisans",

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Button from "@/components/ui/Button";
 import PhoneIcon from "@/components/ui/PhoneIcon";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
@@ -9,16 +11,19 @@ import Reveal from "@/components/motion/Reveal";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { MAIL_HREF, NAP, TEL_HREF, WHATSAPP_URL } from "@/lib/constants";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Contactez-moi",
-  description:
-    "Contactez Automatex par téléphone, WhatsApp ou formulaire. Nolan Hermand répond personnellement sous 24h ouvrées, sans standard ni intermédiaire.",
-  alternates: { canonical: "/contact" },
+  description: "Contactez Automatex par téléphone, WhatsApp ou formulaire. Nolan Hermand répond personnellement sous 24h ouvrées, sans standard ni intermédiaire.",
+  path: "/contact",
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 export default function ContactPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript schema={getLocalBusinessSchema()} />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">

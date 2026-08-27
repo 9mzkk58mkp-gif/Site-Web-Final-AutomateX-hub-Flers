@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Badge from "@/components/ui/Badge";
 import GoogleIcon from "@/components/ui/GoogleIcon";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
@@ -12,11 +14,14 @@ const URL = "/fiche-google";
 const DESCRIPTION =
   "Configuration, avis, pack local, photos : je gère votre fiche Google Business pour artisan dans l'Orne, à partir de 150€ ou incluse dans un pack site web.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Optimisation de fiche Google Business pour artisan dans l'Orne",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const INCLUSIONS = [
   "Configuration complète : catégorie, zone d'intervention, horaires, services",
@@ -58,11 +63,14 @@ const CHILD_PAGES = [
 export default function FicheGooglePage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Optimisation de fiche Google Business pour artisan dans l'Orne",
           description: DESCRIPTION,
           url: URL,
+          // Prix repris à l'identique du texte de la page (« à partir de 150 € »).
+          offers: [{ label: "Optimisation de fiche Google Business", fromPrice: 150 }],
         })}
       />
       <ServicePageLayout

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import FeatureList from "@/components/services/FeatureList";
@@ -10,11 +12,14 @@ const URL = "/automatisations/devis-vocal";
 const DESCRIPTION =
   "Automatiser les devis d'un artisan du bâtiment : dictez les cotes depuis le chantier, le devis se met en forme et le suivi se tient tout seul. Sur devis.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Automatiser les devis : dictez-les depuis le chantier",
   description: DESCRIPTION,
-  alternates: { canonical: URL },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
   "Vous dictez les informations du devis depuis le chantier, avec votre téléphone",
@@ -102,6 +107,7 @@ function CeQueCaEvite() {
 export default function DevisVocalPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Automatiser les devis à la voix",

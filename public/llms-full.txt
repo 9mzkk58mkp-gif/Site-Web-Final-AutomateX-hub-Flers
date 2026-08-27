@@ -1,0 +1,236 @@
+# Automatex — contenu public intégral
+
+> Automatex conçoit des sites internet, optimise les fiches Google Business et met en place
+> des automatisations de gestion pour les artisans du bâtiment de l'Orne, en Normandie.
+> Fondateur unique : Nolan Hermand. Contact : 06 45 38 42 33 — nolan.hermand@automatex-hub.com.
+
+Ce fichier reprend le texte intégral des pages publiques de https://automatex-hub.com, dans l'ordre du
+sitemap. Le sommaire des pages se trouve dans https://automatex-hub.com/llms.txt.
+Fichier généré depuis la source du site — voir scripts/build-llms-full.ts.
+
+## Accueil — le problème de visibilité
+
+Source : https://automatex-hub.com/
+Dernière mise à jour : 2026-08-27
+
+Vos concurrents sont sur Google, vous non. Des artisans qui font un travail irréprochable mais restent invisibles sur Internet, pendant que la concurrence récupère leurs chantiers avec une fiche Google à jour et un site qui s'affiche bien sur téléphone. Le problème n'est pas dans le travail de l'artisan : un particulier cherche « couvreur près de moi » et tombe sur un concurrent ; le site ouvert sur téléphone rame ou casse ; le soir, entre deux chantiers, l'artisan répond aux devis à la main. Automatex : une seule personne du début à la fin, basée dans l'Orne, qui se déplace sur les chantiers.
+
+---
+
+## Accueil — les 3 services
+
+Source : https://automatex-hub.com/
+Dernière mise à jour : 2026-08-27
+
+Ce qu'installe Automatex : 1) Site Web — un site vitrine rapide, propre, optimisé mobile, pensé pour le métier de l'artisan, pas un template générique (voir /sites-web). 2) Fiche Google — fiche Google Business optimisée et à jour pour apparaître dans le pack local quand un client cherche le métier près de chez lui (voir /fiche-google). 3) Automatisations — systèmes qui trient les mails et relancent les devis automatiquement, pour rendre le temps perdu sur l'administratif (voir /automatisations).
+
+---
+
+## Accueil — histoire et zone d'intervention
+
+Source : https://automatex-hub.com/
+Dernière mise à jour : 2026-08-27
+
+Une seule personne du début à la fin : Nolan Hermand vient du chantier (CAP menuiserie, pose de fenêtres) et sait que la visibilité passe toujours après le boulot. Installé à Saint-Georges-des-Groseillers, il se déplace dans tout l'Orne pour rencontrer les artisans en face à face.
+
+---
+
+## Accueil — questions fréquentes
+
+Source : https://automatex-hub.com/
+Dernière mise à jour : 2026-08-27
+
+FAQ : Combien coûte un site internet pour un artisan dans l'Orne ? Une landing page démarre à 1500€, sans abonnement caché, tarif dépendant du nombre de pages et des automatisations ajoutées, devis sur mesure après échange direct. Combien de temps pour la mise en ligne ? En général une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et informations reçues. Garantissez-vous la première position sur Google ? Aucune agence sérieuse ne peut garantir une position, les algorithmes changent en permanence ; le travail porte sur une fiche Google complète, un site rapide et un contenu adapté au métier et à la zone. Pourquoi passer par Automatex plutôt qu'une agence classique ? Une seule personne gère le projet du premier échange à la mise en ligne, délais plus courts, pas de frais de structure. Faut-il s'engager sur la durée ? Non, aucun engagement sur le site en lui-même ; la gestion active de la fiche Google est un service mensuel optionnel, sans engagement. TVA non applicable, art. 293 B du CGI.
+
+---
+
+## Silo Sites Web — page pilier
+
+Source : https://automatex-hub.com/sites-web
+Dernière mise à jour : 2026-08-27
+
+Création de site internet pour artisan dans l'Orne. Ce que comprend un site Automatex : design propre pensé pour le métier, optimisé mobile en priorité, rapide au chargement, réalisations mises en valeur avec de vraies photos de chantier, formulaire de contact et numéro visibles partout. Tarif indicatif : à partir de 1500€, sans abonnement caché (TVA non applicable, art. 293 B du CGI).
+
+---
+
+## Site internet pour menuisier
+
+Source : https://automatex-hub.com/sites-web/menuisier
+Dernière mise à jour : 2026-08-27
+
+Un menuisier vend un savoir-faire qu'on ne voit pas sur une liste de prestations. Le site doit montrer le travail : galerie photo avant/après par type de projet, mise en avant des matériaux et finitions, page dédiée aux essences de bois, section sur-mesure. Nolan a un CAP menuiserie et deux ans d'apprentissage en pose de fenêtres.
+
+---
+
+## Site internet pour couvreur
+
+Source : https://automatex-hub.com/sites-web/couvreur
+Dernière mise à jour : 2026-08-27
+
+La toiture fait peur au particulier : budget élevé, urgence en cas de fuite, confiance nécessaire. Le site doit rassurer : certifications et assurance décennale mises en avant, numéro d'urgence visible dès l'accueil, photos avant/après, types d'interventions clairs (rénovation, isolation, zinguerie, entretien). Nolan a fait deux mois de couverture en immersion.
+
+---
+
+## Site internet pour plombier
+
+Source : https://automatex-hub.com/sites-web/plombier
+Dernière mise à jour : 2026-08-27
+
+Un client qui cherche un plombier cherche une réponse rapide : numéro visible en un clic depuis mobile, mention claire des interventions d'urgence, liste simple des prestations (dépannage, installation, chauffage, sanitaire), zone d'intervention affichée clairement.
+
+---
+
+## Site internet pour électricien
+
+Source : https://automatex-hub.com/sites-web/electricien
+Dernière mise à jour : 2026-08-27
+
+Entre mise aux normes, rénovation électrique et bornes de recharge, le site doit distinguer clairement les prestations : séparation nette (mise aux normes, dépannage, domotique, bornes), certifications si disponibles (Consuel, Qualifelec), rassurance sur sécurité et conformité, formulaire de devis rapide.
+
+---
+
+## Site internet pour maçon
+
+Source : https://automatex-hub.com/sites-web/macon
+Dernière mise à jour : 2026-08-27
+
+Un chantier de maçonnerie engage un budget conséquent et plusieurs semaines. Le client a besoin de se projeter : galerie de chantiers classés par type (extension, rénovation, gros œuvre), déroulé de chantier type, assurance décennale et garanties, zone d'intervention et délais habituels.
+
+---
+
+## Silo Fiche Google — page pilier
+
+Source : https://automatex-hub.com/fiche-google
+Dernière mise à jour : 2026-08-27
+
+Optimisation de fiche Google Business pour artisan dans l'Orne. C'est la fiche Google que les clients voient en premier, avant même le site : Google Maps, pack local, et de plus en plus les réponses des IA. Ce qui est fait : configuration complète (catégorie, zone, horaires, services), stratégie d'avis clients, optimisation pack local, photos et posts réguliers. Tarif indicatif : à partir de 150€, ou inclus dans un pack site web (TVA non applicable, art. 293 B du CGI).
+
+---
+
+## Créer et optimiser sa fiche Google
+
+Source : https://automatex-hub.com/fiche-google/creer-optimiser
+Dernière mise à jour : 2026-08-27
+
+Une fiche Google Business est gratuite à créer, le problème est de bien la remplir : bonne catégorie principale (facteur qui pèse le plus), zone d'intervention réaliste, description claire sans bourrage de mots-clés, informations identiques partout en ligne (nom, adresse, téléphone). Une fiche mal configurée n'est pas montrée par Google, même avec de bons avis.
+
+---
+
+## Obtenir et gérer ses avis Google
+
+Source : https://automatex-hub.com/fiche-google/avis-google
+Dernière mise à jour : 2026-08-27
+
+Les avis rassurent avant l'appel, mais peu de clients pensent à en laisser un spontanément. Comment faire : demander juste après la fin du chantier, faciliter la démarche avec un lien direct ou une carte NFC, répondre à chaque avis positif comme négatif. Automatex propose une carte NFC personnalisée : le client la scanne et arrive directement sur la page d'avis Google, à partir de 90€.
+
+---
+
+## Apparaître dans le pack local Google Maps
+
+Source : https://automatex-hub.com/fiche-google/pack-local-maps
+Dernière mise à jour : 2026-08-27
+
+Le pack local, ce sont les 3 résultats en haut de Google Maps pour une recherche comme « couvreur près de moi ». Ce qui détermine la position : pertinence (catégorie et services), distance, notoriété (avis, activité de la fiche, présence en ligne). Ajustements concrets : catégorie, description, zone d'intervention, régularité des publications.
+
+---
+
+## Photos et publications Google
+
+Source : https://automatex-hub.com/fiche-google/photos-posts
+Dernière mise à jour : 2026-08-27
+
+Une fiche Google qui ne bouge jamais est considérée comme moins fiable par Google. Ce qui fonctionne : photos de chantiers récents (pas des images génériques), posts réguliers sur les réalisations et disponibilités, renommage des fichiers avec mots-clés et zone. Automatex met en place un rythme de publication simple et tenable.
+
+---
+
+## Fiche Google ou site web en premier
+
+Source : https://automatex-hub.com/fiche-google/fiche-vs-site
+Dernière mise à jour : 2026-08-27
+
+Les deux travaillent ensemble, mais avec un budget serré : la fiche Google en premier si l'artisan veut des appels rapidement, a un budget limité, ou n'a pas encore beaucoup de réalisations à montrer. Le site en premier si l'artisan travaille sur recommandation et devis premium, veut montrer un book détaillé, ou vise des clients qui comparent plusieurs prestataires. Dans l'idéal, les deux ensemble : la fiche capte la recherche locale immédiate, le site convertit et rassure.
+
+---
+
+## Silo Automatisations — page pilier
+
+Source : https://automatex-hub.com/automatisations
+Dernière mise à jour : 2026-08-27
+
+Automatisation des devis et de la gestion administrative pour artisans du bâtiment dans l'Orne. Il ne s'agit ni de robotique ni de machines d'atelier : uniquement le travail de bureau d'une entreprise du bâtiment. Ce qui est installé : relance des devis envoyés et restés sans réponse, tri des mails entrants (demandes de chantier d'un côté, factures fournisseurs de l'autre), devis dicté depuis le chantier et retranscrit sans ressaisie. Des systèmes qui tournent en arrière-plan sur les outils habituels de l'artisan (boîte mail, téléphone, tableau de suivi). Concerne menuisiers, couvreurs, plombiers, électriciens et maçons de Flers et de l'Orne. Tarif : sur devis, selon les systèmes mis en place (TVA non applicable, art. 293 B du CGI).
+
+---
+
+## Relance devis automatique pour artisans du bâtiment
+
+Source : https://automatex-hub.com/automatisations/relance-devis
+Dernière mise à jour : 2026-08-27
+
+Relance devis automatique pour artisans du bâtiment. Un devis sans réponse n'est presque jamais un refus : le client attend un accord de banque, compare deux entreprises, ou a laissé filer le mail. Chaque devis envoyé est suivi, une relance écrite part au bon moment au nom de l'artisan, et la relance suivante est annulée si le client répond. Ce n'est pas un logiciel de devis de plus : le système se branche sur la boîte mail et le suivi de devis existants, sans abonnement mensuel imposé ni interface supplémentaire à apprendre. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
+
+---
+
+## Tri automatique des mails pour artisans du bâtiment
+
+Source : https://automatex-hub.com/automatisations/tri-emails
+Dernière mise à jour : 2026-08-27
+
+Tri automatique des mails pour artisans du bâtiment. Entre demandes de devis, factures fournisseurs et publicité, la boîte mail d'un menuisier, d'un couvreur ou d'un plombier devient vite un fouillis et les demandes de chantier s'y perdent. Les mails sont triés par type (demande de chantier, facture fournisseur, administratif, reste), les demandes de devis remontent en haut, des réponses brouillon sont préparées pour les demandes courantes. Le tri se met en place sur la boîte mail actuelle, avec des règles définies à partir de ce que l'artisan reçoit vraiment. Rien n'est supprimé. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
+
+---
+
+## Automatiser les devis à la voix
+
+Source : https://automatex-hub.com/automatisations/devis-vocal
+Dernière mise à jour : 2026-08-27
+
+Automatiser les devis à la voix. Sur un chantier, prendre des notes pour un devis n'est jamais pratique : les cotes finissent sur un carnet et la mise en forme attend le soir. L'artisan dicte les informations depuis le chantier avec son téléphone, les cotes, quantités et coordonnées du client sont retranscrites et rangées, et il récupère une base de devis prête à chiffrer sans ressaisie. Le suivi des devis (envoyé, vu, accepté, sans réponse) se tient ensuite tout seul dans un tableau, et alimente la relance devis automatique. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
+
+---
+
+## Création de site internet à Flers (Orne)
+
+Source : https://automatex-hub.com/site-web-flers
+Dernière mise à jour : 2026-08-27
+
+Création de site internet à Flers, dans l'Orne : une landing page démarre à 1500€ et un site vitrine starter à partir de 590€, TVA non applicable (art. 293 B du CGI). Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers, à 5 à 10 minutes du centre : les rendez-vous se font en face à face, chez le client ou sur son lieu d'activité, sans surcoût de déplacement dans le bassin flérien. Comptez une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et les informations de l'entreprise reçues. Un seul interlocuteur du premier échange à la mise en ligne, sans chef de projet intermédiaire ni frais de structure d'agence. Le référencement local est inclus : structure adaptée au métier et à la zone, pages optimisées pour Flers et l'agglomération, mise en place ou vérification de la fiche Google Business Profile. Aucune position sur Google ne peut être garantie. La page s'adresse aussi aux commerces et TPE locales, pas uniquement aux artisans du bâtiment.
+
+---
+
+## Qui je suis — Nolan Hermand
+
+Source : https://automatex-hub.com/qui-je-suis
+Dernière mise à jour : 2026-08-27
+
+Nolan Hermand, 19 ans, a fait du chantier avant de faire du web : CAP menuiserie, deux ans d'apprentissage en pose de fenêtres, deux mois de couverture. Pendant son alternance, il a vu des artisans au travail irréprochable mais invisibles sur Internet, pendant que leurs concurrents décrochaient des chantiers grâce à une fiche Google à jour ou un site qui s'affiche bien sur téléphone. Il a créé Automatex pour régler ça. Il gère chaque projet seul, du premier échange à la mise en ligne, pas de commercial ni de chef de projet intermédiaire. Basé à Saint-Georges-des-Groseillers, dans l'Orne, il se déplace pour rencontrer les artisans en face à face.
+
+---
+
+## Zones d'intervention
+
+Source : https://automatex-hub.com/zones-intervention
+Dernière mise à jour : 2026-08-27
+
+Installé à Saint-Georges-des-Groseillers, Automatex intervient dans tout le département de l'Orne, avec une priorité sur le bassin de Flers. Secteurs prioritaires : Flers, Saint-Georges-des-Groseillers, La Selle-la-Forge, Tinchebray-Bocage, Domfront en Poiraie, Condé-en-Normandie. Le reste de l'Orne (Argentan, Alençon, L'Aigle, Mortagne-au-Perche et toutes les communes du département) est couvert sur rendez-vous. Pour les rendez-vous en visio ou les projets sans besoin de rencontre physique, Automatex travaille aussi à distance partout en France.
+
+---
+
+## Contact
+
+Source : https://automatex-hub.com/contact
+Dernière mise à jour : 2026-08-27
+
+La manière la plus rapide de joindre Automatex, c'est le téléphone ou WhatsApp au 06 45 38 42 33 — réponse personnelle, pas de standard. Email : nolan.hermand@automatex-hub.com. Un formulaire de contact écrit est aussi disponible sur la page /contact. Réponse sous 24h ouvrées ; pour une urgence, appeler directement.
+
+---
+
+## Notes d'usage
+
+- Les tarifs cités (landing page à partir de 1500€, site vitrine starter à partir de 590€,
+  fiche Google à partir de 150€) sont des prix plancher publics. TVA non applicable,
+  art. 293 B du CGI. Tout devis est établi après échange direct.
+- Aucune position sur Google n'est garantie, sur aucune prestation.
+- Automatex est un Service Area Business : pas d'accueil du public à une adresse postale,
+  l'intervention se fait chez le client dans l'Orne, et à distance ailleurs en France.
+- Les pages /mentions-legales et /realisations ne sont pas du contenu marketing et ne
+  figurent pas dans ce fichier.

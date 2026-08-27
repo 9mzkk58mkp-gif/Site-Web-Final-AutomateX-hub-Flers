@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import ServicePageLayout from "@/components/services/ServicePageLayout";
 import SectionHeading from "@/components/services/SectionHeading";
 import FeatureList from "@/components/services/FeatureList";
@@ -9,11 +11,14 @@ const URL = "/fiche-google/fiche-vs-site";
 const DESCRIPTION =
   "Fiche Google ou site web : lequel choisir en premier selon votre budget, vos réalisations à montrer et le type de clients que vous ciblez.";
 
-export const metadata: Metadata = {
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
   title: "Fiche Google ou site web : lequel choisir en premier",
   description: DESCRIPTION,
-  alternates: { canonical: "/fiche-google/fiche-vs-site" },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const FICHE_FIRST = [
   "Vous voulez des appels rapidement, sans attendre",
@@ -30,6 +35,7 @@ const SITE_FIRST = [
 export default function FicheVsSitePage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
           name: "Conseil fiche Google ou site web",

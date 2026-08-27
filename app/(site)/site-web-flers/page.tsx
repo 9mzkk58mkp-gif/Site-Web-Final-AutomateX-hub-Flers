@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata, type PageMeta } from "@/lib/metadata";
+import PageSchema from "@/components/seo/PageSchema";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
@@ -10,18 +12,22 @@ import FeatureList from "@/components/services/FeatureList";
 import FaqAccordion from "@/components/services/FaqAccordion";
 import SchemaScript from "@/components/seo/SchemaScript";
 import Reveal from "@/components/motion/Reveal";
-import { getFaqSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { getFaqSchema, getLocalBusinessSchema, getServiceSchema } from "@/lib/schema";
 import { FLERS_FAQ } from "@/lib/faq";
 import { NAP, TEL_HREF, WHATSAPP_URL } from "@/lib/constants";
 
 const URL = "/site-web-flers";
 
-export const metadata: Metadata = {
-  title: { absolute: "Création de site internet à Flers (Orne) — Automatex" },
+/** Identité de la page — source unique des balises meta et du JSON-LD. */
+const PAGE: PageMeta = {
+  title: "Création de site internet à Flers (Orne)",
+  absoluteTitle: "Création de site internet à Flers (Orne) — Automatex",
   description:
     "Création de site internet à Flers (Orne) : landing page dès 1500€, site vitrine dès 590€, en ligne en 1 à 2 semaines. Un seul interlocuteur, pas d'agence.",
-  alternates: { canonical: URL },
+  path: URL,
 };
+
+export const metadata: Metadata = pageMetadata(PAGE);
 
 const ANTI_AGENCE = [
   "Un seul interlocuteur du premier échange à la mise en ligne : la personne qui conçoit le site est celle qui vous répond au téléphone.",
@@ -168,8 +174,21 @@ function CtaSection() {
 export default function SiteWebFlersPage() {
   return (
     <>
+      <PageSchema meta={PAGE} />
       <SchemaScript schema={getLocalBusinessSchema()} />
       <SchemaScript schema={getFaqSchema([...FLERS_FAQ])} />
+      <SchemaScript
+        schema={getServiceSchema({
+          name: PAGE.title,
+          description: PAGE.description,
+          url: URL,
+          // Les deux prix plancher annoncés en clair dans l'intro de la page.
+          offers: [
+            { label: "Landing page", fromPrice: 1500 },
+            { label: "Site vitrine starter", fromPrice: 590 },
+          ],
+        })}
+      />
 
       <article className="mx-auto max-w-3xl px-4 pt-16 pb-24">
         <IntroBlock />
