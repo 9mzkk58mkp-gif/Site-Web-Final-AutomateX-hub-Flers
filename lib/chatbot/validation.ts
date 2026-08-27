@@ -1,4 +1,4 @@
-import { MAX_BESOIN_EXPRIME_LENGTH } from "./config";
+import { MAX_BESOIN_EXPRIME_LENGTH, MAX_CONTACT_MESSAGE_LENGTH } from "./config";
 
 /**
  * Validation et sanitization avant tout envoi au webhook N8N — section 7 de la spec.
@@ -14,14 +14,20 @@ export function isValidFrenchPhone(phone: string): boolean {
 }
 
 /** Retire toute balise HTML/script et tronque à la longueur maximale autorisée. */
-export function sanitizeBesoinExprime(text: string): string {
+export function sanitizeBesoinExprime(
+  text: string,
+  maxLength: number = MAX_BESOIN_EXPRIME_LENGTH,
+): string {
   const withoutTags = text.replace(/<[^>]*>/g, "");
   const withoutScriptContent = withoutTags.replace(/javascript:/gi, "");
-  return withoutScriptContent.trim().slice(0, MAX_BESOIN_EXPRIME_LENGTH);
+  return withoutScriptContent.trim().slice(0, maxLength);
 }
 
+/** Origine de la demande : le workflow N8N distingue les deux via ce champ. */
+export type N8nSource = "chatbot" | "contact";
+
 export interface N8nContactPayload {
-  source: "chatbot";
+  source: N8nSource;
   nom: string;
   telephone: string;
   metier: string;
@@ -42,7 +48,10 @@ const ALLOWED_FIELDS = new Set<keyof N8nContactPayload>([
  * Ne conserve que les champs attendus du payload N8N — rejette tout champ
  * additionnel, quelle que soit sa provenance.
  */
-export function buildSafeN8nPayload(input: Record<string, unknown>): N8nContactPayload | null {
+export function buildSafeN8nPayload(
+  input: Record<string, unknown>,
+  source: N8nSource,
+): N8nContactPayload | null {
   for (const key of Object.keys(input)) {
     if (!ALLOWED_FIELDS.has(key as keyof N8nContactPayload)) return null;
   }
@@ -50,13 +59,17 @@ export function buildSafeN8nPayload(input: Record<string, unknown>): N8nContactP
   const nom = typeof input.nom === "string" ? input.nom.trim().slice(0, 100) : "";
   const telephone = typeof input.telephone === "string" ? input.telephone.trim() : "";
   const metier = typeof input.metier === "string" ? input.metier.trim().slice(0, 60) : "";
+  const maxMessageLength =
+    source === "contact" ? MAX_CONTACT_MESSAGE_LENGTH : MAX_BESOIN_EXPRIME_LENGTH;
   const besoinExprime =
-    typeof input.besoin_exprime === "string" ? sanitizeBesoinExprime(input.besoin_exprime) : "";
+    typeof input.besoin_exprime === "string"
+      ? sanitizeBesoinExprime(input.besoin_exprime, maxMessageLength)
+      : "";
 
   if (!nom || !isValidFrenchPhone(telephone)) return null;
 
   return {
-    source: "chatbot",
+    source,
     nom,
     telephone,
     metier,

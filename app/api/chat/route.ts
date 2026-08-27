@@ -70,18 +70,18 @@ export async function POST(request: NextRequest) {
   }
 
   // Rate limiting — sections 5 et 7, priorité critique.
-  if (isGlobalLimitReached()) {
+  if (await isGlobalLimitReached()) {
     return errorResponse(UNAVAILABLE_REPLY, 429, sessionId);
   }
-  if (isIpLimitReached(ip)) {
+  if (await isIpLimitReached(ip)) {
     return errorResponse(UNAVAILABLE_REPLY, 429, sessionId);
   }
-  if (isSessionLimitReached(sessionId)) {
+  if (await isSessionLimitReached(sessionId)) {
     return errorResponse(LIMIT_REPLY, 429, sessionId);
   }
 
-  registerSessionMessage(sessionId);
-  registerIpMessage(ip);
+  await registerSessionMessage(sessionId);
+  await registerIpMessage(ip);
 
   // Filtre anti prompt-injection — avant tout appel API, ne consomme pas le budget.
   if (containsInjectionAttempt(lastMessage.content)) {
@@ -101,19 +101,19 @@ export async function POST(request: NextRequest) {
       ...trimmedHistory.map((m) => ({ role: m.role, content: m.content }) as ChatMessage),
     ];
 
-    registerGlobalMistralCall();
+    await registerGlobalMistralCall();
     const result = await callMistralChat(messages);
 
     let reply = result.content || "Je n'ai pas de réponse pour le moment, réessayez ou appelez directement.";
     let contactCaptured = false;
 
     const contactCall = result.toolCalls.find((call) => call.function.name === "submit_contact_request");
-    if (contactCall && !wasWebhookAlreadySent(sessionId)) {
+    if (contactCall && !(await wasWebhookAlreadySent(sessionId))) {
       try {
         const args = JSON.parse(contactCall.function.arguments) as Record<string, unknown>;
-        const sent = await sendContactToN8n(args);
+        const sent = await sendContactToN8n(args, "chatbot");
         if (sent) {
-          markWebhookSent(sessionId);
+          await markWebhookSent(sessionId);
           contactCaptured = true;
           if (!reply) {
             reply = `Merci, j'ai transmis votre demande à Nolan, il vous rappelle rapidement. Vous pouvez aussi l'appeler directement au ${NAP.phoneDisplay}.`;
@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const session = getOrCreateSession(sessionId);
+    const session = await getOrCreateSession(sessionId);
     const response = NextResponse.json({
       reply,
       contactCaptured,

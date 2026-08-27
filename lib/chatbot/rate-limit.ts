@@ -4,103 +4,83 @@ import {
   MAX_MISTRAL_CALLS_PER_DAY,
   SESSION_TIMEOUT_MS,
 } from "./config";
+import { incrementDailyCount, readDailyCount, readJson, writeJson } from "@/lib/shared-store";
 
 /**
- * Rate limiting en mémoire serveur — sections 5 et 7 de la spec.
- * Pas de service payant : compteurs en mémoire du process Node, remis à zéro
- * chaque jour. Limite connue : sur un déploiement serverless multi-instance,
- * les compteurs ne sont pas partagés entre instances — acceptable pour le
- * volume de trafic visé, à faire évoluer vers un store partagé (Netlify
- * Blobs/KV, Upstash Redis...) si le trafic augmente. Aucune donnée de
- * conversation n'est conservée ici, uniquement des compteurs.
+ * Rate limiting du chatbot — sections 5 et 7 de la spec.
+ *
+ * Les compteurs sont désormais dans un magasin partagé entre les instances
+ * serverless (voir lib/shared-store.ts) et non plus en mémoire de process :
+ * sur Netlify, les limites ci-dessous sont réellement appliquées, y compris
+ * après un démarrage à froid ou entre deux instances concurrentes.
+ *
+ * Aucune donnée de conversation n'est conservée, uniquement des compteurs et
+ * l'horodatage de dernière activité.
  */
 
-interface SessionState {
+const SESSION_PREFIX = "session:";
+const IP_PREFIX = "ip:";
+const GLOBAL_KEY = "global:mistral-calls";
+
+export interface SessionState {
   messageCount: number;
   lastActivity: number;
   webhookSent: boolean;
 }
 
-const sessions = new Map<string, SessionState>();
-const ipDailyCounts = new Map<string, { count: number; day: string }>();
-let globalDailyCount = { count: 0, day: todayKey() };
-
-function todayKey(): string {
-  return new Date().toISOString().slice(0, 10);
+function freshSession(): SessionState {
+  return { messageCount: 0, lastActivity: Date.now(), webhookSent: false };
 }
 
-export function getOrCreateSession(sessionId: string): SessionState {
-  const existing = sessions.get(sessionId);
-  const now = Date.now();
-
-  if (existing && now - existing.lastActivity <= SESSION_TIMEOUT_MS) {
+export async function getOrCreateSession(sessionId: string): Promise<SessionState> {
+  const existing = await readJson<SessionState>(SESSION_PREFIX + sessionId);
+  if (existing && Date.now() - existing.lastActivity <= SESSION_TIMEOUT_MS) {
     return existing;
   }
+  // Session absente, ou expirée après 10 min d'inactivité → réinitialisée.
+  return freshSession();
+}
 
-  // Nouvelle session, ou session expirée (10 min d'inactivité) → réinitialisée.
-  const fresh: SessionState = {
-    messageCount: 0,
-    lastActivity: now,
-    webhookSent: false,
+export async function registerSessionMessage(sessionId: string): Promise<SessionState> {
+  const session = await getOrCreateSession(sessionId);
+  const updated: SessionState = {
+    ...session,
+    messageCount: session.messageCount + 1,
+    lastActivity: Date.now(),
   };
-  sessions.set(sessionId, fresh);
-  return fresh;
+  await writeJson(SESSION_PREFIX + sessionId, updated);
+  return updated;
 }
 
-export function touchSession(sessionId: string): void {
-  const session = sessions.get(sessionId);
-  if (session) session.lastActivity = Date.now();
+export async function isSessionLimitReached(sessionId: string): Promise<boolean> {
+  const session = await getOrCreateSession(sessionId);
+  return session.messageCount >= MAX_MESSAGES_PER_SESSION;
 }
 
-export function registerSessionMessage(sessionId: string): SessionState {
-  const session = getOrCreateSession(sessionId);
-  session.messageCount += 1;
-  session.lastActivity = Date.now();
-  return session;
+export async function markWebhookSent(sessionId: string): Promise<void> {
+  const session = await getOrCreateSession(sessionId);
+  await writeJson(SESSION_PREFIX + sessionId, { ...session, webhookSent: true });
 }
 
-export function isSessionLimitReached(sessionId: string): boolean {
-  return getOrCreateSession(sessionId).messageCount >= MAX_MESSAGES_PER_SESSION;
+export async function wasWebhookAlreadySent(sessionId: string): Promise<boolean> {
+  const session = await getOrCreateSession(sessionId);
+  return session.webhookSent;
 }
 
-export function markWebhookSent(sessionId: string): void {
-  const session = getOrCreateSession(sessionId);
-  session.webhookSent = true;
+export async function registerIpMessage(ip: string): Promise<number> {
+  return incrementDailyCount(IP_PREFIX + ip);
 }
 
-export function wasWebhookAlreadySent(sessionId: string): boolean {
-  return getOrCreateSession(sessionId).webhookSent;
+export async function isIpLimitReached(ip: string): Promise<boolean> {
+  const count = await readDailyCount(IP_PREFIX + ip);
+  return count >= MAX_MESSAGES_PER_IP_PER_DAY;
 }
 
-export function registerIpMessage(ip: string): number {
-  const today = todayKey();
-  const existing = ipDailyCounts.get(ip);
-  if (!existing || existing.day !== today) {
-    ipDailyCounts.set(ip, { count: 1, day: today });
-    return 1;
-  }
-  existing.count += 1;
-  return existing.count;
+export async function registerGlobalMistralCall(): Promise<number> {
+  return incrementDailyCount(GLOBAL_KEY);
 }
 
-export function isIpLimitReached(ip: string): boolean {
-  const today = todayKey();
-  const existing = ipDailyCounts.get(ip);
-  if (!existing || existing.day !== today) return false;
-  return existing.count >= MAX_MESSAGES_PER_IP_PER_DAY;
-}
-
-export function registerGlobalMistralCall(): number {
-  const today = todayKey();
-  if (globalDailyCount.day !== today) {
-    globalDailyCount = { count: 0, day: today };
-  }
-  globalDailyCount.count += 1;
-  return globalDailyCount.count;
-}
-
-export function isGlobalLimitReached(): boolean {
-  const today = todayKey();
-  if (globalDailyCount.day !== today) return false;
-  return globalDailyCount.count >= MAX_MISTRAL_CALLS_PER_DAY;
+export async function isGlobalLimitReached(): Promise<boolean> {
+  const count = await readDailyCount(GLOBAL_KEY);
+  return count >= MAX_MISTRAL_CALLS_PER_DAY;
 }

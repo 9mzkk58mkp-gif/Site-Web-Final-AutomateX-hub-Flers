@@ -4,3 +4,32 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# En-têtes de sécurité appliqués à toutes les réponses.
+# La CSP est volontairement en Report-Only dans un premier temps : le site
+# charge des polices Google et injecte les schemas JSON-LD en scripts inline,
+# donc une CSP bloquante mal réglée casserait le rendu. Basculer sur
+# Content-Security-Policy (sans -Report-Only) après avoir vérifié qu'aucune
+# violation ne remonte dans la console du navigateur.
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy-Report-Only = """
+      default-src 'self'; \
+      script-src 'self' 'unsafe-inline'; \
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; \
+      font-src 'self' https://fonts.gstatic.com; \
+      img-src 'self' data: blob:; \
+      connect-src 'self'; \
+      frame-ancestors 'none'; \
+      base-uri 'self'; \
+      form-action 'self'; \
+      object-src 'none'"""

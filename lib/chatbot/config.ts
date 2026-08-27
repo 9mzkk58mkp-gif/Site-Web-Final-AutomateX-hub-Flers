@@ -23,4 +23,8 @@ export const SESSION_TIMEOUT_MS = 10 * 60 * 1000; // 10 minutes d'inactivité
 export const MAX_HISTORY_MESSAGES = 12; // 6 derniers échanges
 
 /** Sanitization du payload N8N. */
+// Le chatbot transmet un besoin résumé par le modèle : 300 caractères suffisent.
 export const MAX_BESOIN_EXPRIME_LENGTH = 300;
+// Le formulaire de contact transmet le message écrit par l'artisan lui-même,
+// qui décrit son projet — le tronquer à 300 caractères couperait la demande.
+export const MAX_CONTACT_MESSAGE_LENGTH = 2000;

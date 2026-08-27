@@ -1,23 +1,29 @@
-import { buildSafeN8nPayload } from "./validation";
+import { buildSafeN8nPayload, type N8nSource } from "./validation";
 
 /**
  * Envoi de la capture de contact vers N8N — section 4 de la spec.
  * Appel côté serveur uniquement, jamais depuis le widget client.
- * Réutilise NEXT_PUBLIC_N8N_WEBHOOK_URL, le même webhook que le formulaire de
- * contact classique — un seul workflow N8N côté N8N, qui distingue les deux
- * sources via le champ "source" du payload ("chatbot" vs "contact").
- * L'URL de webhook n'est pas un secret sensible (contrairement à
- * MISTRAL_API_KEY, qui reste strictement server-only) : l'exposer côté
- * client via NEXT_PUBLIC_ est un choix assumé de simplicité.
+ * Utilise N8N_WEBHOOK_URL, le même webhook que le formulaire de contact — un
+ * seul workflow N8N, qui distingue les deux origines via le champ "source"
+ * du payload ("chatbot" vs "contact").
+ *
+ * La variable n'est volontairement PAS préfixée NEXT_PUBLIC_ : préfixée, sa
+ * valeur serait inscrite en clair dans le bundle JavaScript envoyé au
+ * navigateur, et n'importe qui pourrait poster sur le webhook sans passer par
+ * la validation ni le rate limiting. Le formulaire de contact passe désormais
+ * par app/api/contact/route.ts pour la même raison.
  */
-export async function sendContactToN8n(rawInput: Record<string, unknown>): Promise<boolean> {
-  const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
+export async function sendContactToN8n(
+  rawInput: Record<string, unknown>,
+  source: N8nSource,
+): Promise<boolean> {
+  const webhookUrl = process.env.N8N_WEBHOOK_URL;
   if (!webhookUrl) {
-    console.warn("[chatbot] NEXT_PUBLIC_N8N_WEBHOOK_URL absente : capture de contact ignorée.");
+    console.warn("[n8n] N8N_WEBHOOK_URL absente : capture de contact ignorée.");
     return false;
   }
 
-  const payload = buildSafeN8nPayload(rawInput);
+  const payload = buildSafeN8nPayload(rawInput, source);
   if (!payload) return false;
 
   try {
