@@ -12,11 +12,11 @@ import { getServiceSchema } from "@/lib/schema";
 
 const URL = "/fiche-google";
 const DESCRIPTION =
-  "Configuration, avis, pack local, photos : je gère votre fiche Google Business pour artisan dans l'Orne, à partir de 150€ ou incluse dans un pack site web.";
+  "Fiche complète, avis, photos, position sur Google Maps : je m'occupe de votre fiche Google d'artisan dans l'Orne, à partir de 150€ ou incluse dans un pack site web.";
 
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
-  title: "Optimisation de fiche Google Business pour artisan dans l'Orne",
+  title: "Votre fiche Google, celle que vos clients voient en premier",
   description: DESCRIPTION,
   path: URL,
 };
@@ -25,8 +25,8 @@ export const metadata: Metadata = pageMetadata(PAGE);
 
 const INCLUSIONS = [
   "Configuration complète : catégorie, zone d'intervention, horaires, services",
-  "Stratégie d'avis clients pour construire la confiance",
-  "Optimisation pour apparaître dans le pack local (les 3 résultats en haut de Google Maps)",
+  "Une façon simple d'obtenir des avis clients, et des réponses à chacun",
+  "Le réglage de la fiche pour sortir dans les 3 premiers sur Google Maps",
   "Photos et posts réguliers pour garder la fiche active",
   "Explication claire de la différence entre fiche Google et site web, et pourquoi vous avez besoin des deux",
 ];
@@ -44,7 +44,7 @@ const CHILD_PAGES = [
   },
   {
     href: "/fiche-google/pack-local-maps",
-    title: "Pack local Google Maps : comment y apparaître",
+    title: "Google Maps : comment sortir dans les premiers",
     description:
       "Pertinence, distance, notoriété : les trois critères qui déterminent votre position.",
   },
@@ -66,7 +66,7 @@ export default function FicheGooglePage() {
       <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
-          name: "Optimisation de fiche Google Business pour artisan dans l'Orne",
+          name: "Prise en charge de la fiche Google d'un artisan dans l'Orne",
           description: DESCRIPTION,
           url: URL,
           // Prix repris à l'identique du texte de la page (« à partir de 150 € »).
@@ -75,18 +75,18 @@ export default function FicheGooglePage() {
       />
       <ServicePageLayout
         eyebrow={<Badge icon={<GoogleIcon size={14} />}>Fiche Google</Badge>}
-        h1="Optimisation de fiche Google Business pour artisan dans l'Orne"
-        intro="Avant même votre site, c'est votre fiche Google que vos clients voient. Elle apparaît sur Google Maps, dans le pack local, et de plus en plus dans les réponses des IA quand quelqu'un cherche un artisan près de chez lui. Une fiche incomplète, c'est une fiche invisible."
+        h1="Votre fiche Google, celle que vos clients voient en premier"
+        intro="Avant même votre site, c'est votre fiche Google que vos clients voient. Elle s'affiche sur Google Maps, en haut des résultats, et de plus en plus dans les réponses que Google donne directement quand quelqu'un cherche un artisan près de chez lui. Une fiche incomplète, c'est une fiche invisible."
         ctaText="Faisons le point sur votre fiche"
       >
         <div>
           <SectionHeading>
-            Qu&apos;est-ce qui est inclus dans l&apos;optimisation de votre fiche Google&nbsp;?
+            Qu&apos;est-ce que vous faites sur ma fiche Google&nbsp;?
           </SectionHeading>
           <p className="mt-3 text-sm text-text-secondary">
-            La configuration complète de la fiche, la stratégie d&apos;avis clients,
-            l&apos;optimisation pour le pack local et la publication de photos et de posts
-            réguliers. À partir de 150&nbsp;€, ou inclus dans un pack site web. TVA non
+            Je remplis la fiche en entier, je mets en place une façon simple de récolter des
+            avis, je règle ce qui vous fait sortir sur Google Maps, et je publie des photos et
+            des actualités régulièrement. À partir de 150&nbsp;€, ou inclus dans un pack site web. TVA non
             applicable, art. 293 B du CGI.
           </p>
           <div className="mt-4">

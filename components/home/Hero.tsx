@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Badge>Sites Web</Badge>
           <Badge>Visibilité Locale</Badge>
-          <Badge>Automatisations</Badge>
+          <Badge>Systèmes</Badge>
         </div>
 
         <div className="mt-6 flex items-center justify-center gap-3 sm:mt-8">

@@ -16,7 +16,7 @@ import { HOME_FAQ } from "@/lib/faq";
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
   title: "Sites web et fiche Google pour artisans dans l'Orne",
-  description: "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
+  description: "Sites web, fiche Google et systèmes qui font gagner du temps, pour les artisans du bâtiment de l'Orne. Une seule personne du début à la fin, basée dans le bassin de Flers.",
   path: "/",
 };
 

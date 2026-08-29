@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s — Automatex",
   },
   description:
-    "Sites web, fiche Google Business et automatisations pour artisans du bâtiment dans l'Orne. Une seule personne du début à la fin.",
+    "Sites web, fiche Google et systèmes qui font gagner du temps, pour les artisans du bâtiment de l'Orne. Une seule personne du début à la fin.",
   // Valeurs de repli : chaque page redéfinit son propre bloc Open Graph via
   // pageMetadata(). L'image (app/opengraph-image.tsx) est héritée par toutes
   // les routes sans avoir à être déclarée ici.

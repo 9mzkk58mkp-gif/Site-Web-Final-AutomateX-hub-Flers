@@ -21,13 +21,13 @@ const SERVICES = [
     badge: "Fiche Google",
     title: "Le premier qu'on trouve, c'est le premier qu'on appelle.",
     description:
-      "Votre fiche Google Business optimisée, à jour, qui vous sort dans le pack local quand un client cherche votre métier près de chez lui.",
+      "Votre fiche Google complète et à jour, qui vous fait sortir en haut de Google Maps quand un client cherche votre métier près de chez lui.",
     href: "/fiche-google",
-    linkLabel: "Voir l'optimisation de fiche Google Business",
+    linkLabel: "Voir ce que je fais sur votre fiche Google",
     icon: <GoogleIcon size={14} />,
   },
   {
-    badge: "Automatisations",
+    badge: "Systèmes",
     title: "Moins de bureau, plus de chantier.",
     description:
       "Des systèmes qui trient vos mails et relancent vos devis tout seuls. Le temps que vous perdez sur l'administratif, on vous le rend.",

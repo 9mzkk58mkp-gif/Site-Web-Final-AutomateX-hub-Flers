@@ -9,11 +9,11 @@ import { getServiceSchema } from "@/lib/schema";
 
 const URL = "/fiche-google/pack-local-maps";
 const DESCRIPTION =
-  "Apparaître dans le pack local Google Maps : pertinence, distance et notoriété, les trois critères ajustés pour sortir dans les 3 premiers résultats.";
+  "Pourquoi ce sont toujours les trois mêmes entreprises qui sortent en haut de Google Maps, et ce qui se règle sur votre fiche pour en faire partie.";
 
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
-  title: "Apparaître dans le pack local Google Maps",
+  title: "Sortir sur Google Maps quand un client cherche près de chez vous",
   description: DESCRIPTION,
   path: URL,
 };
@@ -21,9 +21,9 @@ const PAGE: PageMeta = {
 export const metadata: Metadata = pageMetadata(PAGE);
 
 const POINTS = [
-  "La pertinence : votre catégorie et vos services correspondent-ils à la recherche",
-  "La distance : à quelle distance vous êtes du lieu de recherche",
-  "La notoriété : vos avis, votre activité sur la fiche, votre présence en ligne globale",
+  "Est-ce que votre fiche correspond à ce qui est cherché : votre catégorie, vos services, les mots que vous employez",
+  "À quelle distance vous êtes de la personne qui cherche, au moment où elle cherche",
+  "Ce que Google sait de vous par ailleurs : vos avis, une fiche qui bouge, votre site et vos autres pages",
 ];
 
 export default function PackLocalMapsPage() {
@@ -32,35 +32,42 @@ export default function PackLocalMapsPage() {
       <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
-          name: "Optimisation pack local Google Maps",
+          name: "Faire sortir un artisan sur Google Maps",
           description: DESCRIPTION,
           url: URL,
         })}
       />
       <ServicePageLayout
         backLink={{ href: "/fiche-google", label: "Retour à Fiche Google" }}
-        h1="Apparaître dans le pack local Google Maps"
-        intro="Le pack local, ce sont les 3 résultats qui s'affichent en haut de Google quand quelqu'un cherche 'couvreur près de moi' ou 'plombier à Flers'. Si vous n'y êtes pas, la majorité des clients ne descendent même pas voir la suite."
-        ctaText="Voyons où vous en êtes sur le pack local"
+        h1="Sortir sur Google Maps quand un client cherche près de chez vous"
+        intro="Quand un particulier tape « couvreur près de moi » ou « plombier à Flers », Google affiche trois entreprises en haut de la page, sur une carte. La plupart des gens appellent l'une des trois et ne descendent jamais voir la suite. Si vous n'êtes pas dans ces trois-là, vous n'existez pas pour cette recherche."
+        ctaText="Voyons où vous sortez aujourd'hui sur Google Maps"
       >
         <div>
           <SectionHeading>
-            Qu&apos;est-ce qui détermine la position dans le pack local Google Maps&nbsp;?
+            Pourquoi ce sont toujours les mêmes qui sortent en premier&nbsp;?
           </SectionHeading>
           <p className="mt-3 text-sm text-text-secondary">
-            Trois critères combinés : la pertinence de votre fiche par rapport à la recherche, la
-            distance entre vous et la personne qui cherche, et votre notoriété (avis, activité de
-            la fiche, présence en ligne). Seuls les deux premiers se travaillent directement.
+            Parce que Google répond à trois questions avant d&apos;afficher ses trois entreprises :
+            est-ce que cette fiche correspond à ce qui est cherché, est-ce que l&apos;entreprise
+            est proche, et est-ce qu&apos;elle a l&apos;air fiable. Vos concurrents qui sortent
+            devant vous ne travaillent pas mieux — leur fiche répond mieux à ces trois
+            questions-là.
           </p>
           <div className="mt-4">
             <FeatureList items={POINTS} />
           </div>
+          <p className="mt-6 text-sm text-text-secondary">
+            Sur les trois, la distance ne se change pas : vous êtes où vous êtes. Les deux autres
+            se travaillent, et c&apos;est là que se joue l&apos;écart avec l&apos;entreprise
+            d&apos;à côté.
+          </p>
         </div>
 
         <p className="text-sm text-text-secondary">
-          Ce que j&apos;ajuste concrètement : Catégorie, description, zone d&apos;intervention,
-          régularité des publications — chaque élément de la fiche est calibré pour ces trois
-          critères, pas au hasard.
+          Ce que j&apos;ajuste concrètement sur votre fiche : la catégorie, la description, la zone
+          que vous couvrez, la régularité des publications. Chaque élément est réglé pour répondre
+          à ces questions, pas rempli au hasard.
         </p>
       </ServicePageLayout>
     </>
