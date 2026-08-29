@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { PHOTOS_POSTS_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google/photos-posts";
 const DESCRIPTION =
@@ -61,6 +63,8 @@ export default function PhotosPostsPage() {
           Ce que je mets en place : Un rythme de publication simple et tenable, avec des visuels
           qui montrent votre vrai travail — pas des stocks photos qui ne trompent personne.
         </p>
+
+        <PageFaq items={PHOTOS_POSTS_FAQ} />
       </ServicePageLayout>
     </>
   );

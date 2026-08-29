@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { MENUISIER_FAQ } from "@/lib/service-faq";
 
 const URL = "/sites-web/menuisier";
 const DESCRIPTION =
@@ -59,6 +61,8 @@ export default function MenuisierPage() {
           fenêtres. Je sais ce qu&apos;un client cherche à voir avant de vous appeler : la
           précision de la finition, pas juste &laquo; menuisier depuis 10 ans &raquo;.
         </p>
+
+        <PageFaq items={MENUISIER_FAQ} />
       </ServicePageLayout>
     </>
   );

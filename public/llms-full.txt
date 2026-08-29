@@ -51,6 +51,13 @@ Dernière mise à jour : 2026-08-27
 
 Création de site internet pour artisan dans l'Orne. Ce que comprend un site Automatex : design propre pensé pour le métier, optimisé mobile en priorité, rapide au chargement, réalisations mises en valeur avec de vraies photos de chantier, formulaire de contact et numéro visibles partout. Tarif indicatif : à partir de 890€ pour un site vitrine et 1500€ pour une landing page, sans abonnement caché (TVA non applicable, art. 293 B du CGI).
 
+Questions fréquentes :
+- Combien coûte un site internet pour un artisan ? Un site vitrine démarre à 890 € et une landing page à 1500 €, sans abonnement caché. Le tarif dépend du nombre de pages et du contenu à produire. Le prix vous est annoncé avant de commencer, pas négocié en fin de rendez-vous. TVA non applicable, art. 293 B du CGI.
+- Est-ce que je reste propriétaire de mon site ? Oui, entièrement. Le nom de domaine est déposé à votre nom, et le site vous appartient une fois payé. Vous n'êtes pas en location : si vous décidez un jour de partir, vous emportez votre site et votre domaine, et n'importe quel autre prestataire peut reprendre derrière moi.
+- Je suis engagé combien de temps ? Sur le site lui-même, aucune durée d'engagement : vous payez la création, le site est à vous. Seule la gestion suivie de votre fiche Google est un service mensuel, et il s'arrête quand vous le décidez, sans préavis ni pénalité.
+- Combien de temps avant que le site soit en ligne ? Une à deux semaines entre le premier échange et la mise en ligne, une fois vos photos et les informations de votre entreprise reçues. Le délai dépend surtout de la vitesse à laquelle vous m'envoyez vos éléments — la partie technique, elle, ne traîne pas.
+- Je n'ai pas de belles photos de mes chantiers, c'est bloquant ? Non. Des photos prises au téléphone sur un chantier fini valent mieux que des images d'illustration achetées : ce sont vos ouvrages que le client veut voir, pas une cuisine de catalogue. Je vous dis quoi photographier et sous quel angle, et je me déplace pour en faire moi-même si nécessaire.
+
 ---
 
 ## Site internet pour menuisier
@@ -59,6 +66,11 @@ Source : https://automatex-hub.com/sites-web/menuisier
 Dernière mise à jour : 2026-08-27
 
 Un menuisier vend un savoir-faire qu'on ne voit pas sur une liste de prestations. Le site doit montrer le travail : galerie photo avant/après par type de projet, mise en avant des matériaux et finitions, page dédiée aux essences de bois, section sur-mesure. Nolan a un CAP menuiserie et deux ans d'apprentissage en pose de fenêtres.
+
+Questions fréquentes :
+- Qu'est-ce qui doit apparaître sur le site d'un menuisier ? Vos réalisations, en photos et en grand. Un menuisier vend un savoir-faire qui ne se lit pas dans une liste de prestations : un client qui hésite entre deux devis regarde les finitions, les essences, la façon dont un escalier est monté. La galerie passe donc avant le texte, et le sur-mesure a sa propre section.
+- Je fais de l'agencement et de la pose de fenêtres, faut-il deux sites ? Non, une page par activité sur le même site. Un particulier qui cherche à faire poser des fenêtres et un autre qui veut une cuisine sur mesure ne cherchent pas les mêmes mots : deux pages distinctes captent les deux recherches, sans diluer votre identité ni doubler le budget.
+- Combien coûte un site pour un menuisier ? À partir de 890 € pour un site vitrine, sans abonnement caché. Le tarif dépend du nombre de pages et de la quantité de réalisations à mettre en forme. TVA non applicable, art. 293 B du CGI.
 
 ---
 
@@ -69,6 +81,11 @@ Dernière mise à jour : 2026-08-27
 
 La toiture fait peur au particulier : budget élevé, urgence en cas de fuite, confiance nécessaire. Le site doit rassurer : certifications et assurance décennale mises en avant, numéro d'urgence visible dès l'accueil, photos avant/après, types d'interventions clairs (rénovation, isolation, zinguerie, entretien). Nolan a fait deux mois de couverture en immersion.
 
+Questions fréquentes :
+- Qu'est-ce qui doit apparaître sur le site d'un couvreur ? Votre numéro, tout de suite et sur chaque page. Une toiture qui fuit est une urgence : le client appelle le premier couvreur qu'il arrive à joindre. Viennent ensuite votre assurance décennale et vos qualifications, parce qu'une réfection de toiture représente une grosse somme et que le client cherche à se rassurer avant d'engager.
+- Est-ce utile de montrer mes chantiers de toiture en photo ? Oui, surtout en avant/après. C'est ce qui distingue une entreprise qui travaille réellement d'une annonce en ligne. Un toit refait, une charpente reprise, un faîtage propre : ces photos-là font plus pour votre crédibilité que n'importe quel texte de présentation.
+- Combien coûte un site pour un couvreur ? À partir de 890 € pour un site vitrine, sans abonnement caché, avec le numéro d'urgence mis en avant sur chaque page. TVA non applicable, art. 293 B du CGI.
+
 ---
 
 ## Site internet pour plombier
@@ -77,6 +94,11 @@ Source : https://automatex-hub.com/sites-web/plombier
 Dernière mise à jour : 2026-08-27
 
 Un client qui cherche un plombier cherche une réponse rapide : numéro visible en un clic depuis mobile, mention claire des interventions d'urgence, liste simple des prestations (dépannage, installation, chauffage, sanitaire), zone d'intervention affichée clairement.
+
+Questions fréquentes :
+- Qu'est-ce qui compte le plus sur le site d'un plombier ? Que le numéro soit cliquable en une seconde depuis un téléphone. La majorité de vos demandes sont des urgences — une fuite, un chauffe-eau en panne — et se cherchent debout dans une cuisine, pas assis devant un ordinateur. Le reste du site sert à rassurer ; ce bouton-là sert à décrocher l'appel.
+- Faut-il séparer le dépannage et les travaux d'installation ? Oui, ce sont deux clients différents. Celui qui a une fuite veut un numéro et une disponibilité ; celui qui refait une salle de bains veut voir des réalisations et comprendre le déroulé. Deux pages distinctes évitent que l'un des deux ne s'y retrouve pas.
+- Combien coûte un site pour un plombier ? À partir de 890 € pour un site vitrine, sans abonnement caché, avec la zone d'intervention et les urgences mises en avant. TVA non applicable, art. 293 B du CGI.
 
 ---
 
@@ -87,6 +109,11 @@ Dernière mise à jour : 2026-08-27
 
 Entre mise aux normes, rénovation électrique et bornes de recharge, le site doit distinguer clairement les prestations : séparation nette (mise aux normes, dépannage, domotique, bornes), certifications si disponibles (Consuel, Qualifelec), rassurance sur sécurité et conformité, formulaire de devis rapide.
 
+Questions fréquentes :
+- Qu'est-ce qui doit apparaître sur le site d'un électricien ? Vos prestations séparées clairement, et vos qualifications visibles. Un particulier qui fait une mise aux normes, un autre qui installe une borne de recharge et un troisième qui monte un tableau neuf ne cherchent pas la même chose : une page par prestation évite de les perdre dans une liste.
+- Mes qualifications servent-elles vraiment à quelque chose en ligne ? Oui, sur les chantiers où le client demande une aide ou un financement. Une qualification affichée et vérifiable règle une question que le client se pose de toute façon, et lui évite de vous appeler juste pour la poser.
+- Combien coûte un site pour un électricien ? À partir de 890 € pour un site vitrine, sans abonnement caché, avec un formulaire de demande de devis rapide. TVA non applicable, art. 293 B du CGI.
+
 ---
 
 ## Site internet pour maçon
@@ -95,6 +122,11 @@ Source : https://automatex-hub.com/sites-web/macon
 Dernière mise à jour : 2026-08-27
 
 Un chantier de maçonnerie engage un budget conséquent et plusieurs semaines. Le client a besoin de se projeter : galerie de chantiers classés par type (extension, rénovation, gros œuvre), déroulé de chantier type, assurance décennale et garanties, zone d'intervention et délais habituels.
+
+Questions fréquentes :
+- Qu'est-ce qui doit apparaître sur le site d'un maçon ? Vos chantiers classés par type, et le déroulé d'un chantier. Une terrasse, une extension et un mur de clôture n'intéressent pas les mêmes clients : les ranger par type permet à chacun de trouver le sien. Le déroulé, lui, répond à la question que tout le monde se pose sans l'écrire — combien de temps et dans quel ordre.
+- Faut-il afficher les garanties sur le site ? Oui. Sur du gros œuvre, la décennale est la première chose qu'un particulier vérifie avant de signer. L'afficher clairement vous évite de perdre un client qui aurait supposé, à tort, que vous n'en aviez pas.
+- Combien coûte un site pour un maçon ? À partir de 890 € pour un site vitrine, sans abonnement caché, avec une galerie de chantiers classée par type. TVA non applicable, art. 293 B du CGI.
 
 ---
 
@@ -105,6 +137,12 @@ Dernière mise à jour : 2026-08-27
 
 Prise en charge de la fiche Google d'un artisan dans l'Orne. C'est la fiche que les clients voient en premier, avant même le site : elle s'affiche sur Google Maps, en haut des résultats, et de plus en plus dans les réponses que Google donne directement. Ce qui est fait : la fiche remplie en entier (catégorie, zone, horaires, services), une façon simple de récolter des avis et d'y répondre, le réglage de ce qui fait sortir sur Google Maps, des photos et des publications régulières. Tarif indicatif : à partir de 150€, ou inclus dans un pack site web (TVA non applicable, art. 293 B du CGI).
 
+Questions fréquentes :
+- Combien coûte la prise en charge de ma fiche Google ? À partir de 150 €, ou incluse quand elle accompagne la création d'un site. Le suivi dans la durée — publications, avis, photos — est un service mensuel séparé et optionnel. TVA non applicable, art. 293 B du CGI.
+- Ma fiche existe déjà, est-ce que ça sert encore à quelque chose ? Souvent plus que d'en créer une. La plupart des fiches existantes ont la mauvaise catégorie principale, une zone d'intervention vide ou des horaires qui datent — trois réglages qui pèsent lourd sur votre position. Une fiche à moitié remplie n'est pas montrée, même avec de bons avis.
+- Est-ce que je garde la main sur ma fiche Google ? Oui, le compte reste le vôtre. J'interviens avec un accès que vous m'accordez et que vous pouvez retirer à tout moment depuis votre propre compte Google, sans passer par moi. Vous ne dépendez de personne pour reprendre votre fiche.
+- Vous garantissez que je sortirai en premier sur Google ? Non, et méfiez-vous de qui vous le promet. Personne ne contrôle le classement de Google, et les critères changent régulièrement. Ce qui se garantit, c'est le travail : une fiche complète, cohérente avec votre site, active, et réglée sur ce que Google regarde réellement.
+
 ---
 
 ## Créer sa fiche Google et la remplir correctement
@@ -113,6 +151,12 @@ Source : https://automatex-hub.com/fiche-google/creer-optimiser
 Dernière mise à jour : 2026-08-27
 
 Une fiche Google est gratuite à créer, le problème est de bien la remplir : bonne catégorie principale (facteur qui pèse le plus), zone d'intervention réaliste, description claire sans répéter son métier dix fois, informations identiques partout en ligne (nom, adresse, téléphone). Une fiche mal configurée n'est pas montrée par Google, même avec de bons avis.
+
+Questions fréquentes :
+- Créer une fiche Google, c'est payant ? Non, la création est gratuite chez Google. Ce qui se paie, c'est le temps de la remplir correctement et de la tenir à jour — c'est là que se joue la différence entre une fiche qui sort et une fiche que personne ne voit.
+- Quelle est l'erreur la plus fréquente sur une fiche d'artisan ? La catégorie principale mal choisie. C'est le réglage qui pèse le plus sur votre position, et beaucoup d'artisans se déclarent en « entreprise de construction » alors qu'ils sont couvreurs ou plombiers. Résultat : la fiche ne remonte pas sur les recherches qui comptent pour eux.
+- Faut-il indiquer mon adresse si je travaille chez les clients ? Non, et c'est même déconseillé si vous ne recevez pas de public. Google prévoit un réglage pour les entreprises qui se déplacent : vous masquez l'adresse et vous déclarez votre zone d'intervention à la place. Votre domicile n'apparaît pas, et vous sortez quand même sur votre secteur.
+- Une zone d'intervention large, c'est mieux ? Non, l'inverse. Déclarer tout un département quand vous travaillez sur le bassin de Flers dilue votre fiche sans rien vous rapporter : la distance reste un critère, et une zone irréaliste ne vous fait pas sortir plus loin. Mieux vaut une zone honnête et bien couverte.
 
 ---
 
@@ -123,6 +167,12 @@ Dernière mise à jour : 2026-08-27
 
 Les avis rassurent avant l'appel, mais peu de clients pensent à en laisser un spontanément. Comment faire : demander juste après la fin du chantier, faciliter la démarche avec un lien direct ou une carte NFC, répondre à chaque avis positif comme négatif. Automatex propose une carte NFC personnalisée : le client la scanne et arrive directement sur la page d'avis Google, à partir de 90€.
 
+Questions fréquentes :
+- C'est légal d'acheter des avis Google ? Non. Publier ou faire publier de faux avis est sanctionné en France au titre des pratiques commerciales trompeuses par le Code de la consommation, avec des amendes qui se chiffrent en dizaines de milliers d'euros. Indépendamment de la loi, Google supprime les avis achetés quand il les détecte et peut suspendre la fiche entière — vous perdez alors aussi les vrais avis accumulés. Le risque est hors de proportion avec le gain.
+- Comment demander un avis sans avoir l'air insistant ? En demandant une seule fois, au bon moment : juste après la fin du chantier, quand le client est content et que vous êtes encore devant lui. C'est le moment où la demande paraît naturelle. Passé une semaine, elle devient une relance, et le taux de réponse s'effondre.
+- Que faire d'un avis négatif ? Y répondre, calmement et publiquement. Un avis négatif isolé au milieu d'avis positifs ne fait pas de mal : ce qui fait du mal, c'est un avis négatif sans réponse. Les prochains clients lisent votre réponse autant que la critique, et une réponse posée vous sert plus qu'un dossier parfait.
+- Combien d'avis faut-il pour que ça change quelque chose ? Il n'y a pas de seuil magique, mais la régularité compte plus que le total. Une entreprise qui récolte deux ou trois avis par mois envoie un meilleur signal qu'une autre qui en a trente, tous datés de la même semaine il y a deux ans.
+
 ---
 
 ## Sortir sur Google Maps quand un client cherche près de chez vous
@@ -131,6 +181,11 @@ Source : https://automatex-hub.com/fiche-google/pack-local-maps
 Dernière mise à jour : 2026-08-27
 
 Quand un particulier tape « couvreur près de moi » ou « plombier à Flers », Google affiche trois entreprises en haut de la page, sur une carte, et la plupart des gens appellent l'une des trois sans descendre plus bas. Google répond à trois questions pour choisir ces trois-là : est-ce que la fiche correspond à ce qui est cherché (catégorie, services, mots employés), à quelle distance se trouve l'entreprise, et est-ce qu'elle a l'air fiable (avis, fiche qui bouge, site et autres pages). La distance ne se change pas ; les deux autres se travaillent. Ajustements concrets : catégorie, description, zone d'intervention, régularité des publications.
+
+Questions fréquentes :
+- Pourquoi mes concurrents sortent devant moi sur Google Maps ? Parce que leur fiche répond mieux à trois questions que Google se pose : est-ce qu'elle correspond à ce qui est cherché, est-ce que l'entreprise est proche, et est-ce qu'elle a l'air fiable. Ce n'est pas un jugement sur votre travail — c'est un réglage de fiche, et il se rattrape.
+- Je suis loin du centre-ville, est-ce que c'est perdu d'avance ? Non, mais la distance ne se change pas. Vous sortirez plus difficilement sur une recherche faite à l'autre bout du département, et plus facilement autour de vous. C'est pour ça que les deux autres critères — la fiche et la fiabilité — méritent d'être travaillés à fond : ce sont les seuls sur lesquels vous avez la main.
+- Combien de temps avant de voir un changement ? Quelques semaines en général, parfois plus. Google ne réévalue pas une fiche instantanément, et les effets se voient d'abord sur les recherches proches de vous. Personne ne peut vous garantir un délai — qui vous en promet un invente.
 
 ---
 
@@ -141,6 +196,11 @@ Dernière mise à jour : 2026-08-27
 
 Une fiche Google qui ne bouge jamais est considérée comme moins fiable par Google. Ce qui fonctionne : photos de chantiers récents (pas des images génériques), posts réguliers sur les réalisations et disponibilités, photos nommées avec le métier et la ville avant leur mise en ligne. Automatex met en place un rythme de publication simple et tenable.
 
+Questions fréquentes :
+- À quelle fréquence faut-il publier sur sa fiche Google ? Un rythme que vous pouvez tenir vaut mieux qu'un rythme ambitieux abandonné au bout d'un mois. Deux publications par mois, régulières, envoient un meilleur signal qu'une salve de dix suivie de six mois de silence.
+- Je peux utiliser des photos trouvées sur internet ? Non, pour deux raisons. Ces images appartiennent à quelqu'un, et surtout elles ne montrent pas votre travail : un client reconnaît une photo de catalogue et se demande aussitôt pourquoi vous n'avez pas les vôtres. Une photo de chantier prise au téléphone est plus convaincante.
+- Qu'est-ce que je publie, concrètement ? Ce que vous venez de finir. Un chantier terminé, un avant/après, une disponibilité pour la saison qui arrive. Vous n'avez rien à inventer : il s'agit de montrer que l'entreprise tourne, pas de faire de la communication.
+
 ---
 
 ## Fiche Google ou site web en premier
@@ -149,6 +209,11 @@ Source : https://automatex-hub.com/fiche-google/fiche-vs-site
 Dernière mise à jour : 2026-08-27
 
 Les deux travaillent ensemble, mais avec un budget serré : la fiche Google en premier si l'artisan veut des appels rapidement, a un budget limité, ou n'a pas encore beaucoup de réalisations à montrer. Le site en premier si l'artisan travaille sur recommandation et devis premium, veut montrer un book détaillé, ou vise des clients qui comparent plusieurs prestataires. Dans l'idéal, les deux ensemble : la fiche capte la recherche locale immédiate, le site convertit et rassure.
+
+Questions fréquentes :
+- Si je ne peux en faire qu'un seul, je commence par quoi ? Par la fiche Google, dans la plupart des cas. Elle coûte moins cher, elle est visible plus vite, et elle capte les recherches urgentes faites depuis un téléphone. Le site prend le relais quand le client compare plusieurs entreprises avant de choisir.
+- Est-ce qu'une fiche Google peut remplacer un site ? Pour un dépannage, souvent oui. Pour un chantier à plusieurs milliers d'euros, non : le client veut voir des réalisations, comprendre comment vous travaillez et se rassurer avant d'appeler. Une fiche ne donne pas cette place-là.
+- Combien ça coûte de faire les deux ? La fiche est incluse quand elle accompagne la création d'un site : comptez à partir de 890 € pour un site vitrine avec la fiche mise en place et vérifiée. TVA non applicable, art. 293 B du CGI.
 
 ---
 
@@ -159,6 +224,12 @@ Dernière mise à jour : 2026-08-27
 
 Gagner du temps sur les devis et les mails, pour les artisans du bâtiment de l'Orne. Il ne s'agit ni de robotique ni de machines d'atelier : uniquement le travail de bureau d'une entreprise du bâtiment. Ce qui est installé : relance des devis envoyés et restés sans réponse, tri des mails entrants (demandes de chantier d'un côté, factures fournisseurs de l'autre), devis dicté depuis le chantier et retranscrit sans ressaisie. Des systèmes qui tournent en arrière-plan sur les outils habituels de l'artisan (boîte mail, téléphone, tableau de suivi). Concerne menuisiers, couvreurs, plombiers, électriciens et maçons de Flers et de l'Orne. Tarif : sur devis, selon les systèmes mis en place (TVA non applicable, art. 293 B du CGI).
 
+Questions fréquentes :
+- Est-ce qu'il faut changer mes outils ou mon logiciel ? Non. Tout se branche sur ce que vous utilisez déjà — votre boîte mail, votre téléphone, votre suivi de devis. Il n'y a pas de nouveau logiciel à apprendre, pas de deuxième interface à ouvrir le soir, et rien à ressaisir ailleurs.
+- Combien ça coûte ? Sur devis, selon ce qui est mis en place et selon vos outils actuels. On commence toujours par un échange : vous décrivez votre semaine type, je vous dis ce qui vaut la peine d'être repris et ce qui n'en vaut pas la peine. TVA non applicable, art. 293 B du CGI.
+- Est-ce que je garde le contrôle de ce qui part à mes clients ? Oui. Rien n'est envoyé à votre insu : vous voyez ce qui part, à quel moment, et vous pouvez couper ou modifier quand vous voulez. Le principe est de vous enlever le suivi, pas la décision.
+- Je ne suis pas à l'aise avec l'informatique, c'est un problème ? Non, c'est plutôt la raison d'être de ces systèmes. Ils tournent en arrière-plan et ne vous demandent rien au quotidien. Si l'installation exige que vous appreniez quelque chose de compliqué, c'est qu'elle est mal faite.
+
 ---
 
 ## Relance devis automatique pour artisans du bâtiment
@@ -167,6 +238,12 @@ Source : https://automatex-hub.com/automatisations/relance-devis
 Dernière mise à jour : 2026-08-27
 
 Relance devis automatique pour artisans du bâtiment. Un devis sans réponse n'est presque jamais un refus : le client attend un accord de banque, compare deux entreprises, ou a laissé filer le mail. Chaque devis envoyé est suivi, une relance écrite part au bon moment au nom de l'artisan, et la relance suivante est annulée si le client répond. Ce n'est pas un logiciel de devis de plus : le système se branche sur la boîte mail et le suivi de devis existants, sans abonnement mensuel imposé ni interface supplémentaire à apprendre. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
+
+Questions fréquentes :
+- Au bout de combien de temps part la relance ? Au délai que vous fixez, généralement une semaine après l'envoi du devis, puis une seconde fois deux à trois semaines plus tard. Vous choisissez ces délais selon votre métier : un dépannage ne se relance pas au même rythme qu'une réfection de toiture.
+- Et si le client a déjà répondu entre-temps ? La relance suivante s'annule d'elle-même. Dès qu'une réponse arrive, le suivi le voit et coupe : vous ne risquez pas de relancer quelqu'un qui vient d'accepter votre devis, ce qui est précisément ce qui fait mauvaise impression.
+- La relance est-elle écrite à mon nom ? Oui, à votre nom et dans un français qui ressemble au vôtre. Le client reçoit un message qui pourrait être le vôtre, pas une notification automatique reconnaissable à dix mètres. Vous validez les textes avant la mise en route.
+- Combien coûte la mise en place ? Sur devis, selon les outils que vous utilisez déjà pour vos devis et votre boîte mail. TVA non applicable, art. 293 B du CGI.
 
 ---
 
@@ -177,6 +254,11 @@ Dernière mise à jour : 2026-08-27
 
 Tri automatique des mails pour artisans du bâtiment. Entre demandes de devis, factures fournisseurs et publicité, la boîte mail d'un menuisier, d'un couvreur ou d'un plombier devient vite un fouillis et les demandes de chantier s'y perdent. Les mails sont triés par type (demande de chantier, facture fournisseur, administratif, reste), les demandes de devis remontent en haut, des réponses brouillon sont préparées pour les demandes courantes. Le tri se met en place sur la boîte mail actuelle, avec des règles définies à partir de ce que l'artisan reçoit vraiment. Rien n'est supprimé. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
 
+Questions fréquentes :
+- Est-ce que des mails peuvent être supprimés par erreur ? Non, rien n'est supprimé. Les mails sont classés, pas jetés : tout reste dans votre boîte et reste retrouvable. Le tri ne fait que remonter les demandes de chantier en haut et ranger le reste.
+- Faut-il changer d'adresse mail ? Non, le tri se branche sur votre boîte actuelle. Vous gardez votre adresse, vos contacts et votre historique — vous les retrouvez simplement rangés.
+- Les réponses partent-elles toutes seules ? Non. Des brouillons sont préparés pour les demandes courantes, mais rien ne part sans que vous l'ayez relu et envoyé. Vous gagnez le temps de la rédaction, pas le contrôle de ce que vous dites.
+
 ---
 
 ## Dicter son devis depuis le chantier
@@ -185,6 +267,12 @@ Source : https://automatex-hub.com/automatisations/devis-vocal
 Dernière mise à jour : 2026-08-27
 
 Automatiser les devis à la voix. Sur un chantier, prendre des notes pour un devis n'est jamais pratique : les cotes finissent sur un carnet et la mise en forme attend le soir. L'artisan dicte les informations depuis le chantier avec son téléphone, les cotes, quantités et coordonnées du client sont retranscrites et rangées, et il récupère une base de devis prête à chiffrer sans ressaisie. Le suivi des devis (envoyé, vu, accepté, sans réponse) se tient ensuite tout seul dans un tableau, et alimente la relance devis automatique. Tarif sur devis, TVA non applicable, art. 293 B du CGI.
+
+Questions fréquentes :
+- Il me faut une application particulière pour dicter ? Non, votre téléphone suffit. Vous dictez pendant la visite comme vous laisseriez un message, et vous récupérez les informations mises en forme. Rien à installer sur un ordinateur, rien à apprendre avant de commencer.
+- Et si je me trompe en dictant, ou si je reprends une cote ? Vous vous reprenez à voix haute, comme vous le feriez sur un carnet. C'est la dernière valeur qui est retenue, et vous relisez de toute façon avant de chiffrer : la dictée fait gagner la ressaisie, elle ne remplace pas votre relecture.
+- Le devis est-il envoyé automatiquement au client ? Non. Vous récupérez une base prête à chiffrer et à finaliser ; c'est vous qui décidez du prix et de l'envoi. Le suivi ne démarre qu'une fois le devis parti.
+- Ça marche sur un chantier sans réseau ? La dictée s'enregistre sur le téléphone et se traite dès que le réseau revient. Vous n'avez pas à attendre d'avoir du signal pour prendre vos cotes — ce qui, dans le bocage, est rarement acquis.
 
 ---
 

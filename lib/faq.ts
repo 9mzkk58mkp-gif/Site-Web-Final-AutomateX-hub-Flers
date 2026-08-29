@@ -1,4 +1,12 @@
 /**
+ * Une question et sa réponse. Type partagé par toutes les FAQ du site :
+ * FaqAccordion, le schema FAQPage et lib/service-faq.ts s'appuient dessus,
+ * ce qui garantit qu'une réponse structurée ne peut pas diverger de la
+ * réponse affichée.
+ */
+export type FaqItem = { question: string; answer: string };
+
+/**
  * FAQ home — format GEO (questions autoportantes, citables telles quelles).
  * Source unique utilisée par FaqSection.tsx, le schema FAQPage, et llms.txt.
  */

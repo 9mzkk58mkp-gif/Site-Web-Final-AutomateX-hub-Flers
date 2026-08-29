@@ -10,6 +10,8 @@ import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { SYSTEMES_FAQ } from "@/lib/service-faq";
 
 const URL = "/automatisations";
 const DESCRIPTION =
@@ -98,7 +100,12 @@ function DeQuoiOnParle() {
 function PourQuiConcretement() {
   return (
     <div>
-      <SectionHeading>À quoi ça ressemble, métier par métier</SectionHeading>
+      <SectionHeading>À quoi ça ressemble dans mon métier&nbsp;?</SectionHeading>
+      <p className="mt-3 text-sm text-text-secondary">
+        À des situations que vous reconnaîtrez : un devis parti il y a trois semaines et jamais
+        rappelé, une demande de chantier noyée sous les mails de fournisseur, des cotes retapées
+        le soir sur un ordinateur. Voici les mêmes, métier par métier.
+      </p>
       <div className="mt-4">
         <FeatureList items={METIER_EXAMPLES} />
       </div>
@@ -163,11 +170,18 @@ export default function AutomatisationsPage() {
         <PourQuiConcretement />
 
         <div>
-          <SectionHeading>Le détail par système</SectionHeading>
+          <SectionHeading>Quel système regarder en premier&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Celui qui vous coûte le plus de chantiers aujourd&apos;hui. Si des devis restent sans
+            réponse, commencez par la relance. Si les demandes se perdent, par le tri des mails.
+            Si vos soirées y passent, par la dictée depuis le chantier.
+          </p>
           <ChildPageGrid pages={CHILD_PAGES} />
         </div>
 
         <TarifEtSuite />
+
+        <PageFaq items={SYSTEMES_FAQ} />
       </ServicePageLayout>
     </>
   );

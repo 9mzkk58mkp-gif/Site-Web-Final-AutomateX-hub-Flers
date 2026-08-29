@@ -20,6 +20,7 @@ import path from "node:path";
 import { PUBLIC_CHUNKS } from "../lib/chatbot-knowledge/public-content";
 import { NAP, SITE_URL } from "../lib/constants";
 import { PAGE_DATES } from "../lib/page-dates";
+import { ROUTE_FAQ } from "../lib/service-faq";
 
 /** Ordre de présentation : accueil, piliers, puis pages filles et transversales. */
 const ROUTE_ORDER = [
@@ -57,6 +58,13 @@ const uncovered = ROUTE_ORDER.filter(
   (route) => !PUBLIC_CHUNKS.some((chunk) => chunk.url === route),
 );
 
+/** Questions/réponses affichées sur la page, dans le même ordre qu'à l'écran. */
+function faqLines(url: string | undefined): string[] {
+  const faq = url ? ROUTE_FAQ[url] : undefined;
+  if (!faq) return [];
+  return ["", "Questions fréquentes :", ...faq.map((i) => `- ${i.question} ${i.answer}`)];
+}
+
 const sections = chunks
   .map((chunk) => {
     const url = chunk.url ? `${SITE_URL}${chunk.url}` : SITE_URL;
@@ -68,6 +76,10 @@ const sections = chunks
       ...(modified ? [`Dernière mise à jour : ${modified.slice(0, 10)}`] : []),
       "",
       chunk.text,
+      // La FAQ affichée en bas de page fait partie du contenu public : la
+      // reprendre ici évite qu'un moteur génératif cite la page sans avoir
+      // vu les réponses aux objections (prix, engagement, propriété).
+      ...faqLines(chunk.url),
     ].join("\n");
   })
   .join("\n\n---\n\n");

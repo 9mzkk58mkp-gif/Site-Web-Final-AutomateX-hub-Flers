@@ -7,6 +7,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { DEVIS_VOCAL_FAQ } from "@/lib/service-faq";
 
 const URL = "/automatisations/devis-vocal";
 const DESCRIPTION =
@@ -86,7 +88,12 @@ function SuiviDevis() {
 function CeQueCaEvite() {
   return (
     <div>
-      <SectionHeading>Ce que ça vous évite</SectionHeading>
+      <SectionHeading>Qu&apos;est-ce que ça vous évite concrètement&nbsp;?</SectionHeading>
+      <p className="mt-3 text-sm text-text-secondary">
+        La double saisie, et le devis qui part dix jours trop tard. Tout ce que vous dictez
+        pendant la visite est déjà en forme quand vous rentrez : il ne vous reste qu&apos;à
+        chiffrer.
+      </p>
       <div className="mt-4">
         <FeatureList items={CE_QUE_CA_EVITE} />
       </div>
@@ -137,6 +144,8 @@ export default function DevisVocalPage() {
 
         <SuiviDevis />
         <CeQueCaEvite />
+
+        <PageFaq items={DEVIS_VOCAL_FAQ} />
       </ServicePageLayout>
     </>
   );

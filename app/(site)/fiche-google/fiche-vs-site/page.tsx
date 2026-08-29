@@ -6,6 +6,8 @@ import SectionHeading from "@/components/services/SectionHeading";
 import FeatureList from "@/components/services/FeatureList";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { FICHE_VS_SITE_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google/fiche-vs-site";
 const DESCRIPTION =
@@ -79,6 +81,8 @@ export default function FicheVsSitePage() {
           Dans l&apos;idéal : Les deux ensemble : la fiche capte la recherche locale immédiate, le
           site convertit et rassure une fois le contact établi.
         </p>
+
+        <PageFaq items={FICHE_VS_SITE_FAQ} />
       </ServicePageLayout>
     </>
   );

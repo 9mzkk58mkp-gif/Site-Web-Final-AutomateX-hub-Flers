@@ -9,6 +9,8 @@ import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { FICHE_GOOGLE_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google";
 const DESCRIPTION =
@@ -99,9 +101,16 @@ export default function FicheGooglePage() {
         </div>
 
         <div>
-          <SectionHeading>Le détail par sujet</SectionHeading>
+          <SectionHeading>Quel sujet voulez-vous creuser&nbsp;?</SectionHeading>
+          <p className="mt-3 text-sm text-text-secondary">
+            Si votre fiche n&apos;existe pas ou date, commencez par la création. Si elle existe
+            mais que personne ne vous trouve, regardez Google Maps. Si vous hésitez entre la
+            fiche et le site, la dernière page tranche.
+          </p>
           <ChildPageGrid pages={CHILD_PAGES} />
         </div>
+
+        <PageFaq items={FICHE_GOOGLE_FAQ} />
       </ServicePageLayout>
     </>
   );

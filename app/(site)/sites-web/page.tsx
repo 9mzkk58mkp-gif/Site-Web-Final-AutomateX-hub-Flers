@@ -9,6 +9,8 @@ import ChildPageGrid from "@/components/services/ChildPageGrid";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { SITES_WEB_FAQ } from "@/lib/service-faq";
 
 const URL = "/sites-web";
 const DESCRIPTION =
@@ -106,6 +108,8 @@ export default function SitesWebPage() {
           <p className="mt-3 text-sm text-text-secondary">Le détail par spécialité :</p>
           <ChildPageGrid pages={METIER_PAGES} />
         </div>
+
+        <PageFaq items={SITES_WEB_FAQ} />
       </ServicePageLayout>
     </>
   );

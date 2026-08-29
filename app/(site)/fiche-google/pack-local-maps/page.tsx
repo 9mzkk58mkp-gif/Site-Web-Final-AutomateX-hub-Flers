@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { GOOGLE_MAPS_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google/pack-local-maps";
 const DESCRIPTION =
@@ -69,6 +71,8 @@ export default function PackLocalMapsPage() {
           que vous couvrez, la régularité des publications. Chaque élément est réglé pour répondre
           à ces questions, pas rempli au hasard.
         </p>
+
+        <PageFaq items={GOOGLE_MAPS_FAQ} />
       </ServicePageLayout>
     </>
   );

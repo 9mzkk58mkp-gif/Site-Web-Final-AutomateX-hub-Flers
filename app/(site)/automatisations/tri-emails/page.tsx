@@ -7,6 +7,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { TRI_EMAILS_FAQ } from "@/lib/service-faq";
 
 const URL = "/automatisations/tri-emails";
 const DESCRIPTION =
@@ -141,6 +143,8 @@ export default function TriEmailsPage() {
 
         <CommentCaSePasse />
         <SuiteEtTarif />
+
+        <PageFaq items={TRI_EMAILS_FAQ} />
       </ServicePageLayout>
     </>
   );

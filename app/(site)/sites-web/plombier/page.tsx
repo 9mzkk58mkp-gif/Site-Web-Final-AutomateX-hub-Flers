@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { PLOMBIER_FAQ } from "@/lib/service-faq";
 
 const URL = "/sites-web/plombier";
 const DESCRIPTION =
@@ -53,6 +55,8 @@ export default function PlombierPage() {
             <FeatureList items={POINTS} />
           </div>
         </div>
+
+        <PageFaq items={PLOMBIER_FAQ} />
       </ServicePageLayout>
     </>
   );

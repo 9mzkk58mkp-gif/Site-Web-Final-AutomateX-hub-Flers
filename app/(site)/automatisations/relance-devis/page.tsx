@@ -7,6 +7,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { RELANCE_DEVIS_FAQ } from "@/lib/service-faq";
 
 const URL = "/automatisations/relance-devis";
 const DESCRIPTION =
@@ -76,7 +78,12 @@ function PasUnLogicielDePlus() {
 function CasMetiers() {
   return (
     <div>
-      <SectionHeading>Des exemples de devis qui se relancent tout seuls</SectionHeading>
+      <SectionHeading>Quels devis gagnent le plus à être relancés&nbsp;?</SectionHeading>
+      <p className="mt-3 text-sm text-text-secondary">
+        Ceux dont la décision prend du temps côté client : un montant qui demande un accord de
+        banque, un chantier prévu pour la belle saison, une comparaison entre deux ou trois
+        entreprises. Ce sont ceux qu&apos;on oublie, et ce sont les plus gros.
+      </p>
       <div className="mt-4">
         <FeatureList items={CAS_METIERS} />
       </div>
@@ -152,6 +159,8 @@ export default function RelanceDevisPage() {
         <PasUnLogicielDePlus />
         <CasMetiers />
         <TarifEtLiens />
+
+        <PageFaq items={RELANCE_DEVIS_FAQ} />
       </ServicePageLayout>
     </>
   );

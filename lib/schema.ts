@@ -112,6 +112,15 @@ export function getLocalBusinessSchema(): JsonLdSchema {
       "@type": "AdministrativeArea",
       name,
     })),
+    // Centroïde de la commune de rattachement, PAS l'adresse du domicile :
+    // un Service Area Business déclare son point de service, jamais un lieu
+    // où le public serait reçu. Donne à Google et aux moteurs génératifs
+    // l'ancrage géographique qui manquait à `areaServed` seul.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 48.7597,
+      longitude: -0.5783,
+    },
     priceRange: "€€",
     sameAs: [...SOCIAL_LINKS],
   };

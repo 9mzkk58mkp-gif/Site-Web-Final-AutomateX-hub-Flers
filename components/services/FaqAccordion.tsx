@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
+import type { FaqItem } from "@/lib/faq";
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -23,8 +24,6 @@ function ChevronIcon({ open }: { open: boolean }) {
     </svg>
   );
 }
-
-type FaqItem = { question: string; answer: string };
 
 /**
  * Accordéon FAQ générique. Les réponses restent dans le DOM même fermées

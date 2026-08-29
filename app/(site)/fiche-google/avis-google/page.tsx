@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { AVIS_GOOGLE_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google/avis-google";
 const DESCRIPTION =
@@ -62,6 +64,8 @@ export default function AvisGooglePage() {
           il la scanne avec son téléphone et arrive directement sur votre page d&apos;avis Google,
           sans chercher.
         </p>
+
+        <PageFaq items={AVIS_GOOGLE_FAQ} />
       </ServicePageLayout>
     </>
   );

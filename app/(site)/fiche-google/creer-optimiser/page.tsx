@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { CREER_OPTIMISER_FAQ } from "@/lib/service-faq";
 
 const URL = "/fiche-google/creer-optimiser";
 const DESCRIPTION =
@@ -64,6 +66,8 @@ export default function CreerOptimiserPage() {
           c&apos;est une fiche que Google ne montre pas, même si vous avez de bons avis. La
           configuration de base pèse plus lourd que la plupart des artisans ne l&apos;imaginent.
         </p>
+
+        <PageFaq items={CREER_OPTIMISER_FAQ} />
       </ServicePageLayout>
     </>
   );

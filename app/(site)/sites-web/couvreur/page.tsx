@@ -6,6 +6,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { getServiceSchema } from "@/lib/schema";
+import PageFaq from "@/components/services/PageFaq";
+import { COUVREUR_FAQ } from "@/lib/service-faq";
 
 const URL = "/sites-web/couvreur";
 const DESCRIPTION =
@@ -59,6 +61,8 @@ export default function CouvreurPage() {
           qu&apos;un client en urgence ne cherche pas un joli site — il cherche un numéro qui
           répond vite et une preuve que vous êtes du métier.
         </p>
+
+        <PageFaq items={COUVREUR_FAQ} />
       </ServicePageLayout>
     </>
   );
