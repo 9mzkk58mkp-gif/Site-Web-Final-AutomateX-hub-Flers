@@ -32,7 +32,7 @@ export default function AvisGooglePage() {
       <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
-          name: "Stratégie d'avis Google pour artisans",
+          name: "Obtenir et gérer les avis Google d'un artisan",
           description: DESCRIPTION,
           url: URL,
         })}
@@ -41,7 +41,7 @@ export default function AvisGooglePage() {
         backLink={{ href: "/fiche-google", label: "Retour à Fiche Google" }}
         h1="Obtenir et gérer ses avis Google en tant qu'artisan"
         intro="Les avis, c'est ce qui rassure un particulier avant de vous appeler. Le problème, c'est que peu de clients pensent spontanément à en laisser un — même quand ils sont contents du travail."
-        ctaText="Parlons de votre stratégie d'avis"
+        ctaText="Parlons de vos avis clients"
       >
         <div>
           <SectionHeading>

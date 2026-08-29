@@ -128,7 +128,7 @@ export default function RelanceDevisPage() {
         })}
       />
       <ServicePageLayout
-        backLink={{ href: "/automatisations", label: "Retour à Automatisations" }}
+        backLink={{ href: "/automatisations", label: "Retour aux systèmes" }}
         h1="Relance devis automatique pour artisans du bâtiment"
         intro="Un devis envoyé sans relance, c'est souvent un chantier perdu — pas parce que le client a dit non, mais parce que personne n'a relancé au bon moment. La relance devis automatique s'occupe de ce rappel à votre place, sur les devis que vous avez déjà envoyés."
         ctaText="Parlons de votre suivi de devis"

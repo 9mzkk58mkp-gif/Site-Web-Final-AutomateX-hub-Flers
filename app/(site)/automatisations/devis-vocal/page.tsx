@@ -10,11 +10,11 @@ import { getServiceSchema } from "@/lib/schema";
 
 const URL = "/automatisations/devis-vocal";
 const DESCRIPTION =
-  "Automatiser les devis d'un artisan du bâtiment : dictez les cotes depuis le chantier, le devis se met en forme et le suivi se tient tout seul. Sur devis.";
+  "Dictez les cotes depuis le chantier : le devis se met en forme et le suivi se tient tout seul, sans ressaisie le soir. Sur devis.";
 
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
-  title: "Automatiser les devis : dictez-les depuis le chantier",
+  title: "Dictez votre devis sur le chantier, il est écrit quand vous rentrez",
   description: DESCRIPTION,
   path: URL,
 };
@@ -110,15 +110,15 @@ export default function DevisVocalPage() {
       <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
-          name: "Automatiser les devis à la voix",
+          name: "Devis dicté depuis le chantier pour artisans",
           description: DESCRIPTION,
           url: URL,
         })}
       />
       <ServicePageLayout
-        backLink={{ href: "/automatisations", label: "Retour à Automatisations" }}
-        h1="Automatiser vos devis : dictez-les depuis le chantier"
-        intro="Sur un chantier, prendre des notes pour un devis n'est jamais pratique. Vous dictez les informations à voix haute pendant la visite, elles sont retranscrites et mises en forme, et le devis est déjà à moitié fait quand vous rentrez. C'est la première brique pour automatiser les devis d'une entreprise du bâtiment."
+        backLink={{ href: "/automatisations", label: "Retour aux systèmes" }}
+        h1="Dictez votre devis sur le chantier, il est écrit quand vous rentrez"
+        intro="Sur un chantier, prendre des notes pour un devis n'est jamais pratique. Vous dictez les informations à voix haute pendant la visite, elles sont retranscrites et mises en forme, et le devis est déjà à moitié fait quand vous rentrez. C'est la première chose à mettre en place quand les devis vous mangent vos soirées."
         ctaText="Voyons si ça peut vous servir"
       >
         <PourquoiLaVoix />

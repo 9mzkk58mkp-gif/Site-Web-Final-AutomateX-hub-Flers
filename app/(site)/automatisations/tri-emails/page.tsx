@@ -120,7 +120,7 @@ export default function TriEmailsPage() {
         })}
       />
       <ServicePageLayout
-        backLink={{ href: "/automatisations", label: "Retour à Automatisations" }}
+        backLink={{ href: "/automatisations", label: "Retour aux systèmes" }}
         h1="Tri automatique des mails pour artisans du bâtiment"
         intro="Entre les demandes de devis, les factures fournisseurs et la publicité, la boîte mail d'un menuisier, d'un couvreur ou d'un plombier devient vite un fouillis. Résultat : des demandes de chantier qui se perdent dans le tas, et des clients qui appellent quelqu'un d'autre."
         ctaText="On regarde comment organiser vos mails"

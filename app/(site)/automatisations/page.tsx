@@ -17,7 +17,7 @@ const DESCRIPTION =
 
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
-  title: "Automatisation des devis pour artisans du bâtiment dans l'Orne",
+  title: "Gagner du temps sur les devis et les mails, pour un artisan de l'Orne",
   description: DESCRIPTION,
   path: URL,
 };
@@ -50,7 +50,7 @@ const CHILD_PAGES = [
   },
   {
     href: "/automatisations/devis-vocal",
-    title: "Automatiser vos devis à la voix",
+    title: "Dicter vos devis depuis le chantier",
     description: "Vous dictez depuis le chantier, le devis se met en forme tout seul.",
   },
 ];
@@ -80,7 +80,7 @@ function CeQueJinstalle() {
 function DeQuoiOnParle() {
   return (
     <div>
-      <SectionHeading>Qu&apos;est-ce que l&apos;automatisation pour un artisan, concrètement&nbsp;?</SectionHeading>
+      <SectionHeading>Concrètement, qu&apos;est-ce qui peut tourner tout seul chez un artisan&nbsp;?</SectionHeading>
       <p className="mt-3 text-sm text-text-secondary">
         Il ne s&apos;agit ni de robotique, ni de machines d&apos;atelier, ni de chaîne de
         production. On parle uniquement du travail de bureau d&apos;une entreprise du bâtiment :
@@ -114,7 +114,7 @@ function PourQuiConcretement() {
 function TarifEtSuite() {
   return (
     <div>
-      <SectionHeading>Combien coûte l&apos;automatisation des devis pour un artisan&nbsp;?</SectionHeading>
+      <SectionHeading>Combien ça coûte de mettre ces systèmes en place&nbsp;?</SectionHeading>
       <p className="mt-3 text-sm text-text-secondary">
         Le tarif est établi sur devis, selon les systèmes mis en place et vos outils existants.
         TVA non applicable, art. 293 B du CGI. On commence toujours par un échange : vous me
@@ -126,9 +126,9 @@ function TarifEtSuite() {
         <Link href="/sites-web" className="font-medium text-emerald hover:underline">
           création de votre site vitrine d&apos;artisan
         </Link>{" "}
-        et l&apos;
+        et la{" "}
         <Link href="/fiche-google" className="font-medium text-emerald hover:underline">
-          optimisation de votre fiche Google Business
+          prise en charge de votre fiche Google
         </Link>{" "}
         passent avant : il faut d&apos;abord recevoir des demandes avant de les trier. Je me
         déplace sur{" "}
@@ -147,14 +147,14 @@ export default function AutomatisationsPage() {
       <PageSchema meta={PAGE} />
       <SchemaScript
         schema={getServiceSchema({
-          name: "Automatisation des devis et de la gestion administrative pour artisans",
+          name: "Systèmes de suivi des devis et des mails pour artisans",
           description: DESCRIPTION,
           url: URL,
         })}
       />
       <ServicePageLayout
         eyebrow={<Badge icon={<AutomationIcon />}>Systèmes</Badge>}
-        h1="Automatisation des devis pour artisans du bâtiment dans l'Orne"
+        h1="Gagner du temps sur les devis et les mails, pour un artisan de l'Orne"
         intro="Le soir, après une journée de chantier, personne n'a envie de relancer un devis resté sans réponse ou de vider une boîte mail pleine de factures fournisseurs. Ce sont pourtant ces tâches-là qui font perdre des chantiers à des menuisiers, couvreurs, plombiers, électriciens et maçons qui font par ailleurs un travail irréprochable."
         ctaText="Voyons ce qui vous ferait gagner du temps"
       >

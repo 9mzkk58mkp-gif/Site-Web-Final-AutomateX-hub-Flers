@@ -63,7 +63,7 @@ export default function RealisationsPage() {
             </Link>
             ,{" "}
             <Link href="/fiche-google" className="font-medium text-emerald hover:underline">
-              l&apos;optimisation d&apos;une fiche Google Business
+              la prise en charge d&apos;une fiche Google
             </Link>{" "}
             et{" "}
             <Link href="/qui-je-suis" className="font-medium text-emerald hover:underline">

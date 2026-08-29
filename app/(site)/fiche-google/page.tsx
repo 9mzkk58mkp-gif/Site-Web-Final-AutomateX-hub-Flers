@@ -34,7 +34,7 @@ const INCLUSIONS = [
 const CHILD_PAGES = [
   {
     href: "/fiche-google/creer-optimiser",
-    title: "Créer et optimiser sa fiche Google Business",
+    title: "Créer sa fiche Google et la remplir correctement",
     description: "La bonne catégorie, une zone réaliste, des informations identiques partout.",
   },
   {
@@ -70,7 +70,7 @@ export default function FicheGooglePage() {
           description: DESCRIPTION,
           url: URL,
           // Prix repris à l'identique du texte de la page (« à partir de 150 € »).
-          offers: [{ label: "Optimisation de fiche Google Business", fromPrice: 150 }],
+          offers: [{ label: "Prise en charge de la fiche Google", fromPrice: 150 }],
         })}
       />
       <ServicePageLayout
