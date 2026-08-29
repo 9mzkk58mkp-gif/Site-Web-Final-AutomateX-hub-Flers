@@ -17,11 +17,11 @@ const LABELS: Record<string, string> = {
   "/fiche-google": "Fiche Google",
   "/fiche-google/creer-optimiser": "Créer et optimiser",
   "/fiche-google/avis-google": "Avis Google",
-  "/fiche-google/pack-local-maps": "Pack local Maps",
+  "/fiche-google/pack-local-maps": "Sortir sur Google Maps",
   "/fiche-google/photos-posts": "Photos et posts",
   "/fiche-google/fiche-vs-site": "Fiche ou site web",
 
-  "/automatisations": "Automatisations",
+  "/automatisations": "Systèmes",
   "/automatisations/relance-devis": "Relance de devis",
   "/automatisations/tri-emails": "Tri des e-mails",
   "/automatisations/devis-vocal": "Devis à la voix",

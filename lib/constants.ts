@@ -70,12 +70,14 @@ export const METIERS = [
 export const NAV_LINKS = [
   { href: "/sites-web", label: "Sites Web" },
   { href: "/fiche-google", label: "Fiche Google" },
-  { href: "/automatisations", label: "Automatisations" },
+  // Le segment d'URL reste "automatisations" (indexé), mais le libellé affiché
+  // dit "Systèmes" : un artisan ne cherche jamais "automatisation".
+  { href: "/automatisations", label: "Systèmes" },
   { href: "/qui-je-suis", label: "Qui je suis" },
 ] as const;
 
 export const SILO_LINKS = [
   { href: "/sites-web", label: "Sites Web" },
   { href: "/fiche-google", label: "Fiche Google" },
-  { href: "/automatisations", label: "Automatisations" },
+  { href: "/automatisations", label: "Systèmes" },
 ] as const;

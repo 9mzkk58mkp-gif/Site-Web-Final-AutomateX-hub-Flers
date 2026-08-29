@@ -12,7 +12,7 @@ import { getServiceSchema } from "@/lib/schema";
 
 const URL = "/sites-web";
 const DESCRIPTION =
-  "Site vitrine rapide et mobile-first pour artisans du bâtiment dans l'Orne, à partir de 1500€ sans abonnement. Design pensé pour votre métier, pas un template.";
+  "Site vitrine rapide et mobile-first pour artisans du bâtiment dans l'Orne, à partir de 890€ sans abonnement. Design pensé pour votre métier, pas un template.";
 
 /** Identité de la page — source unique des balises meta et du JSON-LD. */
 const PAGE: PageMeta = {
@@ -70,8 +70,8 @@ export default function SitesWebPage() {
           description: DESCRIPTION,
           url: URL,
           // Prix repris à l'identique du texte de la page (« à partir de
-          // 1500 € »). Ne jamais structurer un tarif absent du contenu visible.
-          offers: [{ label: "Site vitrine pour artisan", fromPrice: 1500 }],
+          // 890 € »). Ne jamais structurer un tarif absent du contenu visible.
+          offers: [{ label: "Site vitrine pour artisan", fromPrice: 890 }],
         })}
       />
       <ServicePageLayout
@@ -83,7 +83,7 @@ export default function SitesWebPage() {
         <div>
           <SectionHeading>Qu&apos;est-ce qui est inclus dans un site Automatex&nbsp;?</SectionHeading>
           <p className="mt-3 text-sm text-text-secondary">
-            Un site vitrine complet à partir de 1500&nbsp;€, sans abonnement caché : design
+            Un site vitrine à partir de 890&nbsp;€, sans abonnement caché : design
             adapté à votre métier, affichage mobile en priorité, galerie de vos chantiers,
             numéro et formulaire visibles sur chaque page. TVA non applicable, art. 293 B du CGI.
           </p>
@@ -91,8 +91,8 @@ export default function SitesWebPage() {
             <FeatureList items={INCLUSIONS} />
           </div>
           <p className="mt-6 text-sm text-text-muted">
-            Tarif indicatif : à partir de 1500€, sans abonnement caché. TVA non applicable, art. 293
-            B du CGI.
+            Tarif indicatif : à partir de 890&nbsp;€ pour un site vitrine, 1500&nbsp;€ pour une
+            landing page, sans abonnement caché. TVA non applicable, art. 293 B du CGI.
           </p>
         </div>
 

@@ -23,7 +23,7 @@ const PAGE: PageMeta = {
   title: "Création de site internet à Flers (Orne)",
   absoluteTitle: "Création de site internet à Flers (Orne) — Automatex",
   description:
-    "Création de site internet à Flers (Orne) : landing page dès 1500€, site vitrine dès 590€, en ligne en 1 à 2 semaines. Un seul interlocuteur, pas d'agence.",
+    "Création de site internet à Flers (Orne) : site vitrine dès 890€, landing page dès 1500€, en ligne en 1 à 2 semaines. Un seul interlocuteur, pas d'agence.",
   path: URL,
 };
 
@@ -32,7 +32,7 @@ export const metadata: Metadata = pageMetadata(PAGE);
 const ANTI_AGENCE = [
   "Un seul interlocuteur du premier échange à la mise en ligne : la personne qui conçoit le site est celle qui vous répond au téléphone.",
   "Des délais courts — 1 à 2 semaines — parce qu'il n'y a pas de file de projets ni de validation à plusieurs étages.",
-  "Un tarif sans frais de structure : landing page à partir de 1500€, site vitrine starter à partir de 590€.",
+  "Un tarif sans frais de structure : site vitrine starter à partir de 890€, landing page à partir de 1500€.",
   "Un déplacement possible sur votre chantier ou votre local à Flers, sans surcoût dans le bassin flérien.",
 ];
 
@@ -48,14 +48,14 @@ function IntroBlock() {
       <h1 className="aurora-h1">Création de site internet à Flers</h1>
       <div className="mt-5 flex flex-wrap gap-2">
         <Badge>Flers · Orne</Badge>
-        <Badge>Dès 590 €</Badge>
+        <Badge>Dès 890 €</Badge>
         <Badge>En ligne en 1 à 2 semaines</Badge>
       </div>
       <p className="mt-6 text-base text-text-secondary">
         La création de votre site internet à Flers est assurée par Nolan Hermand,{" "}
         <HighlightUnderline>Automatex</HighlightUnderline>, basé à Saint-Georges-des-Groseillers,
-        à 5 à 10 minutes du centre de Flers. Une landing page démarre à 1500&nbsp;€, un site
-        vitrine starter à partir de 590&nbsp;€ (TVA non applicable, art. 293&nbsp;B du CGI).
+        à 5 à 10 minutes du centre de Flers. Un site vitrine starter démarre à 890&nbsp;€ et une
+        landing page à 1500&nbsp;€ (TVA non applicable, art. 293&nbsp;B du CGI).
         Comptez 1 à 2 semaines entre le premier échange et la mise en ligne, une fois vos photos
         et informations reçues. La même personne s&apos;occupe de tout, du premier appel à la
         livraison : pas d&apos;agence, pas de chef de projet à relayer, et un rendez-vous en
@@ -185,7 +185,7 @@ export default function SiteWebFlersPage() {
           // Les deux prix plancher annoncés en clair dans l'intro de la page.
           offers: [
             { label: "Landing page", fromPrice: 1500 },
-            { label: "Site vitrine starter", fromPrice: 590 },
+            { label: "Site vitrine starter", fromPrice: 890 },
           ],
         })}
       />

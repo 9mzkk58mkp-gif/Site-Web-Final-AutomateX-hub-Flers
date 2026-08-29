@@ -6,7 +6,7 @@ export const HOME_FAQ = [
   {
     question: "Combien coûte un site internet pour un artisan dans l'Orne ?",
     answer:
-      "Une landing page démarre à 1500€, sans abonnement caché. Le tarif dépend du nombre de pages et des automatisations ajoutées. Chaque devis est fait sur mesure après un échange direct.",
+      "Un site vitrine démarre à 890 € et une landing page à 1500 €, sans abonnement caché. Le tarif dépend du nombre de pages et des systèmes ajoutés. Chaque devis est fait sur mesure après un échange direct. TVA non applicable, art. 293 B du CGI.",
   },
   {
     question: "Combien de temps pour avoir mon site en ligne ?",
@@ -16,7 +16,7 @@ export const HOME_FAQ = [
   {
     question: "Est-ce que vous garantissez la première position sur Google ?",
     answer:
-      "Aucune agence sérieuse ne peut garantir une position, les algorithmes changent en permanence. Le travail porte sur une fiche Google complète, un site rapide, et un contenu qui correspond vraiment à votre métier et votre zone.",
+      "Personne ne peut garantir une position sur Google, et méfiez-vous de qui vous le promet : les critères changent en permanence. Le travail porte sur une fiche Google complète, un site rapide, et un contenu qui correspond vraiment à votre métier et votre zone.",
   },
   {
     question: "Pourquoi passer par vous plutôt qu'une agence classique ?",
@@ -38,7 +38,7 @@ export const FLERS_FAQ = [
   {
     question: "Combien coûte un site web à Flers ?",
     answer:
-      "Une landing page démarre à 1500€ et un site vitrine starter à partir de 590€, sans abonnement caché. Le tarif dépend du nombre de pages, du contenu à produire et des systèmes ajoutés. Chaque devis est établi après un échange direct. TVA non applicable, art. 293 B du CGI.",
+      "Un site vitrine starter démarre à 890 € et une landing page à 1500 €, sans abonnement caché. Le tarif dépend du nombre de pages, du contenu à produire et des systèmes ajoutés. Chaque devis est établi après un échange direct. TVA non applicable, art. 293 B du CGI.",
   },
   {
     question: "Combien de temps pour avoir mon site en ligne à Flers ?",
@@ -56,8 +56,8 @@ export const FLERS_FAQ = [
       "Oui. Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers. Le rendez-vous se fait chez vous, sur votre lieu d'activité ou dans un lieu neutre à Flers, sans surcoût de déplacement dans le bassin flérien.",
   },
   {
-    question: "Le référencement local Google est-il inclus ?",
+    question: "Est-ce que le site m'aide à sortir sur Google ?",
     answer:
-      "Oui. Chaque site est livré avec les bases du référencement local : structure adaptée à votre métier et à votre zone, pages optimisées pour Flers et l'agglomération, et mise en place ou vérification de la fiche Google Business Profile. Aucune position ne peut être garantie, mais le site part sur des fondations saines.",
+      "Oui. Chaque site est livré avec ce qu'il faut pour être trouvé : une structure adaptée à votre métier et à votre zone, des pages écrites pour Flers et l'agglomération, et votre fiche Google mise en place ou vérifiée. Aucune position ne peut être garantie, mais le site part sur des bases saines.",
   },
 ] as const;
