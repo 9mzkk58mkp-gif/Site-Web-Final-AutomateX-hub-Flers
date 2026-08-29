@@ -22,7 +22,7 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
     tier: "public",
     title: "Accueil — les 3 services",
     url: "/",
-    text: "Ce qu'installe Automatex : 1) Site Web — un site vitrine rapide, propre, optimisé mobile, pensé pour le métier de l'artisan, pas un template générique (voir /sites-web). 2) Fiche Google — fiche Google Business optimisée et à jour pour apparaître dans le pack local quand un client cherche le métier près de chez lui (voir /fiche-google). 3) Automatisations — systèmes qui trient les mails et relancent les devis automatiquement, pour rendre le temps perdu sur l'administratif (voir /automatisations).",
+    text: "Ce qu'installe Automatex : 1) Site Web — un site vitrine rapide, propre, optimisé mobile, pensé pour le métier de l'artisan, pas un template générique (voir /sites-web). 2) Fiche Google — fiche Google complète et à jour pour sortir en haut de Google Maps quand un client cherche le métier près de chez lui (voir /fiche-google). 3) Systèmes — ils trient les mails et relancent les devis automatiquement, pour rendre le temps perdu sur l'administratif (voir /automatisations).",
   },
   {
     id: "home-histoire-zones",
@@ -36,14 +36,14 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
     tier: "public",
     title: "Accueil — questions fréquentes",
     url: "/",
-    text: "FAQ : Combien coûte un site internet pour un artisan dans l'Orne ? Une landing page démarre à 1500€, sans abonnement caché, tarif dépendant du nombre de pages et des automatisations ajoutées, devis sur mesure après échange direct. Combien de temps pour la mise en ligne ? En général une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et informations reçues. Garantissez-vous la première position sur Google ? Aucune agence sérieuse ne peut garantir une position, les algorithmes changent en permanence ; le travail porte sur une fiche Google complète, un site rapide et un contenu adapté au métier et à la zone. Pourquoi passer par Automatex plutôt qu'une agence classique ? Une seule personne gère le projet du premier échange à la mise en ligne, délais plus courts, pas de frais de structure. Faut-il s'engager sur la durée ? Non, aucun engagement sur le site en lui-même ; la gestion active de la fiche Google est un service mensuel optionnel, sans engagement. TVA non applicable, art. 293 B du CGI.",
+    text: "FAQ : Combien coûte un site internet pour un artisan dans l'Orne ? Un site vitrine démarre à 890€ et une landing page à 1500€, sans abonnement caché, tarif dépendant du nombre de pages et des systèmes ajoutés, devis sur mesure après échange direct. Combien de temps pour la mise en ligne ? En général une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et informations reçues. Garantissez-vous la première position sur Google ? Personne ne peut garantir une position sur Google et il faut se méfier de qui le promet, les critères changent en permanence ; le travail porte sur une fiche Google complète, un site rapide et un contenu adapté au métier et à la zone. Pourquoi passer par Automatex plutôt qu'une agence classique ? Une seule personne gère le projet du premier échange à la mise en ligne, délais plus courts, pas de frais de structure. Faut-il s'engager sur la durée ? Non, aucun engagement sur le site en lui-même ; la gestion active de la fiche Google est un service mensuel optionnel, sans engagement. TVA non applicable, art. 293 B du CGI.",
   },
   {
     id: "sites-web-pilier",
     tier: "public",
     title: "Silo Sites Web — page pilier",
     url: "/sites-web",
-    text: "Création de site internet pour artisan dans l'Orne. Ce que comprend un site Automatex : design propre pensé pour le métier, optimisé mobile en priorité, rapide au chargement, réalisations mises en valeur avec de vraies photos de chantier, formulaire de contact et numéro visibles partout. Tarif indicatif : à partir de 1500€, sans abonnement caché (TVA non applicable, art. 293 B du CGI).",
+    text: "Création de site internet pour artisan dans l'Orne. Ce que comprend un site Automatex : design propre pensé pour le métier, optimisé mobile en priorité, rapide au chargement, réalisations mises en valeur avec de vraies photos de chantier, formulaire de contact et numéro visibles partout. Tarif indicatif : à partir de 890€ pour un site vitrine et 1500€ pour une landing page, sans abonnement caché (TVA non applicable, art. 293 B du CGI).",
   },
   {
     id: "sites-web-menuisier",
@@ -85,14 +85,14 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
     tier: "public",
     title: "Silo Fiche Google — page pilier",
     url: "/fiche-google",
-    text: "Optimisation de fiche Google Business pour artisan dans l'Orne. C'est la fiche Google que les clients voient en premier, avant même le site : Google Maps, pack local, et de plus en plus les réponses des IA. Ce qui est fait : configuration complète (catégorie, zone, horaires, services), stratégie d'avis clients, optimisation pack local, photos et posts réguliers. Tarif indicatif : à partir de 150€, ou inclus dans un pack site web (TVA non applicable, art. 293 B du CGI).",
+    text: "Prise en charge de la fiche Google d'un artisan dans l'Orne. C'est la fiche que les clients voient en premier, avant même le site : elle s'affiche sur Google Maps, en haut des résultats, et de plus en plus dans les réponses que Google donne directement. Ce qui est fait : la fiche remplie en entier (catégorie, zone, horaires, services), une façon simple de récolter des avis et d'y répondre, le réglage de ce qui fait sortir sur Google Maps, des photos et des publications régulières. Tarif indicatif : à partir de 150€, ou inclus dans un pack site web (TVA non applicable, art. 293 B du CGI).",
   },
   {
     id: "fiche-google-creer-optimiser",
     tier: "public",
-    title: "Créer et optimiser sa fiche Google",
+    title: "Créer sa fiche Google et la remplir correctement",
     url: "/fiche-google/creer-optimiser",
-    text: "Une fiche Google Business est gratuite à créer, le problème est de bien la remplir : bonne catégorie principale (facteur qui pèse le plus), zone d'intervention réaliste, description claire sans bourrage de mots-clés, informations identiques partout en ligne (nom, adresse, téléphone). Une fiche mal configurée n'est pas montrée par Google, même avec de bons avis.",
+    text: "Une fiche Google est gratuite à créer, le problème est de bien la remplir : bonne catégorie principale (facteur qui pèse le plus), zone d'intervention réaliste, description claire sans répéter son métier dix fois, informations identiques partout en ligne (nom, adresse, téléphone). Une fiche mal configurée n'est pas montrée par Google, même avec de bons avis.",
   },
   {
     id: "fiche-google-avis",
@@ -104,16 +104,16 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
   {
     id: "fiche-google-pack-local",
     tier: "public",
-    title: "Apparaître dans le pack local Google Maps",
+    title: "Sortir sur Google Maps quand un client cherche près de chez vous",
     url: "/fiche-google/pack-local-maps",
-    text: "Le pack local, ce sont les 3 résultats en haut de Google Maps pour une recherche comme « couvreur près de moi ». Ce qui détermine la position : pertinence (catégorie et services), distance, notoriété (avis, activité de la fiche, présence en ligne). Ajustements concrets : catégorie, description, zone d'intervention, régularité des publications.",
+    text: "Quand un particulier tape « couvreur près de moi » ou « plombier à Flers », Google affiche trois entreprises en haut de la page, sur une carte, et la plupart des gens appellent l'une des trois sans descendre plus bas. Google répond à trois questions pour choisir ces trois-là : est-ce que la fiche correspond à ce qui est cherché (catégorie, services, mots employés), à quelle distance se trouve l'entreprise, et est-ce qu'elle a l'air fiable (avis, fiche qui bouge, site et autres pages). La distance ne se change pas ; les deux autres se travaillent. Ajustements concrets : catégorie, description, zone d'intervention, régularité des publications.",
   },
   {
     id: "fiche-google-photos-posts",
     tier: "public",
     title: "Photos et publications Google",
     url: "/fiche-google/photos-posts",
-    text: "Une fiche Google qui ne bouge jamais est considérée comme moins fiable par Google. Ce qui fonctionne : photos de chantiers récents (pas des images génériques), posts réguliers sur les réalisations et disponibilités, renommage des fichiers avec mots-clés et zone. Automatex met en place un rythme de publication simple et tenable.",
+    text: "Une fiche Google qui ne bouge jamais est considérée comme moins fiable par Google. Ce qui fonctionne : photos de chantiers récents (pas des images génériques), posts réguliers sur les réalisations et disponibilités, photos nommées avec le métier et la ville avant leur mise en ligne. Automatex met en place un rythme de publication simple et tenable.",
   },
   {
     id: "fiche-google-vs-site",
@@ -125,9 +125,9 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
   {
     id: "automatisations-pilier",
     tier: "public",
-    title: "Silo Automatisations — page pilier",
+    title: "Silo Systèmes — page pilier",
     url: "/automatisations",
-    text: "Automatisation des devis et de la gestion administrative pour artisans du bâtiment dans l'Orne. Il ne s'agit ni de robotique ni de machines d'atelier : uniquement le travail de bureau d'une entreprise du bâtiment. Ce qui est installé : relance des devis envoyés et restés sans réponse, tri des mails entrants (demandes de chantier d'un côté, factures fournisseurs de l'autre), devis dicté depuis le chantier et retranscrit sans ressaisie. Des systèmes qui tournent en arrière-plan sur les outils habituels de l'artisan (boîte mail, téléphone, tableau de suivi). Concerne menuisiers, couvreurs, plombiers, électriciens et maçons de Flers et de l'Orne. Tarif : sur devis, selon les systèmes mis en place (TVA non applicable, art. 293 B du CGI).",
+    text: "Gagner du temps sur les devis et les mails, pour les artisans du bâtiment de l'Orne. Il ne s'agit ni de robotique ni de machines d'atelier : uniquement le travail de bureau d'une entreprise du bâtiment. Ce qui est installé : relance des devis envoyés et restés sans réponse, tri des mails entrants (demandes de chantier d'un côté, factures fournisseurs de l'autre), devis dicté depuis le chantier et retranscrit sans ressaisie. Des systèmes qui tournent en arrière-plan sur les outils habituels de l'artisan (boîte mail, téléphone, tableau de suivi). Concerne menuisiers, couvreurs, plombiers, électriciens et maçons de Flers et de l'Orne. Tarif : sur devis, selon les systèmes mis en place (TVA non applicable, art. 293 B du CGI).",
   },
   {
     id: "automatisations-relance-devis",
@@ -146,7 +146,7 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
   {
     id: "automatisations-devis-vocal",
     tier: "public",
-    title: "Automatiser les devis à la voix",
+    title: "Dicter son devis depuis le chantier",
     url: "/automatisations/devis-vocal",
     text: "Automatiser les devis à la voix. Sur un chantier, prendre des notes pour un devis n'est jamais pratique : les cotes finissent sur un carnet et la mise en forme attend le soir. L'artisan dicte les informations depuis le chantier avec son téléphone, les cotes, quantités et coordonnées du client sont retranscrites et rangées, et il récupère une base de devis prête à chiffrer sans ressaisie. Le suivi des devis (envoyé, vu, accepté, sans réponse) se tient ensuite tout seul dans un tableau, et alimente la relance devis automatique. Tarif sur devis, TVA non applicable, art. 293 B du CGI.",
   },
@@ -155,7 +155,7 @@ export const PUBLIC_CHUNKS: KnowledgeChunk[] = [
     tier: "public",
     title: "Création de site internet à Flers (Orne)",
     url: "/site-web-flers",
-    text: "Création de site internet à Flers, dans l'Orne : une landing page démarre à 1500€ et un site vitrine starter à partir de 590€, TVA non applicable (art. 293 B du CGI). Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers, à 5 à 10 minutes du centre : les rendez-vous se font en face à face, chez le client ou sur son lieu d'activité, sans surcoût de déplacement dans le bassin flérien. Comptez une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et les informations de l'entreprise reçues. Un seul interlocuteur du premier échange à la mise en ligne, sans chef de projet intermédiaire ni frais de structure d'agence. Le référencement local est inclus : structure adaptée au métier et à la zone, pages optimisées pour Flers et l'agglomération, mise en place ou vérification de la fiche Google Business Profile. Aucune position sur Google ne peut être garantie. La page s'adresse aussi aux commerces et TPE locales, pas uniquement aux artisans du bâtiment.",
+    text: "Création de site internet à Flers, dans l'Orne : un site vitrine starter démarre à 890€ et une landing page à 1500€, TVA non applicable (art. 293 B du CGI). Nolan Hermand est installé à Saint-Georges-des-Groseillers, commune limitrophe de Flers, à 5 à 10 minutes du centre : les rendez-vous se font en face à face, chez le client ou sur son lieu d'activité, sans surcoût de déplacement dans le bassin flérien. Comptez une à deux semaines entre le premier échange et la mise en ligne, une fois les photos et les informations de l'entreprise reçues. Un seul interlocuteur du premier échange à la mise en ligne, sans chef de projet intermédiaire ni frais de structure d'agence. Tout ce qu'il faut pour être trouvé sur Google est inclus : structure adaptée au métier et à la zone, pages écrites pour Flers et l'agglomération, fiche Google mise en place ou vérifiée. Aucune position sur Google ne peut être garantie. La page s'adresse aussi aux commerces et TPE locales, pas uniquement aux artisans du bâtiment.",
   },
   {
     id: "qui-je-suis",

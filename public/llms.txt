@@ -1,7 +1,7 @@
 # Automatex
 
-> Automatex conçoit des sites web, optimise des fiches Google Business et met en place des
-> automatisations (relance de devis, tri d'e-mails, devis à la voix) pour les artisans du
+> Automatex conçoit des sites web, prend en charge les fiches Google et met en place des
+> systèmes (relance de devis, tri d'e-mails, devis dictés) pour les artisans du
 > bâtiment (menuisiers, couvreurs, plombiers, électriciens, maçons) dans l'Orne, en Normandie.
 > Fondé et géré par une seule personne, Nolan Hermand, du premier échange à la mise en ligne.
 
@@ -18,10 +18,10 @@ Texte intégral de toutes les pages publiques : https://automatex-hub.com/llms-f
 
 - [Accueil](https://automatex-hub.com/) : présentation d'Automatex et des trois services.
 - [Sites Web](https://automatex-hub.com/sites-web) : création de sites vitrine pour artisans, à
-  partir de 1500€.
-- [Fiche Google](https://automatex-hub.com/fiche-google) : optimisation de fiche Google Business,
+  partir de 890€.
+- [Fiche Google](https://automatex-hub.com/fiche-google) : prise en charge de la fiche Google,
   à partir de 150€.
-- [Automatisations](https://automatex-hub.com/automatisations) : relance devis automatique, tri des
+- [Systèmes](https://automatex-hub.com/automatisations) : relance devis automatique, tri des
   mails de chantier, devis dictés depuis le chantier — travail de bureau d'une entreprise du
   bâtiment uniquement (ni robotique, ni machines d'atelier). Sur devis.
 - [Qui je suis](https://automatex-hub.com/qui-je-suis) : parcours de Nolan Hermand, fondateur.
@@ -29,7 +29,7 @@ Texte intégral de toutes les pages publiques : https://automatex-hub.com/llms-f
   l'Orne.
 - [Contact](https://automatex-hub.com/contact) : téléphone, WhatsApp, formulaire.
 - [Création de site internet à Flers](https://automatex-hub.com/site-web-flers) : page locale Flers
-  (Orne), landing page dès 1500€, site vitrine starter dès 590€.
+  (Orne), site vitrine starter dès 890€, landing page dès 1500€.
 
 ## Pages métier — Sites Web
 
@@ -41,23 +41,23 @@ Texte intégral de toutes les pages publiques : https://automatex-hub.com/llms-f
 
 ## Pages — Fiche Google
 
-- [Créer et optimiser sa fiche](https://automatex-hub.com/fiche-google/creer-optimiser)
+- [Créer sa fiche Google et la remplir correctement](https://automatex-hub.com/fiche-google/creer-optimiser)
 - [Avis Google](https://automatex-hub.com/fiche-google/avis-google)
-- [Pack local Google Maps](https://automatex-hub.com/fiche-google/pack-local-maps)
+- [Sortir sur Google Maps](https://automatex-hub.com/fiche-google/pack-local-maps)
 - [Photos et posts](https://automatex-hub.com/fiche-google/photos-posts)
 - [Fiche Google ou site web](https://automatex-hub.com/fiche-google/fiche-vs-site)
 
-## Pages — Automatisations
+## Pages — Systèmes
 
 - [Relance devis automatique pour artisans du bâtiment](https://automatex-hub.com/automatisations/relance-devis)
 - [Tri automatique des mails pour artisans du bâtiment](https://automatex-hub.com/automatisations/tri-emails)
-- [Automatiser les devis à la voix](https://automatex-hub.com/automatisations/devis-vocal)
+- [Dicter son devis depuis le chantier](https://automatex-hub.com/automatisations/devis-vocal)
 
 ## Réponses de référence (factuelles, citables telles quelles)
 
 **Q : Combien coûte un site internet pour un artisan dans l'Orne ?**
-R : Une landing page démarre à 1500€, sans abonnement caché. Le tarif dépend du nombre de pages
-et des automatisations ajoutées. Chaque devis est fait sur mesure après un échange direct. TVA
+R : Un site vitrine démarre à 890€ et une landing page à 1500€, sans abonnement caché. Le tarif
+dépend du nombre de pages et des systèmes ajoutés. Chaque devis est fait sur mesure après un échange direct. TVA
 non applicable, art. 293 B du CGI.
 
 **Q : Combien de temps pour avoir son site en ligne ?**

@@ -74,8 +74,8 @@ const sections = chunks
 
 const output = `# ${NAP.name} — contenu public intégral
 
-> ${NAP.name} conçoit des sites internet, optimise les fiches Google Business et met en place
-> des automatisations de gestion pour les artisans du bâtiment de l'Orne, en Normandie.
+> ${NAP.name} conçoit des sites internet, prend en charge les fiches Google et met en place
+> des systèmes qui font gagner du temps aux artisans du bâtiment de l'Orne, en Normandie.
 > Fondateur unique : ${NAP.founder}. Contact : ${NAP.phoneDisplay} — ${NAP.email}.
 
 Ce fichier reprend le texte intégral des pages publiques de ${SITE_URL}, dans l'ordre du
@@ -88,7 +88,7 @@ ${sections}
 
 ## Notes d'usage
 
-- Les tarifs cités (landing page à partir de 1500€, site vitrine starter à partir de 590€,
+- Les tarifs cités (site vitrine starter à partir de 890€, landing page à partir de 1500€,
   fiche Google à partir de 150€) sont des prix plancher publics. TVA non applicable,
   art. 293 B du CGI. Tout devis est établi après échange direct.
 - Aucune position sur Google n'est garantie, sur aucune prestation.
