@@ -22,6 +22,12 @@ const PAGE: PageMeta = {
 
 export const metadata: Metadata = pageMetadata(PAGE);
 
+const ENGAGEMENTS = [
+  "Le site est à vous : domaine et hébergement à votre nom, jamais en location.",
+  "Aucun engagement de durée sur la création d'un site.",
+  "Le prix est annoncé avant de commencer, pas en fin de rendez-vous.",
+];
+
 export default function HomePage() {
   return (
     <>
@@ -40,8 +46,21 @@ export default function HomePage() {
           fenêtres. Je sais comment vous travaillez, et je sais que la visibilité passe toujours
           après le boulot.
         </p>
-        <Link href="/qui-je-suis" className="mt-4 inline-block text-sm font-medium text-emerald hover:underline">
-          Mon parcours →
+        {/*
+          Les trois objections que laisse le démarchage abusif — propriété du
+          site, durée d'engagement, prix découvert en rendez-vous. Elles sont
+          traitées en entier sur /qui-je-suis ; ici elles arrivent avant le
+          premier clic, parce que c'est là qu'elles bloquent.
+        */}
+        <ul className="mt-8 grid gap-3 text-left text-sm text-text-secondary sm:grid-cols-3">
+          {ENGAGEMENTS.map((item) => (
+            <li key={item} className="glass-card rounded-2xl px-4 py-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <Link href="/qui-je-suis" className="mt-6 inline-block text-sm font-medium text-emerald hover:underline">
+          Pourquoi ce n&apos;est pas une agence →
         </Link>
       </Reveal>
 

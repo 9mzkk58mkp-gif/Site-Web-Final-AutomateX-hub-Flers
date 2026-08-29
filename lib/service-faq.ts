@@ -356,6 +356,48 @@ export const DEVIS_VOCAL_FAQ: readonly FaqItem[] = [
   },
 ];
 
+/* ------------------------------------------------------------------ */
+/* Qui je suis — objections de confiance                               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Les questions que pose un artisan qui s'est déjà fait démarcher : elles
+ * portent sur ce qu'il risque, pas sur ce qu'il achète. Elles sont traitées
+ * frontalement plutôt qu'évitées — c'est le premier frein du marché.
+ */
+export const QUI_JE_SUIS_FAQ: readonly FaqItem[] = [
+  {
+    question: "Est-ce que je serai vraiment propriétaire de mon site ?",
+    answer:
+      "Oui. Le nom de domaine est déposé à votre nom, l'hébergement est à votre nom, et le site vous appartient une fois payé. Il n'y a ni location, ni crédit-bail, ni clause qui vous obligerait à rester. Si vous partez, vous partez avec votre site.",
+  },
+  {
+    question: "Je m'engage sur combien de temps ?",
+    answer:
+      "Sur la création d'un site, aucune durée : vous payez la prestation, elle est faite, c'est fini. Le seul service récurrent est le suivi de la fiche Google, facturé au mois et résiliable quand vous voulez, sans préavis ni pénalité. Aucun contrat de 24 ou 48 mois n'existe chez Automatex.",
+  },
+  {
+    question: "Le prix peut-il changer entre le devis et la facture ?",
+    answer:
+      "Non. La fourchette est publique sur le site — à partir de 890 € pour un site vitrine, 1500 € pour une landing page, à partir de 150 € pour la fiche Google — et le devis établi après notre échange est le montant que vous payez. Rien ne se négocie sous pression en fin de rendez-vous. TVA non applicable, art. 293 B du CGI.",
+  },
+  {
+    question: "Si je change de prestataire plus tard, mon site est récupérable ?",
+    answer:
+      "Oui, et c'est un choix technique autant qu'un engagement. Le site est construit sur des technologies standard, hébergé sur un compte à votre nom : n'importe quel développeur peut reprendre le travail derrière moi sans repartir de zéro. Vous n'êtes pas prisonnier d'un outil que je serais seul à savoir manipuler.",
+  },
+  {
+    question: "Vous travaillez seul — que se passe-t-il si vous n'êtes plus joignable ?",
+    answer:
+      "C'est la question à poser à quelqu'un qui travaille seul, et la réponse tient dans la ligne au-dessus : parce que tout est à votre nom et sur des outils standard, votre site continue de tourner sans moi et reste reprenable par un autre. Vous ne dépendez pas de ma disponibilité pour rester en ligne.",
+  },
+  {
+    question: "Vous êtes une agence ?",
+    answer:
+      "Non. Automatex, c'est une personne : Nolan Hermand. Celui qui répond au téléphone est celui qui vient sur place et qui construit le site. Il n'y a ni commercial, ni chef de projet, ni frais de structure à répercuter — et personne d'autre à qui votre dossier serait transmis.",
+  },
+];
+
 /**
  * Index par route, consommé uniquement par scripts/build-llms-full.ts pour
  * annexer à chaque page son bloc FAQ. Les pages, elles, importent leur
@@ -379,4 +421,5 @@ export const ROUTE_FAQ: Record<string, readonly FaqItem[]> = {
   "/automatisations/relance-devis": RELANCE_DEVIS_FAQ,
   "/automatisations/tri-emails": TRI_EMAILS_FAQ,
   "/automatisations/devis-vocal": DEVIS_VOCAL_FAQ,
+  "/qui-je-suis": QUI_JE_SUIS_FAQ,
 };

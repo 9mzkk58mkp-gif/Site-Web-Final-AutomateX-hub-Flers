@@ -32,6 +32,11 @@ export const HOME_FAQ = [
       "Une seule personne gère votre projet du premier échange à la mise en ligne, sans intermédiaire. Les délais sont plus courts qu'en agence, et le prix ne comprend pas de frais de structure.",
   },
   {
+    question: "Est-ce que je reste propriétaire de mon site ?",
+    answer:
+      "Oui. Le nom de domaine et l'hébergement sont déposés à votre nom, et le site vous appartient une fois payé — ce n'est ni une location, ni un crédit-bail. Si vous changez de prestataire, vous emportez le site et le domaine avec vous.",
+  },
+  {
     question: "Est-ce que je dois m'engager sur la durée ?",
     answer:
       "Non, aucun engagement de durée sur le site en lui-même. La gestion active de la fiche Google (posts, avis, photos) est un service mensuel optionnel, sans engagement non plus.",

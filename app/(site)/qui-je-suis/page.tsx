@@ -9,6 +9,8 @@ import FeatureList from "@/components/services/FeatureList";
 import SectionHeading from "@/components/services/SectionHeading";
 import Reveal from "@/components/motion/Reveal";
 import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
+import PageFaq from "@/components/services/PageFaq";
+import { QUI_JE_SUIS_FAQ } from "@/lib/service-faq";
 import { getPersonPageSchema } from "@/lib/schema";
 import { NAP, TEL_HREF } from "@/lib/constants";
 
@@ -16,11 +18,18 @@ import { NAP, TEL_HREF } from "@/lib/constants";
 const PAGE: PageMeta = {
   title: "Qui je suis — Nolan Hermand, fondateur d'Automatex",
   absoluteTitle: "Qui je suis — Nolan Hermand, fondateur d'Automatex",
-  description: "Nolan Hermand, CAP menuiserie, fondateur d'Automatex. Une seule personne du début à la fin pour votre site web et votre visibilité Google dans l'Orne.",
+  description: "Nolan Hermand, CAP menuiserie, fondateur d'Automatex. Pas une agence : une personne, un site qui reste le vôtre, aucun engagement de durée, un prix annoncé d'avance.",
   path: "/qui-je-suis",
 };
 
 export const metadata: Metadata = pageMetadata(PAGE);
+
+const CE_QUI_VOUS_PROTEGE = [
+  "Le nom de domaine et l'hébergement sont à votre nom : le site est votre propriété, pas une location.",
+  "Aucun engagement de durée sur la création. Le suivi de fiche Google, lui, s'arrête quand vous le décidez.",
+  "La fourchette de prix est publique sur ce site — rien ne se découvre en fin de rendez-vous.",
+  "Des technologies standard : un autre développeur peut reprendre derrière moi sans tout refaire.",
+];
 
 const EN_PRATIQUE = [
   "Basé à Saint-Georges-des-Groseillers, dans l'Orne",
@@ -103,6 +112,25 @@ export default function QuiJeSuisPage() {
 
           <StaggerItem>
             <SectionHeading>
+              Qu&apos;est-ce qui vous protège si vous voulez partir&nbsp;?
+            </SectionHeading>
+            <p className="mt-3">
+              Le fait que tout soit à votre nom. Beaucoup d&apos;artisans se sont fait démarcher
+              par téléphone, ont signé pour un site payé au mois pendant quatre ans, et ont
+              découvert en voulant partir qu&apos;ils ne possédaient rien — ni le domaine, ni les
+              pages, ni les photos. Ce n&apos;est pas la façon de travailler ici.
+            </p>
+            <div className="mt-4">
+              <FeatureList items={CE_QUI_VOUS_PROTEGE} />
+            </div>
+            <p className="mt-3">
+              Je préfère que vous restiez parce que le travail vous convient, pas parce
+              qu&apos;un contrat vous y oblige.
+            </p>
+          </StaggerItem>
+
+          <StaggerItem>
+            <SectionHeading>
               Comment se déroule concrètement une collaboration avec Automatex&nbsp;?
             </SectionHeading>
             <p className="mt-3">
@@ -115,6 +143,10 @@ export default function QuiJeSuisPage() {
             </div>
           </StaggerItem>
         </StaggerGrid>
+
+        <Reveal className="mt-16">
+          <PageFaq items={QUI_JE_SUIS_FAQ} heading="Ce que les artisans me demandent avant de signer" />
+        </Reveal>
 
         <Reveal className="mt-16 flex justify-center">
           <Button href={TEL_HREF} icon={<PhoneIcon />}>
