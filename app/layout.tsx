@@ -4,7 +4,6 @@ import AuroraFieldLoader from "@/components/aurora/AuroraFieldLoader";
 import GrainOverlay from "@/components/layout/GrainOverlay";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ChatWidgetLoader from "@/components/chatbot/ChatWidgetLoader";
 import SchemaScript from "@/components/seo/SchemaScript";
 import { NAP, SITE_URL } from "@/lib/constants";
 import { getWebSiteSchema } from "@/lib/schema";
@@ -65,7 +64,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ChatWidgetLoader />
+        {/* Chatbot démonté volontairement : le bundle du widget et sa session
+            s'exécutaient au chargement de chaque page et dominaient le TBT.
+            Le composant (components/chatbot/) et la route /api/chat restent en
+            place — remonter <ChatWidgetLoader /> ici une fois le chargement
+            différé (au premier clic / à l'inactivité) mis en place. */}
       </body>
     </html>
   );
